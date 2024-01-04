@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="319.897" height="160" viewBox="0 0 319.897 160">
+    <defs>
+        <clipPath id="t2jhxdtapa">
+            <path data-name="사각형 16288" style="fill:none" d="M0 0h319.897v160H0z"/>
+        </clipPath>
+        <clipPath id="6ss1ji6cnb">
+            <path data-name="패스 74077" d="M159.949 53.333a106.668 106.668 0 0 1 106.6 102.816 3.991 3.991 0 0 0 3.989 3.85h45.356a4.013 4.013 0 0 0 4-4.127A160 160 0 0 0 0 155.873 4.013 4.013 0 0 0 4 160h45.362a3.991 3.991 0 0 0 3.989-3.85 106.668 106.668 0 0 1 106.6-102.816" transform="rotate(-90 160 160)" style="fill:#eee"/>
+        </clipPath>
+    </defs>
+    <g style="clip-path:url(#t2jhxdtapa)">
+        <path data-name="패스 74076" d="M159.949 53.333a106.668 106.668 0 0 1 106.6 102.816 3.991 3.991 0 0 0 3.989 3.85h45.356a4.013 4.013 0 0 0 4-4.127A160 160 0 0 0 0 155.873 4.013 4.013 0 0 0 4 160h45.362a3.991 3.991 0 0 0 3.989-3.85 106.668 106.668 0 0 1 106.6-102.816" style="fill:#eee"/>
+    </g>
+    <g style="clip-path:url(#6ss1ji6cnb)">
+        <path data-name="합치기 2" d="M-17361.047-1619.553a160.428 160.428 0 0 1-58.152-79.993L-17267-1749v160a159.31 159.31 0 0 1-94.047-30.553zM-17427-1749a160.007 160.007 0 0 1 7.8-49.452 160.355 160.355 0 0 1 58.152-79.989L-17267-1749l-152.2 49.448a160 160 0 0 1-7.8-49.448z" transform="rotate(90 -9508 7919)" style="fill:#0eb946;stroke:transparent;stroke-miterlimit:10"/>
+    </g>
+    <text transform="translate(160 144)" style="fill:#0b9d3b;font-size:24px;font-family:Pretendard-Bold,Pretendard;font-weight:700"><tspan x="-35.197" y="0">81.3%</tspan></text>
+</svg>

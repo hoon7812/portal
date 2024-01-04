@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="150" viewBox="0 0 120 150">
+    <defs>
+        <filter id="lwke0wqekb" x="3.5" y="-6" width="119" height="159" filterUnits="userSpaceOnUse">
+            <feOffset dx="3" dy="3"/>
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feFlood flood-opacity=".102"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="dxwmd3l9oc" x="5" y="-4.5" width="116" height="156" filterUnits="userSpaceOnUse">
+            <feOffset dx="3" dy="3"/>
+            <feGaussianBlur stdDeviation="3" result="blur-2"/>
+            <feFlood flood-opacity=".051"/>
+            <feComposite operator="in" in2="blur-2"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <linearGradient id="69c8cniked" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#eee"/>
+            <stop offset=".339" stop-color="#fff"/>
+            <stop offset="1" stop-color="#fff"/>
+        </linearGradient>
+        <clipPath id="evm35235ea">
+            <path transform="translate(707 1108)" style="fill:#fff" d="M0 0h120v150H0z"/>
+        </clipPath>
+    </defs>
+    <g transform="translate(-707 -1108)" style="clip-path:url(#evm35235ea)">
+        <path d="M0 3a3.016 3.016 0 0 1 3-3v3" transform="translate(713.5 1108)" style="fill:#bbb"/>
+        <g style="filter:url(#lwke0wqekb)">
+            <path data-name="bg" d="M0 106.212V0h98.564A1.439 1.439 0 0 1 100 1.442v104.77a5.811 5.811 0 0 1-1.562 3.967l-44.226 27.987a5.754 5.754 0 0 1-8.424 0L1.562 110.179A5.811 5.811 0 0 1 0 106.212" transform="translate(717 1108.5)" style="stroke:#ccc;fill:#fff"/>
+        </g>
+        <g style="filter:url(#dxwmd3l9oc)">
+            <path data-name="gradient" d="M0 104.695V0h96.593A1.415 1.415 0 0 1 98 1.421v103.274a5.746 5.746 0 0 1-1.531 3.91l-43.341 27.587a5.617 5.617 0 0 1-8.256 0L1.531 108.605A5.746 5.746 0 0 1 0 104.695" transform="translate(718 1109.5)" style="fill:url(#69c8cniked)"/>
+        </g>
+    </g>
+</svg>

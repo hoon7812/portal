@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <defs>
+        <clipPath id="phvua180aa">
+            <path data-name="사각형 154" style="fill:none" d="M0 0h16v16H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="그룹 88" style="clip-path:url(#phvua180aa)">
+        <path data-name="선 53" transform="translate(.75 8)" style="stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;fill:none" d="M0 0h14.5"/>
+    </g>
+</svg>

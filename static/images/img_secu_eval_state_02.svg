@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="316" height="30" viewBox="0 0 316 30">
+    <g transform="translate(-787 -393)">
+        <rect width="28" height="30" rx="4" transform="translate(787 393)" style="fill:#a4c9e5"/>
+        <rect data-name="bg" width="28" height="30" rx="4" transform="translate(819 393)" style="fill:#a4c9e5"/>
+        <rect data-name="bg" width="28" height="30" rx="4" transform="translate(851 393)" style="fill:#a4c9e5"/>
+        <rect data-name="bg" width="28" height="30" rx="4" transform="translate(883 393)" style="fill:#a4c9e5"/>
+        <rect data-name="bg" width="28" height="30" rx="4" transform="translate(915 393)" style="fill:#a4c9e5"/>
+        <rect data-name="bg" width="28" height="30" rx="4" transform="translate(947 393)" style="fill:#a4c9e5"/>
+        <rect data-name="bg" width="28" height="30" rx="4" transform="translate(979 393)" style="fill:#a4c9e5"/>
+        <rect data-name="bg" width="28" height="30" rx="4" transform="translate(1011 393)" style="fill:#eee"/>
+        <rect data-name="bg" width="28" height="30" rx="4" transform="translate(1043 393)" style="fill:#eee"/>
+        <rect data-name="bg" width="28" height="30" rx="4" transform="translate(1075 393)" style="fill:#eee"/>
+    </g>
+</svg>

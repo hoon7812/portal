@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="144" height="72" viewBox="0 0 144 72">
+    <defs>
+        <clipPath id="j9f3ygmz0a">
+            <path transform="translate(586 1241)" style="fill:#fff" d="M0 0h144v72H0z"/>
+        </clipPath>
+        <clipPath id="jkfqohzjbc">
+            <path data-name="사각형 3218" style="fill:none" d="M0 0h28v34H0z"/>
+        </clipPath>
+        <filter id="xotoreiavb" x="4" y="4" width="142" height="142" filterUnits="userSpaceOnUse">
+            <feOffset dx="3" dy="3"/>
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feFlood flood-opacity=".149"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g transform="translate(-522 -1233)" style="clip-path:url(#j9f3ygmz0a)">
+        <circle cx="72" cy="72" r="72" transform="translate(522 1233)" style="fill:#dbf5e3"/>
+        <g style="filter:url(#xotoreiavb)">
+            <circle data-name="bg_circle_top" cx="62" cy="62" r="62" transform="translate(532 1243)" style="fill:#0eb946"/>
+        </g>
+        <g data-name="icon">
+            <g data-name="그룹 18138" style="clip-path:url(#jkfqohzjbc)" transform="translate(580 1260)">
+                <path data-name="패스 64910" d="M12.709 1.549 1 13.453h26L15.289 1.549a1.79 1.79 0 0 0-2.58 0z" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+                <path data-name="패스 64911" d="M8.242 26.811a5.861 5.861 0 0 1 6.515-5.972 6.089 6.089 0 0 1 5 6.183V31.8a1.175 1.175 0 0 0 1.149 1.2h4.237A1.9 1.9 0 0 0 27 31.057v-17.6H1v17.588A1.919 1.919 0 0 0 2.869 33h4.226a1.175 1.175 0 0 0 1.147-1.2z" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+            </g>
+        </g>
+    </g>
+</svg>

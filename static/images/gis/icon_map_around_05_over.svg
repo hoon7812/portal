@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <clipPath id="7smch9ebva">
+            <path data-name="사각형 3160" style="fill:none" d="M0 0h16v16H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="그룹 10215" style="clip-path:url(#7smch9ebva)" transform="translate(2 2)">
+        <rect data-name="사각형 3158" width="16" height="16" rx="2.468" style="fill:#fff"/>
+        <rect data-name="사각형 3159" width="12" height="12" rx="1" transform="translate(2 2)" style="fill:#625cf3"/>
+        <path data-name="패스 1028" d="m13.3 7.457-1.791-.388-1.068-2.115-2.985-1.482L4.8 4.793a1.078 1.078 0 0 0-.486 1.45 1.092 1.092 0 0 0 1.459.483l1.688-.839.587.291-2.761 3.9h-2.18a1.081 1.081 0 1 0 0 2.161h3.262l1.2-1.6.813.807-.87 2.614a1.087 1.087 0 0 0 2.063.683l1.3-3.874-2.02-2.006.645-.955.434.862s2.827.771 2.962.771a1.08 1.08 0 0 0 .4-2.084" style="fill:#fff"/>
+        <path data-name="패스 1029" d="M9.734 3.869a1.35 1.35 0 1 1 1.35 1.35 1.349 1.349 0 0 1-1.35-1.35" style="fill:#fff"/>
+        <circle data-name="타원 179" cx="1.35" cy="1.35" r="1.35" transform="translate(9.734 2.519)" style="stroke:#fff;stroke-miterlimit:10;stroke-width:.25px;fill:none"/>
+    </g>
+</svg>

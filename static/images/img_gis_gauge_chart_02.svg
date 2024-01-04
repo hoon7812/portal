@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="319.897" height="160" viewBox="0 0 319.897 160">
+    <defs>
+        <clipPath id="bhuvq3ivua">
+            <path data-name="사각형 16288" style="fill:none" d="M0 0h319.897v160H0z"/>
+        </clipPath>
+        <clipPath id="loioj58ykb">
+            <path data-name="패스 74077" d="M159.949 53.333a106.668 106.668 0 0 1 106.6 102.816 3.991 3.991 0 0 0 3.989 3.85h45.356a4.013 4.013 0 0 0 4-4.127A160 160 0 0 0 0 155.873 4.013 4.013 0 0 0 4 160h45.362a3.991 3.991 0 0 0 3.989-3.85 106.668 106.668 0 0 1 106.6-102.816" transform="rotate(-90 160 160)" style="fill:#eee"/>
+        </clipPath>
+    </defs>
+    <g style="clip-path:url(#bhuvq3ivua)">
+        <path data-name="패스 74076" d="M159.949 53.333a106.668 106.668 0 0 1 106.6 102.816 3.991 3.991 0 0 0 3.989 3.85h45.356a4.013 4.013 0 0 0 4-4.127A160 160 0 0 0 0 155.873 4.013 4.013 0 0 0 4 160h45.362a3.991 3.991 0 0 0 3.989-3.85 106.668 106.668 0 0 1 106.6-102.816" style="fill:#eee"/>
+    </g>
+    <g style="clip-path:url(#loioj58ykb)">
+        <path data-name="1" d="M0 0a159.289 159.289 0 0 1 94.048 30.553L0 160zm94.048 30.553a160.347 160.347 0 0 1 58.152 79.992L0 160z" transform="rotate(-90 80.1 80.1)" style="fill:#4298d3;stroke:transparent;stroke-miterlimit:10"/>
+    </g>
+    <text transform="translate(160 144)" style="fill:#2675b8;font-size:24px;font-family:Pretendard-Bold,Pretendard;font-weight:700"><tspan x="-38.098" y="0">43.4%</tspan></text>
+</svg>

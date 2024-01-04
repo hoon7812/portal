@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<link rel="stylesheet" href="../static/css/gis_m.css"><!-- GIS MOBILE CSS -->
+	<link rel="stylesheet" href="../static/css/swiper-bundle.min.css">
+	<script src="../static/js/ui/jquery-3.6.3.min.js"></script>
+	<script src="../static/js/ui/swiper-bundle.min.js"></script>
+	<script src="../static/js/ui/gis_ui.js"></script><!-- PC/M 공통 퍼블리싱UI JS -->
+	<title>KEIIS 교통안전원</title>
+</head>
+<body>
+	<!-- #WRAP -->
+	<div id="gis_wrap" class="gis_m">
+		<!-- skip navigation -->
+		<nav id="skipnav">
+			<a title="본문 바로가기" href="#gis_top_wrap">본문 바로가기</a>
+		</nav>
+		<!-- //skip navigation -->	
+  
+		<!-- header -->
+		<header id="gis_top_wrap">
+
+			<!-- 교육시설통합정보시스템 버튼 -->
+			<h1>
+				<!-- [D] 각 top_btn 버튼 on 클래스 추가시 display됨. -->
+				<button type="button" class="top_btn home on"><span class="blind">KEIIS 교육시설통합정보시스템</span></button>
+			</h1>
+
+			<!-- 뒤로가기 버튼 -->
+			<button type="button" class="top_btn back"><span class="blind">뒤로 가기</span></button>
+
+			<!-- 닫기 버튼 -->
+			<button type="button" class="top_btn close"><span class="blind">닫기</span></button>
+
+			<!-- 지도 버튼 -->
+			<button type="button" class="top_btn map"><span class="blind">지도</span></button>
+
+			<!-- 목록 버튼 -->
+			<button type="button" class="top_btn list"><span class="blind">목록</span></button>
+
+			<span class="box_ipt">
+				<label for="gis_input01">
+					<input type="text" id="gis_input01" class="input_txt" title="학교, 기관 검색하기" value="" placeholder="학교, 기관 검색">
+				</label>
+				<button type="reset" class="gis_input_del"><span class="blind">삭제</span></button>
+				<button type="button" class="gis_ico_search"><span class="blind">검색하기</span></button>
+			</span>
+
+		</header>
+		<!-- //header -->
+		
+		<!-- content -->
+		<div id="gis_info_wrap">
+	
+			<!-- 검색input 클릭시 검색결과 display됨. -->
+			<div class="gis_info_bottom">							
+
+				<!-- 1-1 최근 검색 기록 : [D] active 클래스 추가시 display됨 -->
+				<div class="gis_info_area active">
+
+					<!-- 주변 시설 -->	
+					<div class="gis_info_facility">					
+						<h3 class="blind">주변</h3>
+						<ul>	
+							<!-- 1-1 주변시설 [D] li.on 클래스 추가시 활성화 -->
+							<li><a href="javascript:void(0);" class="police">경찰서</a></li>
+							<li><a href="javascript:void(0);" class="fire">소방서</a></li>
+							<li><a href="javascript:void(0);" class="hospital">병원</a></li>
+							<li><a href="javascript:void(0);" class="temporary">이재민<br>임시주거시설</a></li>
+							<li><a href="javascript:void(0);" class="disaster">재난대피<br>시설</a></li>
+						</ul>
+					</div>
+					<!-- //주변 시설 -->
+					
+				    <!-- 1-1-1 최근 검색 기록 리스트 [D] active 클래스 추가시 display됨 -->
+					<div class="gis_input_list active">
+						<h3 class="blind">최근 검색</h3>
+						<ul>
+							<li><a href="javascript:void(0);" class="gis_txt_link">성남고등학교</a><a href="javascript:void(0);" class="btn_close_x"><span class="blind">삭제</span></a></li>
+							<li><a href="javascript:void(0);" class="gis_txt_link">성남중학교</a><a href="javascript:void(0);" class="btn_close_x"><span class="blind">삭제</span></a></li>
+							<li><a href="javascript:void(0);" class="gis_txt_link">숭의여자고등학교</a><a href="javascript:void(0);" class="btn_close_x"><span class="blind">삭제</span></a></li>
+							<li><a href="javascript:void(0);" class="gis_txt_link">성남중학교</a><a href="javascript:void(0);" class="btn_close_x"><span class="blind">삭제</span></a></li>
+							<li><a href="javascript:void(0);" class="gis_txt_link">성남중학교성남중학교성남중학교성남중학교성남중학교성남중학교</a><a href="javascript:void(0);" class="btn_close_x"><span class="blind">삭제</span></a></li>
+						</ul>
+					</div>
+				    <!-- //1-1-1 최근 검색 기록 리스트 -->
+					  
+				    <!-- 1-1-2 최근 검색 기록 없을시 [D] active 클래스 추가시 display됨 -->
+					<div class="res_none">
+						최근 검색 기록이 없습니다.
+					</div>
+				    <!-- //1-1-2 최근 검색 기록 없을시 -->					
+
+				</div>				
+				<!-- //1-1 최근 검색 기록 -->			
+
+				<!-- 1-2 검색결과 [D] active 클래스 추가시 display됨 -->	
+				<div class="gis_info_area gis_info_result">						
+					
+					<!-- 1-2-1 검색결과 있을시 [D] active 클래스 추가시 display됨 -->
+					<div class="gis_result_cont active">
+						<h3>검색 결과 <span class="">(총 <i class="">000</i>건)</span></h3>
+						<ul>
+							<li>											
+								<div class="gis_result_cont_top">
+									<!-- [D] 링크 클릭시 우측 요약정보 .gis_info_simp 디스플레이됨 -->
+									<a href="javascript:void(0);" class="btn_open_simp"><strong>성남고</strong>등학교 야구장</a><!-- [D] 키워드 강조 storng 태그-->
+									<span class="gis_result_fac">고등학교</span>
+								</div>
+								<p>
+									서울 동작구 대방동길 74
+								</p>
+							</li>
+							<li>											
+								<div class="gis_result_cont_top">
+									<a href="javascript:void(0);" class="btn_open_simp"><strong>성남고</strong>등학교 야구장 야구장야구장야구장야구장야구장</a>
+									<span class="gis_result_fac">부속건물부속건물</span>
+								</div>
+								<p>
+									서울 동작구 대방동길 74 서울 동작구 대방동길 74 서울 동작구 대방동길 74 서울 동작구 대방동길 74 서울 동작구 대방동길 74
+								</p>
+							</li>
+							<li>											
+								<div class="gis_result_cont_top">
+									<a href="javascript:void(0);" class="btn_open_simp">야구장야구장<strong>성남고</strong>야구장야구장야구장야구장등학교 야구장</a>
+									<span class="gis_result_fac">고등학교</span>
+								</div>
+								<p>
+									서울 동작구 대방동길 74
+								</p>
+							</li>
+							<li>											
+								<div class="gis_result_cont_top">
+									<a href="javascript:void(0);" class="btn_open_simp"><strong>성남고</strong>등학교 야구장</a>
+									<span class="gis_result_fac">부속건물</span>
+								</div>
+								<p>
+									서울 동작구 대방동길 74
+								</p>
+							</li>
+							<li>											
+								<div class="gis_result_cont_top">
+									<a href="javascript:void(0);" class="btn_open_simp"><strong>성남고</strong>등학교 야구장</a>
+									<span class="gis_result_fac">고등학교</span>
+								</div>
+								<p>
+									서울 동작구 대방동길 74
+								</p>
+							</li>
+							<li>											
+								<div class="gis_result_cont_top">
+									<a href="javascript:void(0);" class="btn_open_simp"><strong>성남고</strong>등학교 야구장</a>
+									<span class="gis_result_fac">고등학교</span>
+								</div>
+								<p>
+									서울 동작구 대방동길 74
+								</p>
+							</li>
+							<li>											
+								<div class="gis_result_cont_top">
+									<a href="javascript:void(0);" class="btn_open_simp"><strong>성남고</strong>등학교 야구장</a>
+									<span class="gis_result_fac">고등학교</span>
+								</div>
+								<p>
+									서울 동작구 대방동길 74
+								</p>
+							</li>
+							<li>											
+								<div class="gis_result_cont_top">
+									<a href="javascript:void(0);" class="btn_open_simp"><strong>성남고</strong>등학교 야구장</a>
+									<span class="gis_result_fac">고등학교</span>
+								</div>
+								<p>
+									서울 동작구 대방동길 74
+								</p>
+							</li>
+							<li>											
+								<div class="gis_result_cont_top">
+									<a href="javascript:void(0);" class="btn_open_simp"><strong>성남고</strong>등학교 야구장</a>
+									<span class="gis_result_fac">고등학교</span>
+								</div>
+								<p>
+									서울 동작구 대방동길 74
+								</p>
+							</li>
+						</ul>		
+						<button type="button" class="btn_result">더보기</button>							
+					</div>
+					<!-- //1-2-1 검색결과 있을시 -->
+
+					<!-- 1-2-2 검색결과 없을시 [D] active 클래스 추가시 display됨 -->
+					<div class="gis_m_none">
+						검색결과가 없습니다.
+					</div>		
+					<!-- //1-2-2 검색결과 없을시 [D] active 클래스 추가시 display됨 -->		
+
+				</div>
+				<!-- //1-2 검색결과 -->		
+			</div>		
+
+		</div>		
+		<!-- //content -->	
+	
+		<!-- 지도 영역 관리 Bar -->
+		<div id="gis_btn_wrap">		
+			<ul class="gis_btn">
+				<li>
+					<div class="gis_top_btn num">12</div>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="gis_top_btn mylct"><span class="blind">내 위치</span></a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="gis_top_btn plus"><span class="blind">확대</span></a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="gis_top_btn minus"><span class="blind">축소</span></a>
+				</li>					
+		        <!-- [D] 클릭시 li.on 클래스 추가 하위메뉴 활성화 -->
+				<li>
+					<a href="javascript:void(0);" class="gis_top_btn guide"><span class="blind">주변</span></a>
+					<ul>
+						<!-- [D] 클릭시 li.on 클래스 추가 활성화 -->
+						<li><a href="javascript:void(0);" class="police"><span class="blind">경찰서</span></a></li>
+						<li><a href="javascript:void(0);" class="fire"><span class="blind">소방서</span></a></li>
+						<li><a href="javascript:void(0);" class="hospital"><span class="blind">병원</span></a></li>
+						<li><a href="javascript:void(0);" class="temporary"><span class="blind">이재민임시주거시설</span></a></li>
+						<li><a href="javascript:void(0);" class="disaster"><span class="blind">재난대피시설</span></a></li>
+					</ul>
+				</li>				
+			</ul>	
+		</div>
+		<!-- //지도 영역 관리 Bar -->
+		
+		<!-- 일반/위성 -->
+		<div class="gis_sate">
+			<ul>
+				<!-- [D] on 클래스 추가시 활성화 -->
+				<li class="on">
+					<a href="javascript:void(0);">일반</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">위성</a>
+				</li>				
+			</ul>	
+		</div>
+		<!-- //일반/위성 -->	
+
+		<!-- 마커1 [D] on 클래스시 활성화, gis_small_open 클래스, open-gis-small-pop 매칭시 팝업 오픈 / normal: 일반마커, n01~n15 : 가 ~ 까 가나다순 -->
+		<div class="gis_map_marker_area normal on gis_small_open" open-gis-small-pop="pop_small01" style="top: 100px; left: 200px;">
+			<div class="gis_map_marker"></div>		
+		</div>
+
+		<div class="gis_map_marker_area normal gis_small_open" open-gis-small-pop="pop_small01" style="top: 200px; left: 200px;">
+			<div class="gis_map_marker"></div>		
+		</div>
+		
+		<div class="gis_map_marker_area n01 gis_small_open" open-gis-small-pop="pop_small01" style="top: 100px; left: 100px;">
+			<div class="gis_map_marker"><span class="blind">가</span></div>				
+		</div>
+		
+		<div class="gis_map_marker_area n02 gis_small_open" open-gis-small-pop="pop_small01" style="top: 140px; left: 100px;">
+			<div class="gis_map_marker"><span class="blind">나</span></div>		
+		</div>
+		
+		<div class="gis_map_marker_area n03 gis_small_open" open-gis-small-pop="pop_small01" style="top: 180px; left: 100px;">
+			<div class="gis_map_marker"><span class="blind">다</span></div>		
+		</div>
+		
+		<div class="gis_map_marker_area n04 gis_small_open" open-gis-small-pop="pop_small01" style="top: 220px; left: 100px;">
+			<div class="gis_map_marker"><span class="blind">라</span></div>		
+		</div>
+		
+		<div class="gis_map_marker_area n05 gis_small_open" open-gis-small-pop="pop_small01" style="top: 260px; left: 100px;">
+			<div class="gis_map_marker"><span class="blind">마</span></div>		
+		</div>
+		
+		<div class="gis_map_marker_area n06 gis_small_open" open-gis-small-pop="pop_small01" style="top: 300px; left: 100px;">
+			<div class="gis_map_marker"><span class="blind">바</span></div>		
+		</div>
+		
+		<div class="gis_map_marker_area n07 gis_small_open" open-gis-small-pop="pop_small01" style="top: 340px; left: 100px;">
+			<div class="gis_map_marker"><span class="blind">사</span></div>		
+		</div>
+		
+		<div class="gis_map_marker_area n08 gis_small_open" open-gis-small-pop="pop_small01" style="top: 380px; left: 100px;">
+			<div class="gis_map_marker"><span class="blind">아</span></div>		
+		</div>
+		
+		<div class="gis_map_marker_area n09 gis_small_open" open-gis-small-pop="pop_small01" style="top: 420px; left: 100px;">
+			<div class="gis_map_marker"><span class="blind">자</span></div>		
+		</div>
+		
+		<div class="gis_map_marker_area n10 gis_small_open" open-gis-small-pop="pop_small01" style="top: 460px; left: 100px;">
+			<div class="gis_map_marker"><span class="blind">차</span></div>		
+		</div>
+		
+		<div class="gis_map_marker_area n11 gis_small_open" open-gis-small-pop="pop_small01" style="top: 500px; left: 100px;">
+			<div class="gis_map_marker"><span class="blind">카</span></div>		
+		</div>
+		
+		<div class="gis_map_marker_area n12 gis_small_open" open-gis-small-pop="pop_small01" style="top: 540px; left: 100px;">
+			<div class="gis_map_marker"><span class="blind">타</span></div>		
+		</div>
+		
+		<div class="gis_map_marker_area n13 gis_small_open" open-gis-small-pop="pop_small01" style="top: 580px; left: 100px;">
+			<div class="gis_map_marker"><span class="blind">파</span></div>		
+		</div>		
+		
+		<div class="gis_map_marker_area n14 gis_small_open" open-gis-small-pop="pop_small01" style="top: 620px; left: 100px;">
+			<div class="gis_map_marker"><span class="blind">하</span></div>		
+		</div>		
+		
+		<div class="gis_map_marker_area n15 gis_small_open" open-gis-small-pop="pop_small01" style="top: 250px; left: 200px;">
+			<div class="gis_map_marker"><span class="blind">유치원</span></div>		
+		</div>		
+
+		<div class="gis_map_marker_area n16 gis_small_open" open-gis-small-pop="pop_small01" style="top: 300px; left: 200px;">
+			<div class="gis_map_marker"><span class="blind">초등학교</span></div>		
+		</div>		
+
+		<div class="gis_map_marker_area n17 gis_small_open" open-gis-small-pop="pop_small01" style="top: 350px; left: 200px;">
+			<div class="gis_map_marker"><span class="blind">중학교</span></div>		
+		</div>		
+
+		<div class="gis_map_marker_area n18 gis_small_open" open-gis-small-pop="pop_small01" style="top: 400px; left: 200px;">
+			<div class="gis_map_marker"><span class="blind">고등학교</span></div>		
+		</div>		
+
+		<div class="gis_map_marker_area n19 gis_small_open" open-gis-small-pop="pop_small01" style="top: 450px; left: 200px;">
+			<div class="gis_map_marker"><span class="blind">대학교</span></div>		
+		</div>	
+
+		<div class="gis_map_marker_area n20 gis_small_open" open-gis-small-pop="pop_small01" style="top: 500px; left: 200px;">
+			<div class="gis_map_marker"><span class="blind">기타학교</span></div>		
+		</div>		
+
+		<div class="gis_map_marker_area n21 gis_small_open" open-gis-small-pop="pop_small01" style="top: 550px; left: 200px;">
+			<div class="gis_map_marker"><span class="blind">학력인정</span></div>		
+		</div>		
+
+		<div class="gis_map_marker_area n22 gis_small_open" open-gis-small-pop="pop_small01" style="top: 600px; left: 200px;">
+			<div class="gis_map_marker"><span class="blind">부속기관</span></div>		
+		</div>		
+		<!-- 마커 -->
+		
+		<!-- 주변 팝업 : 삭제 -->
+		<!-- <section class="gis_pop bottom pop_02">	
+			
+			<div class="gis_info_facility">					
+				<h3>주변</h3>
+				<ul>
+					<li><a href="javascript:void(0);" class="police">경찰서</a></li>
+					<li><a href="javascript:void(0);" class="fire">소방서</a></li>
+					<li><a href="javascript:void(0);" class="hospital">병원</a></li>
+					<li><a href="javascript:void(0);" class="temporary">이재민<br>임시주거시설</a></li>
+					<li><a href="javascript:void(0);" class="disaster">재난대피<br>시설</a></li>
+				</ul>
+			</div>
+			<a href="javascript:void(0);" class="closed"><span class="blind">닫기</span></a>	
+
+		</section> -->
+		<!-- //주변 팝업 -->
+
+		<!-- 요약정보 small 팝업 [D] open-gis-pop 매칭시 팝업 오픈, on 클래스 추가시 활성화 -->
+		<section class="gis_pop small pop_small01">
+
+			<div class="gis_pop_top">
+				<h3><a href="javascript:void(0);" class="gis_open" open-gis-pop="pop_01">성남고등학교</a></h3>
+				<span>고등학교</span>
+				<p>[06946]서울특별시 동작구 대방동길 74 시 동작구 대방동길 74</p>
+			</div>
+			<a href="javascript:void(0);" class="close"><span class="blind">닫기</span></a>	
+
+		</section>
+		<!--//요약정보 small 팝업 -->
+		
+		<!-- 요약 정보 Full 팝업 -->
+		<section class="gis_pop full pop_01">		
+
+			<div class="gis_info_simp_sec">
+				<div class="gis_simp_tl">		
+					<ul>
+						<li>교육시설</li>
+						<li>고등학교</li>
+					</ul>					
+					<h4>성남고등학교</h4>
+					<p>[06946]서울 동작구 대방동길 74</p>
+				</div>
+
+				<div class="gis_simp_detail">	
+					<ul class="gis_simp_detail01">
+						<li>사립</li>
+						<li>개교 1938년</li>
+					</ul>					
+					<p>학생 : 984명 <span>(남 984명, 여 0명)</span></p>
+					<p>교직원 : 000명 <span>(남 00명, 여 00명)</span></p>
+					<ul class="gis_simp_detail02">
+						<li>
+							<span>용지</span>
+							<p>00 개</p>
+						</li>
+						<li>
+							<span>건물 수</span>
+							<p>00 개</p>
+						</li>
+					</ul>
+				</div>
+
+				<div class="gis_info_fac_list">
+					<h5>
+						근접 생활안전시설 <button type="button" class="tool_m"><span class="blind">툴팁보기</span></button>
+						<span class="tooltip">
+							해당 시설의 1.5km 이내 근접한 생활안전시설이 존재하지 않을 경우 표시되지 않습니다. 
+							<button type="button">닫기</button>
+						</span>
+					</h5>
+					<ul>
+						<!-- [D] on 클래스시 활성화 -->
+						<li>
+							<button type="button" class="police">
+								<span>경찰서</span>
+								<span>80m</span>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="fire">
+								<span>소방서</span>
+								<span>1.2km</span>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="hospital">
+								<span>병원</span>
+								<span>521m</span>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="temporary">
+								<span>이재민임시<br>주거시설</span>
+								<span>0m</span>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="disaster">
+								<span>재난대피<br>시설</span>
+								<span>15m</span>
+							</button>
+						</li>
+					</ul>
+				</div>
+
+				<div class="gis_simp_state">
+					<div>
+						<h5>
+							안정등급 현황
+							<span>(단위 : %)</span>
+						</h5>
+						<!-- 차트 영역 -->
+						<div class="chart_area"></div>
+					</div>
+					<div>
+						<h5>
+							건물 노후도
+							<span>(단위 : 건)</span>
+						</h5>
+						<!-- 차트 영역 -->
+						<div class="chart_area"></div>
+					</div>
+				</div>
+
+				<a href="javascript:void(0);" class="closed"><span class="blind">닫기</span></a>		
+			</div>	
+
+		</section>
+		<!-- //요약 정보 Full 팝업 -->
+		
+		<!-- GNB modal layer -->	
+		<div class="gis_modal"></div>
+		<!-- //GNB modal layer -->
+	
+		<!-- 지도 영역 -->
+		<div id="gis_map_area">	
+			<img src="../static/images/gis/temp/temp_map.png" alt="지도 샘플" style="width: 100%; height: 100%;">
+		</div>
+		<!-- //지도 영역 -->
+		
+	</div>
+	<!--// #WRAP -->
+	
+</body>
+</html>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <defs>
+        <clipPath id="2h7sigfpca">
+            <path data-name="사각형 3148" style="fill:none" d="M0 0h42v50H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="그룹 18097" style="clip-path:url(#2h7sigfpca)" transform="translate(9 5)">
+        <path data-name="패스 64680" d="M30.021 3.267h7.5A3.526 3.526 0 0 1 41 6.836v38.595A3.526 3.526 0 0 1 37.519 49H4.48A3.525 3.525 0 0 1 1 45.431V6.836a3.525 3.525 0 0 1 3.48-3.569h7.5" style="stroke-miterlimit:10;stroke:#1c78bf;stroke-width:2px;fill:none"/>
+        <path data-name="패스 64681" d="M26.91 6.354H15.091c-1.891 0-3.424-1.847-3.424-4.124A1.14 1.14 0 0 1 12.688 1h16.625a1.14 1.14 0 0 1 1.021 1.23c0 2.277-1.534 4.124-3.424 4.124z" style="stroke-linecap:round;stroke-miterlimit:10;stroke:#1c78bf;stroke-width:2px;fill:none"/>
+        <path data-name="선 176" transform="translate(20.368 16.063)" style="stroke-linecap:round;stroke-miterlimit:10;stroke:#1c78bf;stroke-width:2px;fill:none" d="M0 0h14"/>
+        <path data-name="선 177" transform="translate(20.368 20.647)" style="stroke-linecap:round;stroke-miterlimit:10;stroke:#1c78bf;stroke-width:2px;fill:none" d="M0 0h8.55"/>
+        <path data-name="패스 64682" d="m15.5 15.922-4.871 4.815L7.5 17.644" style="stroke-linejoin:round;stroke-linecap:round;stroke:#1c78bf;stroke-width:2px;fill:none"/>
+        <path data-name="선 178" transform="translate(20.368 31.036)" style="stroke-linecap:round;stroke-miterlimit:10;stroke:#1c78bf;stroke-width:2px;fill:none" d="M0 0h14"/>
+        <path data-name="선 179" transform="translate(20.368 35.62)" style="stroke-linecap:round;stroke-miterlimit:10;stroke:#1c78bf;stroke-width:2px;fill:none" d="M0 0h8.55"/>
+        <path data-name="패스 64683" d="m15.5 30.895-4.871 4.815L7.5 32.617" style="stroke-linejoin:round;stroke-linecap:round;stroke:#1c78bf;stroke-width:2px;fill:none"/>
+    </g>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <style>
+      .cls-1, .cls-4, .cls-5, .cls-6 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        opacity: 0;
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-4, .cls-5, .cls-6 {
+        stroke: #1c78bf;
+        stroke-width: 2px;
+      }
+
+      .cls-4, .cls-5 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-5, .cls-6 {
+        stroke-linecap: round;
+      }
+
+      .cls-6 {
+        stroke-linejoin: round;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="사각형_5153" data-name="사각형 5153" class="cls-1" width="42" height="50"/>
+    </clipPath>
+  </defs>
+  <g id="icon_tab_statis_over_07" transform="translate(-668 -666)">
+    <rect id="area" class="cls-2" width="60" height="60" transform="translate(668 666)"/>
+    <g id="icon" transform="translate(677 671)">
+      <g id="그룹_18394" data-name="그룹 18394" class="cls-3">
+        <path id="패스_68582" data-name="패스 68582" class="cls-4" d="M30.021,3.267h7.5A3.526,3.526,0,0,1,41,6.836V45.431A3.526,3.526,0,0,1,37.519,49H4.48A3.525,3.525,0,0,1,1,45.431V6.836A3.525,3.525,0,0,1,4.48,3.267h7.5"/>
+        <path id="패스_68583" data-name="패스 68583" class="cls-5" d="M26.91,6.354H15.091c-1.891,0-3.424-1.847-3.424-4.124A1.14,1.14,0,0,1,12.688,1H29.313a1.14,1.14,0,0,1,1.021,1.23C30.334,4.507,28.8,6.354,26.91,6.354Z"/>
+        <path id="패스_68584" data-name="패스 68584" class="cls-5" d="M28.777,35.736a5.717,5.717,0,1,1,5.556-5.714A5.642,5.642,0,0,1,28.777,35.736Z"/>
+        <path id="패스_68585" data-name="패스 68585" class="cls-6" d="M31.556,35.341v5.714l-2.778-2.017L26,41.055V35.341"/>
+        <line id="선_561" data-name="선 561" class="cls-5" x2="26.667" transform="translate(7.667 13.62)"/>
+        <line id="선_562" data-name="선 562" class="cls-5" x2="16.287" transform="translate(7.667 19)"/>
+        <line id="선_563" data-name="선 563" class="cls-5" x2="8.889" transform="translate(7.667 33.832)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,290 @@
+@charset "utf-8";
+
+
+/* ------------------------------ [ Font ] ------------------------------------------------------------------------------------------ */
+
+/* 한글/영어 font : Pretendard  */
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src:local(※),url('../font/Pretendard-ExtraBold.eot');
+	src:local(※),url('../font/Pretendard-ExtraBold.eot?#iefix') format("embedded-opentype"),
+		url('../font/Pretendard-ExtraBold.woff2') format('woff2'),
+		url('../font/Pretendard-ExtraBold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src:local(※),url('../font/Pretendard-Bold.eot');
+	src:local(※),url('../font/Pretendard-Bold.eot?#iefix') format("embedded-opentype"),
+		url('../font/Pretendard-Bold.woff2') format('woff2'),
+		url('../font/Pretendard-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 600;
+	font-display: swap;
+	src:local(※),url('../font/Pretendard-SemiBold.eot');
+	src:local(※),url('../font/Pretendard-SemiBold.eot?#iefix') format("embedded-opentype"),
+		url('../font/Pretendard-SemiBold.woff2') format('woff2'),
+		url('../font/Pretendard-SemiBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-display: swap;
+    src:local(※),url('../font/Pretendard-Medium.eot');
+    src:local(※),url('../font/Pretendard-Medium.eot?#iefix') format("embedded-opentype"),
+        url('../font/Pretendard-Medium.woff2') format('woff2'),
+        url('../font/Pretendard-Medium.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src:local(※),url('../font/Pretendard-Regular.eot');
+	src:local(※),url('../font/Pretendard-Regular.eot?#iefix') format("embedded-opentype"),
+		url('../font/Pretendard-Regular.woff2') format('woff2'),
+		url('../font/Pretendard-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src:local(※),url('../font/Pretendard-Light.eot');
+	src:local(※),url('../font/Pretendard-Light.eot?#iefix') format("embedded-opentype"),
+		url('../font/Pretendard-Light.woff2') format('woff2'),
+		url('../font/Pretendard-Light.woff') format('woff');
+}
+
+
+/* Roboto 웹폰트 */
+@font-face {  
+    font-family: 'Roboto';  
+    font-style: normal;  
+    font-weight: 100;
+    src: url("../font/Roboto-Thin.woff2") format('woff2'),
+         url("../font/Roboto-Thin.woff") format('woff'),
+         url("../font/Roboto-Thin.otf") format('opentype');
+}
+@font-face {  
+    font-family: 'Roboto';  
+    font-style: normal;  
+    font-weight: 300;
+	src: url("../font/Roboto-Light.woff2") format('woff2'),
+        url("../font/Roboto-Light.woff") format('woff'),
+        url("../font/Roboto-Light.otf") format('opentype');
+}
+@font-face {   
+    font-family: 'Roboto';   
+    font-style: normal;   
+    font-weight: 400;
+    src: url("../font/Roboto-Regular.woff2") format('woff2'),
+        url("../font/Roboto-Regular.woff") format('woff'),
+        url("../font/Roboto-Regular.otf") format('opentype');
+}
+@font-face {   
+    font-family: 'Roboto';   
+    font-style: normal;   
+    font-weight: 500;
+    src: url("../font/Roboto-Medium.woff2") format('woff2'),
+        url("../font/Roboto-Medium.woff") format('woff'),
+        url("../font/Roboto-Medium.otf") format('opentype'); 
+}
+@font-face {   
+    font-family: 'Roboto';   
+    font-style: normal;   
+    font-weight: 600;
+    src: url("../font/Roboto-Bold.woff2") format('woff2'),
+        url("../font/Roboto-Bold.woff") format('woff'),
+        url("../font/Roboto-Bold.otf") format('opentype'); 
+}
+@font-face {  
+    font-family: 'Roboto';   
+    font-style: normal;   
+    font-weight: 700;
+    src: url("../font/Roboto-Black.woff2") format('woff2'),
+        url("../font/Roboto-Black.woff") format('woff'),
+        url("../font/Roboto-Black.otf") format('opentype'); 
+}
+
+
+
+
+/* ------------------------------ [ Layout Reset ] ------------------------------------------------------------------------------------------ */
+/* Reset */
+
+html { font-size:62.5%; height: 100%; }
+
+body { font-size: 1.6rem; font-weight: 500; height: 100%; margin:0; padding:0; -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:none; -moz-osx-font-smoothing:grayscale;}
+
+div,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+abbr,address,big,cite,code,del,dfn,font,figure,figcaption,img,ins,q,s,samp,small,strike,sub,sup,tt,var,
+b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
+	color:#555;
+	margin:0;
+	padding:0;
+	letter-spacing: -0.045rem;
+	box-sizing: border-box;
+	font-size: 1.6rem; 
+	font-weight: 500;
+	font-family: 'Pretendard',sans-serif;
+	word-break: keep-all;
+	box-sizing: border-box;
+}
+*, *:before, *:after {box-sizing:border-box}
+button, textarea {
+	-webkit-text-size-adjust:none;
+	/* -webkit-appearance:none; */
+	-webkit-border-radius:0;
+	border:none;
+	border-radius:0;
+	margin:0;
+	padding:0;
+	font-size: 1.6rem; 
+	font-weight: 500;
+	font-family: 'Pretendard',sans-serif;	 
+}
+button, a {
+	background:none;
+	border:none;
+	color:inherit;
+	cursor:pointer;
+}
+button:focus-visible, a:focus-visible, input:focus-visible {
+	outline: .2rem solid #000;
+}
+button:focus:not(:focus-visible), a:focus:not(:focus-visible), input:focus:not(:focus-visible) {
+	outline: none;
+} 
+input:focus {
+	outline: none;
+}
+button:disabled, a:disabled {
+	cursor:default;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+	table-layout:fixed;
+	width:100%;
+}
+select {
+	background-color:transparent;
+	border:none;
+	letter-spacing:inherit;
+	appearance:none;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	-webkit-font-smoothing:antialiased;
+	border:none;
+	border-radius:0;
+	margin:0;
+	padding:0;
+	font-size: 1.6rem;
+	font-weight: 500;
+	color: #555;
+	font-family: 'Pretendard',sans-serif;
+}
+select::-ms-expand {
+	display:none; /* 화살표 없애기 for IE10, 11 */
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style:normal;
+}
+ul,li,ol {
+	list-style-type:none;
+}
+hr {
+	display:none;
+}
+i {
+	font-style: normal;
+}
+legend,caption {
+	overflow:hidden;
+	visibility:hidden;
+	/* position: absolute; */
+	font-size:0;
+	line-height:0;
+	height:0;
+	z-index:-1;
+}
+a,a:active,input:active,button:active,select:active,label:active,
+a:focus,input:focus,button:focus,select:focus,label:focus {
+	text-decoration:none;
+	/* outline:none; */
+}
+a,span,em,strong {
+	color:inherit;
+	/* font:inherit; */
+	border:0;
+	margin:0;
+	padding:0;
+	-webkit-font-smoothing:antialiased;
+}
+a,input,button,select,label {
+	-webkit-tap-highlight-color:transparent;
+}
+strong {font-weight:600;}
+.blind {
+	overflow:hidden;
+	font-size:0;
+	line-height:0;
+	position:absolute;
+	height:0;
+	width:0;
+	color: #000;
+	background-color: #fff;
+}
+
+iframe { border: 0; }
+
+/* input 공통 */
+input[type='text']::-ms-clear {display:none}
+input[type='search']::-webkit-search-cancel-button {display:none}
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='tel'],
+input[type='search'],
+input[type='number'],
+input[type='file']
+input[type='date'],
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	/* transition:background-color 5000s ease-in-out 0s;
+	-webkit-transition:background-color 9999s ease-out; */
+	-webkit-box-shadow:0 0 0 0 white inset;
+	font:1.6rem 'Pretendard',sans-serif;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+.input_txt::-webkit-input-placeholder,
+.input_txt::placeholder { color: #aaa}
+
+input[readonly='readonly'], input[readonly], input:read-only { background-color: #f8f8f8; }
+input[disabled='disabled'], input[disabled], input:disabled { background-color: #f8f8f8; }
+input[readonly='readonly']:hover, input[readonly]:hover,
+input[readonly='readonly']:focus, input[readonly]:focus,
+input[type='text']:disabled:hover, input[type='password']:disabled:hover,
+input[type='text']:disabled:focus, input[type='password']:disabled:focus { border-color: #111; }
+
+/* ------------------------------ 스와이프 리셋 ------------------------------------------------------------ */
+.swiper,
+.swiper-container .swiper-wrapper {z-index:0; box-sizing: border-box;}
+.swiper-button-next,
+.swiper-button-prev {opacity:1;margin:0}
+.swiper-button-prev {left:0}
+.swiper-button-next {right:0}
+.swiper-button-next:after,
+.swiper-button-prev:after {display:none;font-size:0;line-height:0;height:0;width:0}

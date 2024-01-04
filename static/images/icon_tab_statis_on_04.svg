@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <defs>
+        <clipPath id="v04fb6uioa">
+            <path data-name="사각형 3185" style="fill:none" d="M0 0h46v46H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="그룹 18115">
+        <g data-name="그룹 18114" style="clip-path:url(#v04fb6uioa)" transform="translate(7 7)">
+            <path data-name="사각형 3182" transform="translate(1 36.2)" style="stroke:#999;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 0h14.667v8.8H0z"/>
+            <path data-name="사각형 3183" transform="translate(15.667 36.2)" style="stroke:#999;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 0h14.667v8.8H0z"/>
+            <path data-name="사각형 3184" transform="translate(30.333 36.2)" style="stroke:#999;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 0h14.667v8.8H0z"/>
+        </g>
+    </g>
+    <path data-name="사각형 3186" transform="translate(15.333 34.4)" style="stroke:#999;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 0h14.667v8.8H0z"/>
+    <path data-name="사각형 3187" transform="translate(30 34.4)" style="stroke:#999;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 0h14.667v8.8H0z"/>
+    <g data-name="그룹 18117">
+        <g data-name="그룹 18116" style="clip-path:url(#v04fb6uioa)" transform="translate(7 7)">
+            <path data-name="사각형 3188" transform="translate(1 18.6)" style="stroke:#999;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 0h14.667v8.8H0z"/>
+        </g>
+    </g>
+    <path data-name="사각형 3190" transform="translate(22.667 25.6)" style="stroke:#999;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 0h14.667v8.8H0z"/>
+    <path data-name="패스 64698" d="M8.333 18.6V9.8H23v8.88z" style="stroke:#999;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" transform="translate(7 7)"/>
+    <g data-name="그룹 18119">
+        <g data-name="그룹 18118" style="clip-path:url(#v04fb6uioa)" transform="translate(7 7)">
+            <path data-name="사각형 3191" transform="translate(1 9.8)" style="stroke:#999;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 0h7.333v8.8H0z"/>
+            <path data-name="사각형 3192" transform="translate(1 1)" style="stroke:#999;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 0h14.667v8.8H0z"/>
+            <path data-name="사각형 3193" transform="translate(1 27.4)" style="stroke:#999;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 0h7.333v8.8H0z"/>
+            <path data-name="사각형 3194" transform="translate(37.667 27.4)" style="stroke:#999;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 0h7.333v8.8H0z"/>
+            <path data-name="사각형 3195" transform="translate(30.333 1)" style="stroke:#999;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 0h14.667v8.8H0z"/>
+        </g>
+    </g>
+</svg>

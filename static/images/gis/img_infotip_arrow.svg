@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="14" viewBox="0 0 24 14">
+    <defs>
+        <clipPath id="1f9r2qzoya">
+            <path transform="translate(1405 474)" style="stroke:#707070;fill:#fff" d="M0 0h24v14H0z"/>
+        </clipPath>
+        <filter id="68qdlnzoob" x="-3.5" y="-7.5" width="31" height="25" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur stdDeviation="2.5" result="blur"/>
+            <feFlood flood-opacity=".102"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g style="clip-path:url(#1f9r2qzoya)">
+        <g style="filter:url(#68qdlnzoob)" transform="translate(-1405 -474)">
+            <path data-name="arrow" d="m8 0 8 10H0z" transform="rotate(180 712.5 242)" style="fill:#fff"/>
+        </g>
+    </g>
+</svg>

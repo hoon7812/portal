@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="144" height="72" viewBox="0 0 144 72">
+    <defs>
+        <clipPath id="qbngo6seba">
+            <path transform="translate(586 1241)" style="fill:#fff" d="M0 0h144v72H0z"/>
+        </clipPath>
+        <clipPath id="412kyxa5pc">
+            <path data-name="사각형 3225" style="fill:none" d="M0 0h40v36H0z"/>
+        </clipPath>
+        <filter id="7i1f36uimb" x="4" y="4" width="142" height="142" filterUnits="userSpaceOnUse">
+            <feOffset dx="3" dy="3"/>
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feFlood flood-opacity=".149"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g transform="translate(-522 -1233)" style="clip-path:url(#qbngo6seba)">
+        <circle cx="72" cy="72" r="72" transform="translate(522 1233)" style="fill:#fce5eb"/>
+        <g style="filter:url(#7i1f36uimb)">
+            <circle data-name="bg_circle_top" cx="62" cy="62" r="62" transform="translate(532 1243)" style="fill:#ea507c"/>
+        </g>
+        <g data-name="icon">
+            <g data-name="그룹 18145" style="clip-path:url(#412kyxa5pc)" transform="translate(574 1260)">
+                <path data-name="패스 64945" d="M23.917 24.28v-1.9a1.748 1.748 0 0 1 1.731-1.761h5.746a1.748 1.748 0 0 1 1.731 1.761v1.9" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+                <path data-name="패스 64946" d="M3.138 24.383V3.18A2.165 2.165 0 0 1 5.284 1h29.433a2.164 2.164 0 0 1 2.145 2.18v21.2" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+                <path data-name="선 216" transform="translate(1 24.697)" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 0h38"/>
+                <path data-name="선 217" transform="translate(8.274 24.997)" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 10.003 5.755 0"/>
+                <path data-name="선 218" transform="translate(25.971 24.997)" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="m0 0 5.755 10.003"/>
+                <path data-name="선 219" transform="translate(10.865 31.036)" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="M18.27 0H0"/>
+                <path data-name="패스 64947" d="M15.182 16.79H13.5l-.847-2.466H9.707l-.86 2.466H7.26l3.246-8.981H11.9zm-5.027-3.8H12.2l-.593-1.831q-.158-.448-.249-.754t-.188-.629a8.56 8.56 0 0 1-.181.637c-.032.1-.067.214-.1.33s-.083.253-.139.411z" style="fill:#fff"/>
+                <path data-name="패스 64948" d="M17.287 7.808h3.392q2.749 0 2.749 2.193v.261a2.513 2.513 0 0 1-.066.579 1.6 1.6 0 0 1-.23.524 1.576 1.576 0 0 1-.43.423 2.084 2.084 0 0 1-.655.28 2.257 2.257 0 0 1 1.291.617 1.934 1.934 0 0 1 .49 1.426v.312a2.25 2.25 0 0 1-.678 1.737 3 3 0 0 1-2.1.629h-3.763zm1.538 1.321v2.342h1.139q.448 0 .8-.026a1.662 1.662 0 0 0 .594-.136.8.8 0 0 0 .364-.343 1.381 1.381 0 0 0 .127-.654v-.225a.755.755 0 0 0-.43-.765 3.723 3.723 0 0 0-1.412-.193zm0 6.34h1.4a7.723 7.723 0 0 0 .891-.044 1.777 1.777 0 0 0 .63-.174.844.844 0 0 0 .369-.367 1.4 1.4 0 0 0 .121-.636v-.274a1.287 1.287 0 0 0-.115-.579.865.865 0 0 0-.381-.373 2.019 2.019 0 0 0-.7-.2 8.361 8.361 0 0 0-1.04-.056h-1.175z" style="fill:#fff"/>
+                <path data-name="패스 64949" d="M29.53 7.672a5.382 5.382 0 0 1 1.629.224 4.134 4.134 0 0 1 1.375.772L31.7 9.889a2.754 2.754 0 0 0-1.054-.6 4.207 4.207 0 0 0-1.114-.143 2.516 2.516 0 0 0-.763.118 1.541 1.541 0 0 0-.667.43 2.3 2.3 0 0 0-.472.847 4.342 4.342 0 0 0-.182 1.37v.922a3.77 3.77 0 0 0 .17 1.208 2.266 2.266 0 0 0 .454.81 1.731 1.731 0 0 0 .66.455 2.2 2.2 0 0 0 .788.143 4.287 4.287 0 0 0 1.241-.193 2.649 2.649 0 0 0 1.157-.742l.824 1.222a3.375 3.375 0 0 1-.818.629 4.922 4.922 0 0 1-.854.361 4.021 4.021 0 0 1-.836.167 8.205 8.205 0 0 1-.775.038 4.364 4.364 0 0 1-1.363-.212 3 3 0 0 1-1.138-.672 3.293 3.293 0 0 1-.782-1.171 4.54 4.54 0 0 1-.29-1.72v-1.611a4.789 4.789 0 0 1 .284-1.737 3.341 3.341 0 0 1 .78-1.208 3.046 3.046 0 0 1 1.157-.7 4.38 4.38 0 0 1 1.423-.224" style="fill:#fff"/>
+            </g>
+        </g>
+    </g>
+</svg>

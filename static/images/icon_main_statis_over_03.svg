@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+    <defs>
+        <clipPath id="t06tz63eia">
+            <path data-name="사각형 3099" style="fill:none" d="M0 0h34v46H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="그룹 18250">
+        <g data-name="그룹 18249" style="clip-path:url(#t06tz63eia)" transform="translate(7 1)">
+            <path data-name="패스 68220" d="M7.058 28.045 1 40.287l7.377-2.508L10.939 45l6.036-12.24" style="stroke-linecap:round;stroke-linejoin:round;stroke:#fff;stroke-width:2px;fill:none"/>
+            <path data-name="패스 68221" d="M26.913 28.021 33 40.244l-7.383-2.49-2.543 7.227-6.1-12.221" style="stroke-linecap:round;stroke-linejoin:round;stroke:#fff;stroke-width:2px;fill:none"/>
+            <path data-name="패스 68222" d="M30.752 10.937c.237-2.347 0-2.582-2.371-3.639-1.66-.7-1.541-.821-2.253-2.464C25.18 2.721 24.7 2.6 22.216 2.956c-1.778.235-1.9 0-3.319-1.057-1.779-1.291-2.253-1.173-4.268.235-1.423 1.057-1.542.939-3.32.822-2.371-.235-2.609 0-3.675 2.344-.711 1.644-.83 1.526-2.489 2.23-2.135.939-2.253 1.408-1.9 3.873.237 1.761 0 1.878-1.067 3.286-1.3 1.761-1.186 2.23.237 4.226 1.067 1.408.948 1.526.83 3.286-.238 2.348 0 2.582 2.371 3.639 1.659.7 1.541.821 2.252 2.464.949 2.113 1.423 2.23 3.913 1.878 1.778-.235 1.9 0 3.319 1.056 1.778 1.291 2.252 1.174 4.267-.234 1.423-1.057 1.542-.94 3.32-.822 2.371.235 2.608 0 3.675-2.347.712-1.644.83-1.526 2.49-2.23 2.134-.939 2.253-1.409 1.9-3.873-.237-1.761 0-1.878 1.067-3.287 1.3-1.76 1.185-2.23-.237-4.225-1.067-1.405-.949-1.52-.83-3.283z" style="stroke-miterlimit:10;stroke:#fff;stroke-width:2px;fill:none"/>
+            <ellipse data-name="타원 24" cx="9.333" cy="9.24" rx="9.333" ry="9.24" transform="translate(7.667 7.33)" style="stroke-miterlimit:10;stroke:#fff;stroke-width:2px;fill:none"/>
+            <path data-name="패스 68223" d="m12.864 16.336 2.9 2.964 5.369-5.46" style="stroke-linecap:round;stroke-linejoin:round;stroke:#fff;stroke-width:2px;fill:none"/>
+        </g>
+    </g>
+</svg>

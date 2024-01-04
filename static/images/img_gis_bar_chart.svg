@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="224" viewBox="0 0 500 224">
+    <g data-name="1">
+        <path transform="translate(134 8)" style="fill:#eee" d="M0 0h280v32H0z"/>
+        <path transform="translate(134 8)" style="fill:#0eb946" d="M0 0h20v32H0z"/>
+        <path transform="translate(133)" style="fill:#ccc" d="M0 0h1v48H0z"/>
+        <text transform="translate(121 30)" style="font-size:18px;fill:#111;font-family:Pretendard-Medium,Pretendard;font-weight:500;letter-spacing:-.025em"><tspan x="-91.09" y="0">성남고등학교</tspan></text>
+        <text data-name="내용" transform="translate(426 30)" style="font-family:Pretendard-Bold,Pretendard;font-weight:700;fill:#0b9d3b;font-size:18px"><tspan x="0" y="0">13</tspan></text>
+    </g>
+    <g data-name="2">
+        <path data-name="bar" transform="translate(134 96)" style="fill:#eee" d="M0 0h280v32H0z"/>
+        <path data-name="data" transform="translate(134 96)" style="fill:#4298d3" d="M0 0h160v32H0z"/>
+        <path data-name="line" transform="translate(133 88)" style="fill:#ccc" d="M0 0h1v48H0z"/>
+        <text data-name="내용" transform="translate(121 118)" style="font-size:18px;fill:#111;font-family:Pretendard-Medium,Pretendard;font-weight:500;letter-spacing:-.025em"><tspan x="-75.983" y="0">서울특별시</tspan></text>
+        <text data-name="내용" transform="translate(426 118)" style="fill:#2675b8;font-family:Pretendard-Bold,Pretendard;font-weight:700;font-size:18px"><tspan x="0" y="0">1,569</tspan></text>
+    </g>
+    <g data-name="3">
+        <path data-name="bar" transform="translate(134 184)" style="fill:#eee" d="M0 0h280v32H0z"/>
+        <path data-name="data" transform="translate(134 184)" style="fill:#7876dd" d="M0 0h280v32H0z"/>
+        <path data-name="line" transform="translate(133 176)" style="fill:#ccc" d="M0 0h1v48H0z"/>
+        <text data-name="내용" transform="translate(121 206)" style="font-size:18px;fill:#111;font-family:Pretendard-Medium,Pretendard;font-weight:500;letter-spacing:-.025em"><tspan x="-30.663" y="0">전국</tspan></text>
+        <text data-name="내용" transform="translate(426 206)" style="fill:#5656bd;font-family:Pretendard-Bold,Pretendard;font-weight:700;font-size:18px"><tspan x="0" y="0">4,514</tspan></text>
+    </g>
+</svg>

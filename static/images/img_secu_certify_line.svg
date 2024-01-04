@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="11" viewBox="0 0 920 11">
+    <g transform="translate(-720 -1316)">
+        <path data-name="연도 bar" transform="translate(730 1320)" style="fill:#ddd" d="M0 0h900v3H0z"/>
+        <circle cx="5.5" cy="5.5" r="5.5" transform="translate(720 1316)" style="fill:#ddd"/>
+        <circle cx="5.5" cy="5.5" r="5.5" transform="translate(1629 1316)" style="fill:#ddd"/>
+    </g>
+</svg>

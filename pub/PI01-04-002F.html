@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<link rel="stylesheet" href="../static/css/style.css"><!-- 공통 CSS -->
+	<link rel="stylesheet" href="../static/css/style_m.css"><!-- 모바일 CSS -->
+	<link rel="stylesheet" href="../static/css/style_t.css"><!-- 태블릿 CSS -->
+	<link rel="stylesheet" href="../static/css/swiper-bundle.min.css">
+	<script src="../static/js/ui/jquery-3.6.3.min.js"></script>
+	<script src="../static/js/ui/swiper-bundle.min.js"></script>
+	<script src="../static/js/ui/ui.js"></script><!-- 공통 퍼블리싱UI JS -->
+	<link rel="stylesheet" href="../static/css/datepicker.css">
+	<script src="../static/js/ui/bootstrap-datepicker.js"></script>
+	<script>	
+		$(window).on('load', function () {	
+			// Datepicker
+			$(".startDate").datepicker({
+				dateFormat: 'yy.mm.dd'
+			});	
+
+			$(".endtDate").datepicker({
+				dateFormat: 'yy.mm.dd'	
+			});		
+		});	
+	</script>
+	<title>통합검색</title>
+</head>
+<body>		
+	
+	<!-- #WRAP -->
+	<div id="wrap" class="search_all">
+		<!-- skip navigation -->
+		<nav id="skipnav">
+			<a title="통합검색 바로가기" href="#search_header">통합검색 바로가기</a>
+			<a title="본문 바로가기" href="#container">본문 바로가기</a>
+		</nav>
+		<!-- //skip navigation -->	
+  
+		<!-- #HEADER -->
+		<header>			
+			<div class="header_area">	
+				<div id="search_header">							
+					<h1>
+						<a href="javascript:void(0);"><span class="blind">KEIIS</span></a>
+					</h1>
+					<fieldset>
+						<div class="sel_wrap">
+							<select title="통합검색 구분 선택하기">
+								<option selected="selected">통합검색</option>
+								<option>학교/기관 검색</option>
+								<option>메뉴 검색</option>
+								<option>공지사항</option>
+								<option>안전 캠페인</option>
+								<option>안전 자료실</option>
+								<option>용어사전</option>
+								<option>게시판</option>
+								<option>첨부문서</option>
+								<option>웹페이지</option>
+							</select>
+						</div>
+					
+						<span class="box_ipt">
+							<label for="input_all_search">
+								<!-- input 클릭시 최신 검색어 [D] on 클래스 활성화 -->
+								<input type="text" id="input_all_search" class="input_txt" title="통합 검색하기" value="시설안전" placeholder="">
+							</label>
+							<button type="reset" class="input_del"><span class="blind">검색어 내용 초기화</span></button>
+							<button type="button" class="ico_search"><span class="blind">검색하기</span></button>
+						</span>
+
+						<!-- input 클릭시 최신 검색어 [D] on 클래스 활성화 -->
+						<div class="search_input_list">
+							<ul>
+								<li><a href="javascript:void(0);" class="txt_link">시설안전</a><a href="javascript:void(0);" class="btn_close_x"><span class="blind">삭제</span></a></li>
+								<li><a href="javascript:void(0);" class="txt_link">안전 캠페인</a><a href="javascript:void(0);" class="btn_close_x"><span class="blind">삭제</span></a></li>
+								<li><a href="javascript:void(0);" class="txt_link">교육시설</a><a href="javascript:void(0);" class="btn_close_x"><span class="blind">삭제</span></a></li>
+								<li><a href="javascript:void(0);" class="txt_link">안전점검</a><a href="javascript:void(0);" class="btn_close_x"><span class="blind">삭제</span></a></li>
+								<li><a href="javascript:void(0);" class="txt_link">용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전</a><a href="javascript:void(0);" class="btn_close_x"><span class="blind">삭제</span></a></li>
+							</ul>
+						</div>
+						<!-- //input 클릭시 최신 검색어 -->
+
+					</fieldset>
+				</div>
+			</div>		
+
+			<div class="header_bot_area">				
+				<div class="header_bot">
+
+					<div class="sel_cust">
+						<!-- [D] 클릭시 on 클래스, 옵션 활성화 -->
+						<button type="button">정렬</button>
+						<div class="sel_dropbox">
+							<ul>
+								<!-- [D] on 클래스, hover시 활성화 -->
+								<li class="on">
+									<a href="javascript:void(0);">관련도순</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">최신순</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="sel_cust">
+						<!-- [D] 클릭시 on 클래스, 옵션 활성화 -->
+						<button type="button">기간</button>
+						<div class="sel_dropbox">
+							<ul>
+								<li class="on">
+									<a href="javascript:void(0);">전체</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">1일</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">1주</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">1개월</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">1년</a>
+								</li>
+								<li>
+									<span>직접입력</span>
+									<div class="box_datepicker">
+										<span class="box_ipt">
+											<input type="text" class="input_txt startDate" title="날짜 시작 선택" value="" placeholder="">
+										</span>
+										<span class="date_line">
+										~
+										</span>
+										<span class="box_ipt ">
+											<input type="text" class="input_txt endtDate" title="날짜 끝 선택" value="" placeholder="">
+										</span>
+										<button type="button">적용하기</button>
+									</div>								
+								</li>
+							</ul>
+						</div>
+					</div>					
+					
+					<div class="sel_cust">
+						<!-- [D] 클릭시 on 클래스, 옵션 활성화 -->
+						<button type="button">검색범위</button>
+						<div class="sel_dropbox">
+							<ul>
+								<li class="on">
+									<a href="javascript:void(0);">전체</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">제목</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<span class="option_tl">옵션유지</span>
+
+					<div class="option_state">
+						<ul>
+							<!-- [D] on 클래스 추가시 활성화 -->
+							<li class="on">
+								<a href="javascript:void(0);">꺼짐</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">켜짐</a>
+							</li>				
+						</ul>	
+					</div>	
+					
+				</div>
+			</div>
+		</header>
+		<!-- //#HEADER -->		
+	
+		<!--- #container --->
+		<section id="container">	
+
+			<!-- #contents -->
+			<div id="contents">
+
+				<!------------------- 본문 ------------------->		
+				<!-- LNB-->
+				<div class="srch_lnb_wrap">
+					<ul class="srch_lnb">			
+						<li class="srch_lnb_tl">
+							검색구분
+						</li>			
+						<!-- [D] on 클래스시 활성화 -->
+						<li class="on">
+							<a href="javascript:void(0);">통합검색</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">학교/기관 검색</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">메뉴 검색</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">공지사항</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">안전 캠페인</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">안전 자료실</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">용어사전</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">게시판</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">첨부문서</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">웹페이지</a>
+						</li>
+					</ul>
+					<button type="button" class="btn_lnb"><span class="blind">메뉴 열기</span></button>
+
+				</div>
+				<!-- //LNB -->
+
+				<!-- 컨텐츠 -->
+				<div class="srch_cont">		
+					
+					<div class="srch_all_txt">
+						검색어 <span class="txt_keyword">"시설안전"</span> 에 대한 <span class="txt_all">총 00,000건</span>의 검색결과를 찾았습니다.
+					</div>
+					
+					<!-- 통합검색 메뉴 -->
+					<div class="srch_box">
+						<h3>통합검색 <span>(총 00,000건)</span></h3>
+						<ul>
+							<li>								
+								<a href="#srch_theme">학교/기관 검색 (000건)</a>
+							</li>
+							<li>								
+								<a href="#srch_menu">메뉴 검색 (000건)</a>
+							</li>
+							<li>								
+								<a href="#srch_notice">공지사항 (00건)</a>
+							</li>
+							<li>								
+								<a href="#srch_camp">안전 캠페인 (00건)</a>
+							</li>
+							<li>								
+								<a href="#srch_safe">안전 자료실 (0건)</a>
+							</li>
+							<li>								
+								<a href="#srch_word">용어사전 (00건)</a>
+							</li>
+							<li>								
+								<a href="#srch_board">게시판 (000건)</a>
+							</li>
+							<li>								
+								<a href="#srch_doc">첨부문서 (000건)</a>
+							</li>
+							<li>								
+								<a href="#srch_web">웹페이지 (000건)</a>
+							</li>
+						</ul>
+					</div>
+					<!-- //통합검색 메뉴 -->
+
+					<!-- 바로가기 -->
+					<!-- <div class="quick_link">
+						<ul>
+							<li>
+								<a href="javascript:void(0);" title="새창" target="_blank" class="btn_link">
+									<span class="link_ico">바로가기</span>
+									<span class="tl">000 기관 홈페이지</span>
+									<span class="link">http://www.gjcity.go.kr/index.asp</span>
+								</a>
+								<a href="javascript:void(0);" class="btn_bp" title="새창" target="_blank">상세 현황</a>		
+								<a href="javascript:void(0);" class="btn_bp" title="새창" target="_blank">시설 지도</a>		
+							</li>
+							<li>
+								<a href="javascript:void(0);" title="새창" target="_blank" class="btn_link">
+									<span class="link_ico">바로가기</span>
+									<span class="tl">00000000000000000000000 기관 홈페이지</span>
+									<span class="link">http://www.gjcity.go.kr/indexindexindexindexindexindexindexindexindexindexindexindexindexindexindexindexindexindexindexindexindex.asp</span>
+								</a>
+								<a href="javascript:void(0);" class="btn_bp" title="새창" target="_blank">상세 현황</a>		
+								<a href="javascript:void(0);" class="btn_bp" title="새창" target="_blank">시설 지도</a>		
+							</li>
+						</ul>
+					</div> -->
+					<!-- //바로가기 -->
+
+					<!-- 학교/기관 검색 바로가기 -->
+					<div class="quick_theme" id="srch_theme">
+						<h3>학교/기관 검색<span>(총 00,000건)</span></h3>
+						<ul>
+							<li>
+								<p class="img_area">
+									<img src="../static/images/temp/img_koies.png" alt="KOIES">
+								</p>
+								<div class="info_area">
+									<div class="tl_link">
+										<div class="tl_link_area">
+											<p>OOO 기관 홈페이지홈페이지</p>
+											<a href="javascript:void(0);">(<strong>http://www.gjcity.go.kr/index.asp</strong>)</a>
+										</div>
+										<a href="javascript:void(0);" class="btn_bp" title="새창" target="_blank">상세 현황</a>		
+										<a href="javascript:void(0);" class="btn_bp type02" title="새창" target="_blank">시설 지도</a>		
+									</div>
+									<dl>
+										<dt>주소 :</dt>
+										<dd class="p_txt">											
+											서울특별시 송파구 오금로123길 12 (방이동) 12<br>
+											서울특별시 송파구 방이동 123-23 000기관
+										</dd>
+										<dt>행정구분 :</dt>
+										<dd class="dd_link">
+											서울특별시 송파구
+										</dd>
+										<dt>대표전화 :</dt>
+										<dd class="tel_link">
+											<a href="tel:031-760-2000">031-760-2000</a>
+										</dd>
+									</dl>
+								</div>
+							</li>
+							<li>
+								<p class="img_area">
+									<img src="../static/images/temp/img_koies.png" alt="KOIES">
+								</p>
+								<div class="info_area">
+									<div class="tl_link">
+										<div class="tl_link_area">
+											<p>OOO 기관 홈페이지홈페이지</p>
+											<a href="javascript:void(0);">(<strong>http://www.gjcity.go.kr/index.asp</strong>)</a>
+										</div>
+										<a href="javascript:void(0);" class="btn_bp" title="새창" target="_blank">상세 현황</a>		
+										<a href="javascript:void(0);" class="btn_bp type02" title="새창" target="_blank">시설 지도</a>		
+									</div>
+									<dl>
+										<dt>주소 :</dt>
+										<dd class="p_txt">											
+											서울특별시 송파구 오금로123길 12 (방이동) 12<br>
+											서울특별시 송파구 방이동 123-23 000기관
+										</dd>
+										<dt>행정구분 :</dt>
+										<dd class="dd_link">
+											서울특별시 송파구
+										</dd>
+										<dt>대표전화 :</dt>
+										<dd class="tel_link">
+											<a href="tel:031-760-2000">031-760-2000</a>
+										</dd>
+									</dl>
+								</div>
+							</li>
+							<li>
+								<p class="img_area">
+									<!-- 이미지 없을시 background로 no image 노출 -->
+								</p>
+								<div class="info_area">
+									<div class="tl_link">
+										<div class="tl_link_area">
+											<p>OOO 기관 홈페이지홈페이지</p>
+											<a href="javascript:void(0);">(<strong>http://www.gjcity.go.kr/index.asp</strong>)</a>
+										</div>
+										<a href="javascript:void(0);" class="btn_bp" title="새창" target="_blank">상세 현황</a>		
+										<a href="javascript:void(0);" class="btn_bp type02" title="새창" target="_blank">시설 지도</a>		
+									</div>
+									<dl>
+										<dt>주소 :</dt>
+										<dd class="p_txt">											
+											서울특별시 송파구 오금로123길 12 (방이동) 12<br>
+											서울특별시 송파구 방이동 123-23 000기관
+										</dd>
+										<dt>행정구분 :</dt>
+										<dd class="dd_link">
+											서울특별시 송파구
+										</dd>
+										<dt>대표전화 :</dt>
+										<dd class="tel_link">
+											<a href="tel:031-760-2000">031-760-2000</a>
+										</dd>
+									</dl>
+								</div>
+							</li>
+						</ul>
+						<a href="javascript:void(0);" class="btn_more">더보기</a>
+					</div>
+					<!-- //학교/기관 검색 바로가기 -->
+
+					<!-- 메뉴 검색 -->
+					<div class="srch_menu" id="srch_menu">
+						<h3>메뉴 검색 <span>(총 000건)</span></h3>
+						<ul>
+							<li>
+								<a href="javascript:void(0);">
+									<span>홈</span> <span><strong>시설안전</strong> 가이드</span> <span>법령 자료실</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<span>홈</span> <span><strong>시설안전</strong> 가이드</span> <span>안전 자료실</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<span>홈</span> <span><strong>시설안전</strong> 가이드</span> <span>안전점검 계획</span><span>안전점검 계획</span><span>안전점검 계획</span>
+								</a>
+							</li>
+						</ul>
+						<a href="javascript:void(0);" class="btn_more">더보기</a>
+					</div>				
+					<!-- //메뉴 검색 -->	 
+					
+					<!-- 공지사항 -->
+					<div class="srch_board" id="srch_notice">
+						<h3>공지사항 <span>(총 00건)</span></h3>
+						<ul>
+							<li>
+								<h4>
+									<a href="javascript:void(0);">「제6회 학교 <strong>시설안전</strong> 콘텐츠 공모전」 결과 및 이벤트 당첨자 발표</a>
+									<span class="date">2023-05-24</span>
+								</h4>
+								<p>
+									교육시설에 대한 사전기획(적정성검토)이 법제화 됨(「교육시설의 사전기획 등 업무수행 지침」, 22.6.29.)에 따라 미래형 학교 조성을 위한 내실있는 사전기획 저변화를 관계 전문가와 모색하는 「교육시설 
+									사전기획 심포지엄」을 개최합니다. 아래와 같이 행사 안내를 드리오니 많은 관심과 참여 부탁드립니다...
+								</p>
+							</li>
+							<li>
+								<h4>
+									<a href="javascript:void(0);">「제6회 학교 <strong>시설안전</strong> 콘텐츠 공모전」 결과 및 이벤트 당첨자 발표 콘텐츠 공모전」 결과 및 이벤트 당첨자 발표 콘텐츠 공모전」 결과 및 이벤트 당첨자 발표 콘텐츠 공모전」 결과 및 이벤트 당첨자 발표 콘텐츠 공모전」 결과 및 이벤트 당첨자 발표</a>
+									<span class="date">2023-05-24</span>
+								</h4>
+								<p>
+									교육시설에 대한 사전기획(적정성검토)이 법제화 됨(「교육시설의 사전기획 등 업무수행 지침」, 22.6.29.)에 따라 미래형 학교 조성을 위한 내실있는 사전기획 저변화를 관계 전문가와 모색하는 「교육시설 
+									사전기획 심포지엄」을 개최합니다. 아래와 같이 행사 안내를 드리오니 많은 관심과 참여 부탁드립니다.아래와 같이 행사 안내를 드리오니 많은 관심과 참여 부탁드립니다.아래와 같이 행사 안내를 드리오니 많은 관심과 참여 부탁드립니다.아래와 같이 행사 안내를 드리오니 많은 관심과 참여 부탁드립니다.아래와 같이 행사 안내를 드리오니 많은 관심과 참여 부탁드립니다.
+								</p>
+							</li>
+						</ul>
+						<a href="javascript:void(0);" class="btn_more">더보기</a>
+					</div>
+					<!-- //공지사항 -->
+
+					<!-- 안전 캠페인 -->
+					<div id="srch_camp">
+						<h3>안전 캠페인 <span>(총 00건)</span></h3>
+						<div class="photo_list">
+							<ul>
+								<li>
+									<a href="javascript:void(0);">
+										<span class="img">
+											<img src="../static/images/temp/img_campaign_sample_02.png" alt="갤러리형 이미지 샘플">
+										</span>
+										<p>특수학교(유치원) 안전전검 지원 현장스케치 특수학교 (유치원) 안전전검 지원 현장스케치 특수학교(유치원) 원 현장스케치 특수학교(유치원)원 현장스케치 특수학교(유치원)</p>
+										<span class="photo_bottom">
+											<span class="ico_tb ing">진행중</span>
+											<span class="photo_date">2023-06-01 ~ 2023-06-30</span>
+										</span>
+									</a>
+								</li>  
+								<li>
+									<a href="javascript:void(0);">
+										<span class="img">
+											<!-- <img src="../static/images/temp/img_campaign_sample_02.png" alt="갤러리형 이미지 샘플"> -->
+										</span>
+										<p>특수학교(유치원) 안전전검 지원 현장스케치 특수학교 (유치원) 안전전검 지원 현장스케치 특수학교(유치원)</p>
+										<span class="photo_bottom">
+											<span class="ico_tb exp">예정</span>
+											<span class="photo_date">2023-06-01 ~ 2023-06-30</span>
+										</span>
+									</a>
+								</li> 
+								<li>
+									<a href="javascript:void(0);">
+										<span class="img">
+											<img src="../static/images/temp/img_campaign_sample_02.png" alt="갤러리형 이미지 샘플">
+										</span>
+										<p>2023년 안전한 교육시설 만들기 캠페인 선포식</p>
+										<span class="photo_bottom">
+											<span class="ico_tb end">종료</span>
+											<span class="photo_date">2023-06-01 ~ 2023-06-30</span>
+										</span>
+									</a>
+								</li> 
+								<li>
+									<a href="javascript:void(0);">
+										<span class="img">
+											<img src="../static/images/temp/img_campaign_sample_02.png" alt="갤러리형 이미지 샘플">
+										</span>
+										<p>2021 그린스마트 미래학교「가상설계 및 콘텐츠」</p>
+										<span class="photo_bottom">
+											<span class="ico_tb ing">진행중</span>
+											<span class="photo_date">2023-06-01 ~ 2023-06-30</span>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">
+										<span class="img">
+											<img src="../static/images/temp/img_campaign_sample_02.png" alt="갤러리형 이미지 샘플">
+										</span>
+										<p>2021 그린스마트 미래학교「가상설계 및 콘텐츠」공모전 수상작 VR 전시관 안내</p>
+										<span class="photo_bottom">
+											<span class="ico_tb ing">진행중</span>
+											<span class="photo_date">2023-06-01 ~ 2023-06-30</span>
+										</span>
+									</a> 
+								</li> 
+							</ul>
+						</div>
+						<a href="javascript:void(0);" class="btn_more">더보기</a>
+					</div>
+					<!-- //안전 캠페인 -->
+					
+					<!-- 교육시설 통계 -->
+					<!-- <div class="srch_board" id="srch_edu">
+						<h3>교육시설 통계 <span>(총 00건)</span></h3>
+						<ul>
+							<li>
+								<h4>
+									<a href="javascript:void(0);">제목 영역 클릭 시 상세페이지로 이동</a>
+								</h4>
+								<p>
+									내용 내 검색어 <strong>시설안전</strong> 존재 시 이렇게 표시 합니다. 등록일 없는 콘텐츠의 경우 등록일 항목 비노출 합니다. 구분이 2Depth일 경우 하단에 해당 게시물 위치 표기 합니다. 검색결과 3개 미만일 경우 ‘더보기‘ 부재
+								</p>
+								<div class="lct">
+									<span>교육시설 통계</span>
+									<span>지역별 통계</span>
+								</div>
+							</li>
+							<li>
+								<h4>
+									<a href="javascript:void(0);">제목 영역 클릭 시 상세페이지로 이동제목 영역 클릭 시 상세페이지로 이동제목 영역 클릭 시 상세페이지로 이동제목 영역 클릭 시 상세페이지로 이동제목 영역 클릭 시 상세페이지로 이동제목 영역 클릭 시 상세페이지로 이동</a>									
+								</h4>
+								<p>
+									내용 내 검색어 <strong>시설안전</strong> 존재 시 이렇게 표시 합니다. 등록일 없는 콘텐츠의 경우 등록일 항목 비노출 합니다. 구분이 2Depth일 경우 하단에 해당 게시물 위치 표기 합니다. 검색결과 3개 미만일 경우 ‘더보기‘ 부재
+									내용 내 검색어 존재 시 이렇게 표시 합니다. 등록일 없는 콘텐츠의 경우 등록일 항목 비노출 합니다. 구분이 2Depth일 경우 하단에 해당 게시물 위치 표기 합니다. 검색결과 3개 미만일 경우 ‘더보기‘ 부재
+									내용 내 검색어 존재 시 이렇게 표시 합니다. 등록일 없는 콘텐츠의 경우 등록일 항목 비노출 합니다. 구분이 2Depth일 경우 하단에 해당 게시물 위치 표기 합니다. 검색결과 3개 미만일 경우 ‘더보기‘ 부재
+								</p>								
+								<div class="lct">
+									<span>교육시설 통계</span>
+									<span>지역별 통계</span>
+								</div>
+							</li>
+						</ul>
+						<a href="javascript:void(0);" class="btn_more">더보기</a>
+					</div> -->
+					<!-- //교육시설 통계 -->
+					
+					<!-- 안전 자료실 -->
+					<div id="srch_safe">
+						<h3>안전 자료실 <span>(총 00건)</span></h3>						
+						<div class="mov_list">
+							<ul>
+								<li>
+									<a href="javascript:void(0);"><span class="blind">안전자료실 목록 1</span></a>
+									<span class="img">												
+										<iframe src="https://www.youtube.com/embed/BP5-cAfQIaY?controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</span>
+									<p>특수학교(유치원) 안전전검 지원 현장스케치 특수학교 (유치원) 안전전검 지원 현장스케치 특수학교(유치원) 원 현장스케치 특수학교(유치원)원 현장스케치 특수학교(유치원)</p>
+									<span class="mov_bottom">
+										<span>안전점검</span>
+										<span>2023-06-01</span>
+									</span>
+								</li>  
+								<li>
+									<a href="javascript:void(0);"><span class="blind">안전자료실 목록 2</span></a>
+									<span class="img">
+										<!-- <img src="../static/images/temp/img_safe_data_sample_02.png" alt="안전자료실 이미지 샘플"> -->
+									</span>
+									<p>특수학교(유치원) 안전전검 지원 현장스케치 </p>
+									<span class="mov_bottom">
+										<span>안전점검</span>
+										<span>2023-06-01</span>
+									</span>
+								</li>  
+								<li>
+									<a href="javascript:void(0);"><span class="blind">안전자료실 목록 2</span></a>
+									<span class="img">
+										<img src="../static/images/temp/img_safe_data_sample_02.png" alt="안전자료실 이미지 샘플">
+									</span>
+									<p>특수학교(유치원) 안전전검 지원 현장스케치 </p>
+									<span class="mov_bottom">
+										<span>안전점검</span>
+										<span>2023-06-01</span>
+									</span>
+								</li>  
+								<!-- [D] 삭제 -->
+								<!-- <li class="type02">
+									<a href="javascript:void(0);"><span class="blind">안전자료실 목록 3</span></a>
+									<p>특수학교(유치원) 안전전검 지원 현장스케치 특수학교 (유치원) 안전전검 지원 현장스케치 특수학교(유치원) 원 현장스케치 특수학교(유치원)원 현장스케치 특수학교(유치원)</p>
+									<span class="mov_txt">
+										교육시설 안전성평가 업무를 지원하기 위해 "교육시설 안
+										전성평가 실무 편람"을 배포드립니다.<br>
+										1. 관련법령<br>
+										- 교육시설 등의 안전 및 유지관리 등에 관한 법률(시행 
+										2020. 12. 4.)<br>
+											가. 법 제19조, 제20조<br>
+											나. 영 제20조<br>
+										- 교육시설 안전성평가 운영 기준(시행 2021. 5. 13.)<br>
+										- 교육시설 안전성평가 운영 기준(시행 2021. 5. 13.)<br>
+										- 교육시설 안전성평가 운영 기준(시행 2021. 5. 13.)<br>
+										- 교육시설 안전성평가 운영 기준(시행 2021. 5. 13.)<br>
+										- 교육시설 안전성평가 운영 기준(시행 2021. 5. 13.)<br>
+									</span>
+									<span class="mov_bottom">
+										<span>안전점검</span>
+										<span>2023-06-01</span>
+									</span>
+								</li>   -->
+								<li>
+									<a href="javascript:void(0);"><span class="blind">안전자료실 목록 4</span></a>
+									<span class="img">												
+										<iframe src="https://www.youtube.com/embed/BP5-cAfQIaY?controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</span>
+									<p>특수학교(유치원) 안전전검 지원 현장스케치 특수학교 (유치원) 안전전검 지원 현장스케치 특수학교(유치원) 원 현장스케치 특수학교(유치원)원 현장스케치 특수학교(유치원)</p>
+									<span class="mov_bottom">
+										<span>안전점검</span>
+										<span>2023-06-01</span>
+									</span>
+								</li>  
+							</ul>
+						</div>
+						<a href="javascript:void(0);" class="btn_more">더보기</a>
+					</div>
+					<!-- //안전 자료실 -->
+					
+					<!-- 용어사전 -->
+					<div class="srch_board" id="srch_word">
+						<h3>용어사전 <span>(총 00건)</span></h3>
+						<ul>
+							<li>
+								<h4>
+									<a href="javascript:void(0);">평생 교육 기관</a>
+								</h4>
+								<p>
+									평생교육법 제2조(정의) 이 법에서 사용하는 용어의 정의는 다음과 같다. 1. "평생교육"이란 학교의 정규교육과정을 제외한 학력보완교육, 성인 문자해득교육, 직업능력 향상교육, 인문교양교육, 문화예술교육, 시민참여교육 등을 포함하는 모든 형태의 조직적인 교육활동을 말한다.
+								</p>
+							</li>
+							<li>
+								<h4>
+									<a href="javascript:void(0);"><strong>시설안전</strong>교육</a>
+								</h4>
+								<p>
+									뜻풀이 설명 내 검색어 <strong>시설안전</strong> 존재 시 이렇게 표시 하며, 1행 일 경우 높이값 조절						
+								</p>
+							</li>
+						</ul>
+						<a href="javascript:void(0);" class="btn_more">더보기</a>
+					</div>
+					<!-- //용어사전 -->
+					
+					<!-- 게시판 -->
+					<div class="srch_board" id="srch_board">
+						<h3>게시판 <span>(총 00건)</span></h3>
+						<ul>
+							<li>
+								<div class="lct">
+									<span>홈</span>
+									<span>주제별 통계</span>
+									<span>지역별 통계</span>
+								</div>
+								<h4>
+									<a href="javascript:void(0);">게시물 제목 표기</a>
+									<span class="date">2023-05-24</span>
+								</h4>
+								<p>
+									게시물 내용 내 검색어 <strong>시설안전</strong> 존재 시 이렇게 표시 합니다. 내용 일부(PC 기준 최대 2행) 노출 및 영역 초과 시 말줄임으로 표시 합니다. 제목 클릭 시 해당 게시물 상세 페이지로 이동 합니다. 내용 일부(PC 기준 최대 2행) 노출 및 영역 초과 시 말줄임으로 표시 합니다. 제목 클릭 시 해당 게시물 상세 페이지로 이동 합니다...
+								</p>
+							</li>
+							<li>
+								<div class="lct">
+									<span>홈</span>
+									<span>시설안전 가이드</span>
+									<span>법령 자료실</span>
+								</div>
+								<h4>
+									<a href="javascript:void(0);">「제6회 학교 <strong>시설안전</strong> 콘텐츠 공모전」 결과 및 이벤트 당첨자 발표 콘텐츠 공모전」 결과 및 이벤트 당첨자 발표 콘텐츠 공모전」 결과 및 이벤트 당첨자 발표 콘텐츠 공모전」 결과 및 이벤트 당첨자 발표 콘텐츠 공모전」 결과 및 이벤트 당첨자 발표</a>
+									<span class="date">2023-05-24</span>
+								</h4>
+								<p>
+									교육시설에 대한 사전기획(적정성검토)이 법제화 됨(「교육시설의 사전기획 등 업무수행 지침」, 22.6.29.)에 따라 미래형 학교 조성을 위한 내실있는 사전기획 저변화를 관계 전문가와 모색하는 「교육시설 
+									사전기획 심포지엄」을 개최합니다. 아래와 같이 행사 안내를 드리오니 많은 관심과 참여 부탁드립니다.아래와 같이 행사 안내를 드리오니 많은 관심과 참여 부탁드립니다.아래와 같이 행사 안내를 드리오니 많은 관심과 참여 부탁드립니다.아래와 같이 행사 안내를 드리오니 많은 관심과 참여 부탁드립니다.아래와 같이 행사 안내를 드리오니 많은 관심과 참여 부탁드립니다.
+								</p>
+							</li>
+							<li>
+								<div class="lct">
+									<span>홈</span>
+									<span>교육시설 소식</span>
+									<span>오류 정보 신고</span>
+								</div>
+								<h4>
+									<a href="javascript:void(0);">제목 영역 1행으로 등록일 영역 제외, 말줄임 표시</a>
+									<span class="date">2023-05-24</span>
+								</h4>
+								<p>
+									자료실 내용 내 검색어 <strong>시설안전</strong> 존재 시 이렇게 표시 하며, 1행 일 경우 높이값 조절
+								</p>
+							</li>
+						</ul>
+						<a href="javascript:void(0);" class="btn_more">더보기</a>
+					</div>
+					<!-- //게시판 -->
+
+					<!-- 첨부문서 -->
+					<div class="srch_board srch_file" id="srch_doc">
+						<h3>첨부문서 <span>(총 00건)</span></h3>
+						<ul>
+							<li>
+								<h4>
+									<!-- [D] 클래스별 파일 종류 : file, excel, hwp, word, pdf, ppt, img, zip, txt, dwg, mov ]-->
+									<a href="javascript:void(0);" class="file">첨부파일명검색어 <strong>시설안전</strong> 표시.xls</a>
+									<span class="date">2023-05-24</span>
+								</h4>
+								<p>
+									첨부파일 내용 일부 1행 표시
+								</p>
+								<div class="b_tl">
+									<a href="javascript:void(0);">첨부파일 존재하는 게시물 제목 영역, 클릭 시 해당 상세페이지로 이동</a>
+								</div>
+							</li>
+							<li>
+								<h4>
+									<a href="javascript:void(0);" class="excel">첨부파일명(파일명 클릭 시 다운로드).png</a>
+									<span class="date">2023-05-24</span>
+								</h4>
+								<p>
+									첨부파일 내용 일부 표시 및 제목 및 내용 내 검색결과 부재일 경우 강조표시 없음, 영역 초과 시 말줄임 표시 첨부파일 내용 일부 표시 및 제목 및 내용 내 검색결과 부재일 경우 강조표시 없음, 영역 초과 시 말줄임 표시
+								</p>
+								<div class="b_tl">
+									<a href="javascript:void(0);">게시물 제목 영역입니다. 게시물 제목 영역입니다. 게시물 제목 영역입니다. 게시물 제목 영역입니다. 게시물 제목 영역입니다. 게시물 제목 영역입니다. 게시물 제목 영역입니다. 게시물 제목 영역입니다. 게시물 제목 영역입니다. </a>
+								</div>
+							</li>
+							<li>
+								<h4>
+									<a href="javascript:void(0);" class="hwp">첨부파일명(파일명 클릭 시 다운로드)첨부파일명(파일명 클릭 시 다운로드)첨부파일명(파일명 클릭 시 다운로드)첨부파일명(파일명 클릭 시 다운로드)첨부파일명(파일명 클릭 시 다운로드)첨부파일명(파일명 클릭 시 다운로드).doc</a>
+									<span class="date">2023-05-24</span>
+								</h4>
+								<p>
+									첨부파일 내용 일부 표시 및 제목 및 내용 내 검색결과 부재일 경우 강조표시 없음. 
+								</p>
+								<div class="b_tl">
+									<a href="javascript:void(0);">게시물 제목 영역입니다. </a>
+								</div>
+							</li>
+						</ul>
+						<a href="javascript:void(0);" class="btn_more">더보기</a>
+					</div>
+					<!-- //첨부문서 -->
+					
+					<!-- 웹페이지 -->
+					<div class="srch_board srch_web" id="srch_web">
+						<h3>웹페이지 <span>(총 00건)</span></h3>
+						<ul>
+							<li>
+								<h4>
+									<a href="javascript:void(0);">게시판 및 프로그램 페이지 제외, Contents 페이지의 경우에만 ‘웹페이지’로 구분</a>
+								</h4>
+								<p>
+									내용 내 검색어 <strong>시설안전</strong> 존재 시 이렇게 표시 합니다. 등록일 없는 콘텐츠의 경우 등록일 항목 비노출 합니다. 구분이 2Depth일 경우 하단에 해당 게시물 위치 표기 합니다. 검색결과 3개 미만일 경우 ‘더보기‘ 부재
+								</p>
+								<div class="lct">
+									<span>https://www.koies.or.kr/00059</span>
+								</div>
+							</li>
+							<li>
+								<h4>
+									<a href="javascript:void(0);">제목 영역 클릭 시 상세페이지로 이동제목 <strong>시설안전</strong> 영역 클릭 시 상세페이지로 이동제목 영역 클릭 시 상세페이지로 이동제목 영역 클릭 시 상세페이지로 이동제목 영역 클릭 시 상세페이지로 이동제목 영역 클릭 시 상세페이지로 이동</a>									
+								</h4>
+								<p>
+									내용 내 검색어 <strong>시설안전</strong> 존재 시 이렇게 표시 합니다. 
+								</p>								
+								<div class="lct">
+									<span>https://www.koies.or.kr/00099</span>
+								</div>
+							</li>
+							<li>
+								<h4>
+									<a href="javascript:void(0);">제목 영역 1행으로 말줄임 표시</a>									
+								</h4>
+								<p>
+									내용 내 검색어 <strong>시설안전</strong> 존재 시 이렇게 표시 합니다. 등록일 없는 콘텐츠의 경우 등록일 항목 비노출 합니다. 구분이 2Depth일 경우 하단에 해당 게시물 위치 표기 합니다. 검색결과 3개 미만일 경우 ‘더보기‘ 부재
+									내용 내 검색어 존재 시 이렇게 표시 합니다. 등록일 없는 콘텐츠의 경우 등록일 항목 비노출 합니다. 구분이 2Depth일 경우 하단에 해당 게시물 위치 표기 합니다. 검색결과 3개 미만일 경우 ‘더보기‘ 부재
+									내용 내 검색어 존재 시 이렇게 표시 합니다. 등록일 없는 콘텐츠의 경우 등록일 항목 비노출 합니다. 구분이 2Depth일 경우 하단에 해당 게시물 위치 표기 합니다. 검색결과 3개 미만일 경우 ‘더보기‘ 부재
+								</p>								
+								<div class="lct">
+									<span>https://www.koies.or.kr/00132001320013200132001320013200132001320013200132001320013200132001320013200132001320013200132001320013200132001320013200132001320013200132</span>
+								</div>
+							</li>
+						</ul>
+						<a href="javascript:void(0);" class="btn_more">더보기</a>
+					</div>
+					<!-- //웹페이지 -->
+
+				</div>
+				<!-- //컨텐츠 -->
+				<!------------------- //본문 ------------------->		
+
+				<!-- top button-->
+				<div class="top_btn">
+					<a href="javascript:void(0);">
+						<span class="blind">상단으로 이동하기</span>
+					</a>
+				</div>
+				<!-- //top button-->
+
+			</div>
+			<!-- //#contents -->
+
+		</section>
+		<!--- //#container --->	
+
+		<!-- S :Footer -->
+		<footer id="footer">
+			<div class="footer_wrap type02">
+				<div class="footer_copy">
+					<p>
+						서울특별시 영등포구 국회대로 62길 25(여의도동 17-10) 한국교육시설안전원10층<br>
+						대표번호 02-781-8100 팩스 020-720-3918						
+					</p>
+					<p>
+						Copyright © 2024  Korea Institute of Educational Facility Safety.  All Rights Reserved.
+					</p>
+				</div>
+				<div class="footer_logo">
+					<a href="https://www.moe.go.kr/main.do?s=moe" title="새창" target="_blank" class="footer_btn_edu"><span class="blind">교육부</span></a>
+					<a href="https://www.koies.or.kr/index" title="새창" target="_blank" class="logo">
+						<span class="blind">한국고용시설안전원 Korea Institute of Educational Facility Safety</span>
+					</a>			
+					<span class="box_ipt">
+						<select title="시도교육청 바로가기 새창" onchange="window.open(value,'_blank');">
+							<option selected="selected">시도교육청</option>
+							<option value="https://www.sen.go.kr/sen/index.do">서울특별시교육청</option>
+							<option value="http://www.pen.go.kr">부산광역시교육청</option>
+							<option value="https://www.dge.go.kr/main/main.do">대구광역시교육청</option>
+							<option value="https://www.ice.go.kr/main.do?s=ice">인천광역시교육청</option>
+							<option value="http://www.gen.go.kr/main/main.php">광주광역시교육청</option>
+							<option value="https://www.dje.go.kr/main.do?s=dje">대전광역시교육청</option>
+							<option value="https://www.use.go.kr">울산광역시교육청</option>
+							<option value="https://www.sje.go.kr/intro/sje/index.html?sysId=sje">세종특별자치시교육청</option>
+							<option value="https://www.goe.go.kr">경기도교육청</option>
+							<option value="https://www.gwe.go.kr">강원도특별자치시교육청</option>
+							<option value="https://www.cbe.go.kr">충청북도교육청</option>
+							<option value="http://www.cne.go.kr/cne/main.do">충청남도교육청</option>
+							<option value="https://www.jbe.go.kr/index.jbe">전라북도교육청</option>
+							<option value="https://www.jne.go.kr/main/main.do">전라남도교육청</option>
+							<option value="https://www.gbe.kr/main/main.do">경상북도교육청</option>
+							<option value="https://www.gne.go.kr/index.gne?contentsSid=1384">경상남도교육청</option>
+							<option value="https://www.jje.go.kr/index.jje">제주특별자치도교육청</option>
+						</select>
+					</span>
+					<a href="https://work.keiis.kr/keiis/index.do" title="새창" target="_blank" class="footer_btn">업무포털</a>
+				</div>
+			</div>		
+		</footer>
+		<!-- E :Footer -->
+	</div>
+	<!--// #WRAP -->
+</body>
+</html>

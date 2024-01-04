@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="218.994" height="248" viewBox="0 0 218.994 248">
+    <defs>
+        <clipPath id="vw0aapl8oa">
+            <path data-name="사각형 16293" style="fill:none" d="M0 0h46v46H0z"/>
+        </clipPath>
+    </defs>
+    <g transform="translate(-258 -1285)">
+        <rect width="140" height="3" rx="1.5" transform="rotate(90 -505.25 813.25)" style="fill:#7876dd"/>
+        <g transform="translate(-183 423)">
+            <circle cx="48" cy="48" r="48" transform="translate(441 1014)" style="fill:#7876dd"/>
+            <circle cx="42" cy="42" r="42" transform="translate(447 1020)" style="fill:#fff"/>
+            <g data-name="그룹 18098" style="clip-path:url(#vw0aapl8oa)" transform="translate(466 1039)">
+                <path data-name="패스 74087" d="M42.237 15.04c.332-3.317 0-3.648-3.317-5.141-2.32-.999-2.156-1.161-3.151-3.483-1.327-2.985-1.99-3.151-5.472-2.653-2.488.332-2.654 0-4.643-1.493C23.166.446 22.5.612 19.683 2.6c-1.99 1.493-2.156 1.327-4.643 1.161-3.317-.332-3.649 0-5.141 3.317C8.9 9.4 8.738 9.236 6.416 10.23c-2.985 1.327-3.151 1.99-2.653 5.47.331 2.487 0 2.653-1.492 4.643C.446 22.834.612 23.5 2.6 26.317c1.492 1.99 1.327 2.155 1.161 4.643-.332 3.317 0 3.648 3.317 5.141 2.321.994 2.155 1.16 3.15 3.482 1.327 2.985 1.991 3.151 5.473 2.654 2.488-.332 2.653 0 4.644 1.492 2.487 1.824 3.15 1.659 5.969-.331 1.99-1.493 2.156-1.327 4.644-1.161 3.316.331 3.648 0 5.141-3.317.995-2.322 1.161-2.156 3.482-3.151 2.986-1.326 3.152-1.99 2.654-5.472-.332-2.488 0-2.654 1.492-4.644 1.824-2.487 1.659-3.151-.331-5.97-1.496-1.99-1.325-2.156-1.159-4.643z" style="stroke-width:2px;stroke-miterlimit:10;stroke:#7876dd;fill:none"/>
+                <path data-name="패스 74088" d="M23 9.461A13.538 13.538 0 1 0 36.538 23 13.538 13.538 0 0 0 23 9.461z" style="stroke-width:2px;stroke-miterlimit:10;stroke:#7876dd;fill:none"/>
+                <path data-name="패스 74089" d="M17 22.657 21.212 27 29 19" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;stroke:#7876dd;fill:none"/>
+            </g>
+        </g>
+        <path d="M171.631 20.876 152.507 40H0V8a8 8 0 0 1 8-8h144.507l19.124 19.125a1.237 1.237 0 0 1 0 1.751" transform="translate(305 1285)" style="fill:#7876dd"/>
+        <g transform="translate(296 1369)" style="stroke-width:5px;stroke:#7876dd;fill:#fff">
+            <circle cx="10.5" cy="10.5" r="10.5" style="stroke:none"/>
+            <circle cx="10.5" cy="10.5" r="8" style="fill:none"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<link rel="stylesheet" href="../static/css/style.css"><!-- 공통 CSS -->
+	<link rel="stylesheet" href="../static/css/swiper-bundle.min.css">
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+	<script src="../static/js/ui/swiper-bundle.min.js"></script>
+	<script src="../static/js/ui/ui.js"></script><!-- 공통 퍼블리싱UI JS -->
+	<script>		
+		$(window).on('load', function () {
+			//시설현황 상세 Tab Sticky
+			class StickyNavigation {
+				
+				constructor() {
+					this.currentId = null;
+					this.currentTab = null;
+					this.tabContainerHeight = 112;
+					let self = this;
+					$('.fac_tab_btn, .fac_tab_cont_btn').click(function() { 
+						self.onTabClick(event, $(this)); 
+					});
+					$(window).scroll(() => { this.onScroll(); });
+					$(window).resize(() => { this.onResize(); });
+				}
+				
+				onTabClick(event, element) {
+					event.preventDefault();
+					let scrollTop = $(element.attr('href')).offset().top - this.tabContainerHeight + 1;
+					$('html, body').animate({ scrollTop: scrollTop }, 400);
+				}
+				
+				onScroll() {
+					this.checkTabContainerPosition();
+					this.findCurrentTabSelector();
+				}
+				
+				onResize() {
+					if(this.currentId) {
+						this.setSliderCss();
+					}
+				}
+				
+				checkTabContainerPosition() {
+					let offset = $('#fact_top_wrap').offset().top + $('#fact_top_wrap').height() - this.tabContainerHeight;
+					if($(window).scrollTop() > offset) {
+						$('.fact_top_tab').addClass('fixed');
+					} 
+					else {
+						$('.fact_top_tab').removeClass('fixed');
+					}
+				}
+				
+				findCurrentTabSelector(element) {
+					let newCurrentId;
+					let newCurrentTab;
+					let self = this;
+					$('.fac_tab_btn').each(function() {
+						let id = $(this).attr('href');
+						let offsetTop = $(id).offset().top - self.tabContainerHeight;
+						let offsetBottom = $(id).offset().top + $(id).height() - self.tabContainerHeight;
+						if($(window).scrollTop() > offsetTop && $(window).scrollTop() < offsetBottom) {
+							newCurrentId = id;
+							newCurrentTab = $(this);
+						}
+					});
+					if(this.currentId != newCurrentId || this.currentId === null) {
+						this.currentId = newCurrentId;
+						this.currentTab = newCurrentTab;
+						this.setSliderCss();
+					}
+				}
+				
+				setSliderCss() {	
+					let off = $('.on');            
+					if(this.currentTab) {
+						this.currentTab.addClass('on');
+						this.currentTab.siblings().removeClass('on');
+					}
+					// let width = 0;
+					// let left = 0;
+					// if(this.currentTab) {
+					// 	width = this.currentTab.css('width');
+					// 	left = this.currentTab.offset().left;
+					// }
+					// $('.fac_tab_btn_slider').css('width', width);
+					// $('.fac_tab_btn_slider').css('left', left);
+				}		
+			}
+			new StickyNavigation();	
+		});		
+	</script>
+	<title>시설 현황 상세</title>
+</head>
+<body>
+	<!-- skip navigation -->
+	<nav id="skipnav">
+		<a title="본문 바로가기" href="#fact_top_wrap">본문 바로가기</a>
+	</nav>
+	<!-- //skip navigation -->	
+
+	<!-- 타이틀 -->
+	<div id="fact_tl">시설 현황 상세</div>
+	<!-- //타이틀 -->
+
+	<!-- #fact_wrap -->
+	<div id="fact_top_wrap">
+
+		<div class="fact_top_area">	
+			<span>기준 : 2023-10-16 <b>12 : 30</b></span>
+			<a href="javascript:void(0);" class="btn_error">오류 정보 신고</a>
+		</div>
+
+		<div class="fact_top_info">
+			<div class="fact_top_info_tl school"><!-- [D] 클래스별 변경 > 학교: school, 기관: organ -->
+				<p>
+					<span class="tl">성남고등학교</span>
+					<span class="s_tl s01">유치원</span><!-- [D] 기관시 스타일 자동 변경 -->
+					<!-- <span class="s_tl s02">초등학교</span>
+					<span class="s_tl s03">중학교</span>
+					<span class="s_tl s04">고등학교</span>
+					<span class="s_tl s05">기타학교</span>
+					<span class="s_tl s06">대학교</span>
+					<span class="s_tl s07">평생교육기관</span> -->
+					<span class="division d01">국립</span><!-- [D] 기관시 자동 비활성 -->
+					<!-- <span class="division d02">공립</span>
+					<span class="division d03">사립</span> -->
+				</p>
+				<span class="addr">서울 동작구 대방동길 74</span>
+			</div>
+		</div>
+
+		<ul class="fact_board_list">
+			<li>
+				<span>개교연도</span>
+				<p class="num01" data-count-year="1938">0</p><i>년</i>
+			</li>
+			<li>
+				<span>학생수</span>
+				<p class="count_num" data-count="1003">0</p><i>명</i>			
+			</li>
+			<li>
+				<span>교직원</span>
+				<p class="count_num" data-count="76">0</p><i>명</i>	
+			</li>
+			<li>
+				<span>안정성 평가</span>
+				<p class="face type01">적정</p>
+				<!-- <p class="face type02">보완</p> -->
+			</li> 
+			<li>
+				<span>안전인증심사</span>
+				<p class="safe type01">최우수</p>
+				<!-- <p class="safe type02">우수</p> -->
+				<!-- <p class="safe type03">예정</p> -->
+			</li>
+			<li>  
+				<span>소방차 진입로 확보</span>
+				<p class="face type01">진입가능</p>
+				<!-- <p class="face type03">진입곤란</p> -->
+				<!-- <p class="face type04">진입불가</p> -->
+				<!-- <p class="face type05">조사예정</p> -->
+			</li>
+		</ul>
+		<div class="fact_top_tab">
+	        <a class="fac_tab_btn on" href="#fac_cont01">요약정보</a>
+		    <a class="fac_tab_btn" href="#fac_cont02">시설현황</a>  
+ 		    <a class="fac_tab_btn" href="#fac_cont03">안전관리</a>
+		</div>
+	</div>
+	<!--// #fact_top_wrap -->
+
+	<!-- #fact_cont -->	
+	<div id="fact_cont">
+		<div class="fact_cont_area" id="fac_cont01">
+			
+			<!-- <span class="box_date">기준 : 2023-10-16<span>12 : 30</span></span> -->
+
+			<div class="box_table_safe hor">
+				<!-- [D] 학교시 테이블 -->
+				<table>
+					<caption>요약정보입니다. 대표전화번호, 감독기관, 설립유형, 설립구분, 개교연도, 학교유형, 학생수(명), 교직원수(명), 운영상태, 홈페이지 URL 등이 있습니다.</caption>
+					<colgroup>
+						<col>
+						<col>
+						<col>
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">대표전화번호</th>
+							<td>02-123-1234</td>
+							<th scope="row">감독기관</th>
+							<td>서울시교육청</td>
+						</tr>
+						<tr>
+							<th scope="row">설립유형</th>
+							<td>단설</td>
+							<th scope="row">설립구분</th>
+							<td>사립</td>
+						</tr>
+						<tr>
+							<th scope="row">개교연도</th>
+							<td>1938</td>
+							<th scope="row">학교유형</th>
+							<td>일반고등학교</td>
+						</tr>
+						<tr>
+							<th scope="row">학생수(명)</th>
+							<td>1,003 (남 1,003 / 여 0)</td>
+							<th scope="row">교직원수(명)</th>
+							<td>76 (남 19 / 여 57)</td>
+						</tr>
+						<tr>
+							<th scope="row">운영상태</th>
+							<td>운영</td>
+							<th scope="row">홈페이지 URL</th>
+							<td><a href="http://www.sungnam.hs.kr" title="새창" target="_blank">http://www.sungnam.hs.kr</a></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<!-- [D] 기관시 테이블 -->
+				<!-- <table>
+					<caption>요약정보입니다. 대표전화번호, 기관구분, 행정지도, 행정시군구, 상위기관명, 감독기관, 운영상태, 홈페이지URL 등이 있습니다.</caption>
+					<colgroup>
+						<col>
+						<col>
+						<col>
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">대표전화번호</th>
+							<td>02-123-1234</td>
+							<th scope="row">기관구분</th>
+							<td>교육청</td>
+						</tr>
+						<tr>
+							<th scope="row">행정지도</th>
+							<td>서울특별시</td>
+							<th scope="row">행정시군구</th>
+							<td>종로구</td>
+						</tr>
+						<tr>
+							<th scope="row">상위기관명</th>
+							<td>교육부</td>
+							<th scope="row">감독기관</th>
+							<td>교육부</td>
+						</tr>
+						<tr>
+							<th scope="row">운영상태</th>
+							<td>운영</td>
+							<th scope="row">홈페이지 URL</th>
+							<td><a href="http://www.sungnam.hs.kr" title="새창" target="_blank">http://www.sungnam.hs.kr</a></td>
+						</tr>
+					</tbody>
+				</table> -->
+			</div>
+		</div> 
+
+		<div class="fact_top_tab_cont">
+			<a class="fac_tab_cont_btn" href="#fac_cont01">요약정보</a>
+			<a class="fac_tab_cont_btn on" href="#fac_cont02">시설현황</a>  
+			<a class="fac_tab_cont_btn" href="#fac_cont03">안전관리</a>
+		</div>
+
+		<div class="fact_cont_area" id="fac_cont02">
+
+			<h3>용지 현황
+				<!-- <span class="date">기준 : 2023-10-16<span>12 : 30</span></span> -->
+			</h3>	
+			
+			<ul class="fact_cont_info">
+				<li>용지수(개) : <span>13</span></li>
+				<li>대지면적(㎡) : <span>824,307</span></li>
+				<li>연면적(㎡) : <span>687,983</span></li>
+				<li>체육장면적(㎡) : <span>87,983</span></li>
+			</ul>
+			
+			<div class="box_table_safe land">
+				<table>							
+					<caption>시설현황 용지현황 테이블입니다. 번호, 용지명, 용지구분, 대지면적, 연면적, 체육장면적 등이 있습니다.</caption>
+					<colgroup>
+						<col>
+						<col style="width: 15rem;">
+						<col style="width: 15rem;">
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th rowspan="2" scope="col">번호</th>
+							<th rowspan="2" scope="col">용지명</th>
+							<th rowspan="2" scope="col">용지구분</th>
+							<th rowspan="2" scope="col">대지면적(㎡)</th>  
+							<th rowspan="2" scope="col">연면적(㎡)</th>
+							<th colspan="3" scope="colgroup">체육장면적(㎡)</th>                                  
+						</tr>
+						<tr>
+							<th scope="col">실내</th>
+							<th scope="col">실외</th>
+							<th scope="col">계</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>교사부지</td>
+							<td>교사대지</td>
+							<td class="txt_r">13,737.00</td>
+							<td class="txt_r">96,846.80</td>
+							<td class="txt_r">2,750.00</td>
+							<td class="txt_r">441.00</td>
+							<td class="txt_r">3,191.80</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>교사부지</td>
+							<td>교사대지</td>
+							<td class="txt_r">13,737.00</td>
+							<td class="txt_r">96,846.80</td>
+							<td class="txt_r">2,750.00</td>
+							<td class="txt_r">441.00</td>
+							<td class="txt_r">3,191.80</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>교사부지</td>
+							<td>교사대지</td>
+							<td class="txt_r">13,737.00</td>
+							<td class="txt_r">96,846.80</td>
+							<td class="txt_r">2,750.00</td>
+							<td class="txt_r">441.00</td>
+							<td class="txt_r">3,191.80</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>교사부지</td>
+							<td>교사대지</td>
+							<td class="txt_r">13,737.00</td>
+							<td class="txt_r">96,846.80</td>
+							<td class="txt_r">2,750.00</td>
+							<td class="txt_r">441.00</td>
+							<td class="txt_r">3,191.80</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>교사부지</td>
+							<td>교사대지</td>
+							<td class="txt_r">13,737.00</td>
+							<td class="txt_r">96,846.80</td>
+							<td class="txt_r">2,750.00</td>
+							<td class="txt_r">441.00</td>
+							<td class="txt_r">3,191.80</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>교사부지</td>
+							<td>교사대지</td>
+							<td class="txt_r">13,737.00</td>
+							<td class="txt_r">96,846.80</td>
+							<td class="txt_r">2,750.00</td>
+							<td class="txt_r">441.00</td>
+							<td class="txt_r">3,191.80</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>교사부지</td>
+							<td>교사대지</td>
+							<td class="txt_r">13,737.00</td>
+							<td class="txt_r">96,846.80</td>
+							<td class="txt_r">2,750.00</td>
+							<td class="txt_r">441.00</td>
+							<td class="txt_r">3,191.80</td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td>교사부지</td>
+							<td>교사대지</td>
+							<td class="txt_r">13,737.00</td>
+							<td class="txt_r">96,846.80</td>
+							<td class="txt_r">2,750.00</td>
+							<td class="txt_r">441.00</td>
+							<td class="txt_r">3,191.80</td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td>교사부지</td>
+							<td>교사대지</td>
+							<td class="txt_r">13,737.00</td>
+							<td class="txt_r">96,846.80</td>
+							<td class="txt_r">2,750.00</td>
+							<td class="txt_r">441.00</td>
+							<td class="txt_r">3,191.80</td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td>교사부지</td>
+							<td>교사대지</td>
+							<td class="txt_r">13,737.00</td>
+							<td class="txt_r">96,846.80</td>
+							<td class="txt_r">2,750.00</td>
+							<td class="txt_r">441.00</td>
+							<td class="txt_r">3,191.80</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<h3>건물 현황				
+				<!-- <span class="date">기준 : 2023-10-16<span>12 : 30</span></span> -->
+			</h3>		
+			
+			<ul class="fact_cont_info">
+				<li>건물수(개) : <span>17</span></li>
+				<li>건축면적(㎡) : <span>54,307</span></li>
+				<li>연면적(㎡) : <span>687,983</span></li>
+			</ul>
+
+			<div class="box_table_safe bld">
+				<table>							
+					<caption>시설현황 건물현황 테이블입니다. 번호, 용지명, 건물명, 사용승인일자, 연면적, 층수, 건물용도, 건축면적, 연면적, 안전등급, 안전현황, 주요관리대상 등이 있습니다.</caption>
+					<colgroup>
+						<col>
+						<col style="width: 15rem;">
+						<col style="width: 20rem;">
+						<col style="width: 10rem;">
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col style="width: 5rem;">
+						<col style="width: 5rem;">
+						<col style="width: 5rem;">
+						<col style="width: 5rem;">
+						<col style="width: 5rem;">
+						<col style="width: 5rem;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th rowspan="2" scope="col">번호</th>
+							<th rowspan="2" scope="col">용지명</th>
+							<th rowspan="2" scope="col">건물명</th>
+							<th rowspan="2" scope="col">사용승인일자</th>  
+							<th rowspan="2" scope="col">층수<br>(지상/지하)</th>
+							<th rowspan="2" scope="col">건물용도</th>                 
+							<th rowspan="2" scope="col">건축면적(㎡)</th>                 
+							<th rowspan="2" scope="col">연면적(㎡)</th>                 
+							<th rowspan="2" scope="col">안전등급</th>                 
+							<th colspan="3" scope="colgroup">안전현황 <sup>주1)</sup></th>                 
+							<th colspan="3" scope="colgroup">주요관리대상 <sup>주2)</sup></th>                                  
+						</tr>
+						<tr>
+							<th scope="col">특수</th>
+							<th scope="col">내진</th>
+							<th scope="col">소방</th>
+							<th scope="col">40년</th>
+							<th scope="col">구조</th>
+							<th scope="col">해소</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>교사대지</td>
+							<td>본관</td>
+							<td>1973-01-01</td>
+							<td>4/2</td>
+							<td>교사부지</td>
+							<td class="txt_r">791.55</td>
+							<td class="txt_r">3,166.20</td>
+							<td><span class="ico a">A등급</span></td>
+							<td><span class="circle">선택</span></td>
+							<td><span class="circle">선택</span></td>
+							<td><span class="circle">선택</span></td>
+							<td></td>
+							<td><span class="circle">선택</span></td>
+							<td><span class="circle">선택</span></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>교사부지</td>
+							<td>본관</td>
+							<td>1973-01-01</td>
+							<td>4/2</td>
+							<td>교사부지</td>
+							<td class="txt_r">791.55</td>
+							<td class="txt_r">3,166.20</td>
+							<td><span class="ico b">B등급</span></td>
+							<td><span class="circle">선택</span></td>
+							<td><span class="circle">선택</span></td>
+							<td></td>
+							<td></td>
+							<td><span class="circle">선택</span></td>
+							<td><span class="circle">선택</span></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>교사부지</td>
+							<td>본관</td>
+							<td>1973-01-01</td>
+							<td>4/2</td>
+							<td>교사부지</td>
+							<td class="txt_r">791.55</td>
+							<td class="txt_r">3,166.20</td>
+							<td><span class="ico c">C등급</span></td>
+							<td><span class="circle">선택</span></td>
+							<td><span class="circle">선택</span></td>
+							<td><span class="circle">선택</span></td>
+							<td></td>
+							<td><span class="circle">선택</span></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>교사부지</td>
+							<td>본관</td>
+							<td>1973-01-01</td>
+							<td>4/2</td>
+							<td>교사부지</td>
+							<td class="txt_r">791.55</td>
+							<td class="txt_r">3,166.20</td>
+							<td><span class="ico d">D등급</span></td>
+							<td></td>
+							<td><span class="circle">선택</span></td>
+							<td><span class="circle">선택</span></td>
+							<td></td>
+							<td><span class="circle">선택</span></td>
+							<td><span class="circle">선택</span></td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>교사부지</td>
+							<td>본관</td>
+							<td>1973-01-01</td>
+							<td>4/2</td>
+							<td>교사부지</td>
+							<td class="txt_r">791.55</td>
+							<td class="txt_r">3,166.20</td>
+							<td><span class="ico e">E등급</span></td>
+							<td><span class="circle">선택</span></td>
+							<td><span class="circle">선택</span></td>
+							<td><span class="circle">선택</span></td>
+							<td></td>
+							<td><span class="circle">선택</span></td>
+							<td><span class="circle">선택</span></td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>교사부지</td>
+							<td>본관</td>
+							<td>1973-01-01</td>
+							<td>4/2</td>
+							<td>교사부지</td>
+							<td class="txt_r">791.55</td>
+							<td class="txt_r">3,166.20</td>
+							<td><span class="ico f">미지정</span></td>
+							<td><span class="circle">선택</span></td>
+							<td></td>
+							<td><span class="circle">선택</span></td>
+							<td></td>
+							<td><span class="circle">선택</span></td>
+							<td><span class="circle">선택</span></td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>교사부지</td>
+							<td>본관</td>
+							<td>1973-01-01</td>
+							<td>4/2</td>
+							<td>교사부지</td>
+							<td class="txt_r">791.55</td>
+							<td class="txt_r">3,166.20</td>
+							<td><span class="ico a">A등급</span></td>
+							<td><span class="circle">선택</span></td>
+							<td><span class="circle">선택</span></td>
+							<td><span class="circle">선택</span></td>
+							<td></td>
+							<td><span class="circle">선택</span></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td>교사부지</td>
+							<td>본관</td>
+							<td>1973-01-01</td>
+							<td>4/2</td>
+							<td>교사부지</td>
+							<td class="txt_r">791.55</td>
+							<td class="txt_r">3,166.20</td>
+							<td><span class="ico b">B등급</span></td>
+							<td></td>
+							<td><span class="circle">선택</span></td>
+							<td><span class="circle">선택</span></td>
+							<td></td>
+							<td><span class="circle">선택</span></td>
+							<td><span class="circle">선택</span></td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td>교사부지</td>
+							<td>본관</td>
+							<td>1973-01-01</td>
+							<td>4/2</td>
+							<td>교사부지</td>
+							<td class="txt_r">791.55</td>
+							<td class="txt_r">3,166.20</td>
+							<td><span class="ico d">D등급</span></td>
+							<td><span class="circle">선택</span></td>
+							<td><span class="circle">선택</span></td>
+							<td><span class="circle">선택</span></td>
+							<td></td>
+							<td><span class="circle">선택</span></td>
+							<td><span class="circle">선택</span></td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td>교사부지</td>
+							<td>본관</td>
+							<td>1973-01-01</td>
+							<td>4/2</td>
+							<td>교사부지</td>
+							<td class="txt_r">791.55</td>
+							<td class="txt_r">3,166.20</td>
+							<td><span class="ico e">E등급</span></td>
+							<td><span class="circle">선택</span></td>
+							<td><span class="circle">선택</span></td>
+							<td><span class="circle">선택</span></td>
+							<td></td>
+							<td><span class="circle">선택</span></td>
+							<td><span class="circle">선택</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<ul class="announce">
+				<li><span>주1)</span> 안전현황 : [특수] 특수건출물여부, [내진] 내진설계적용여부, [소방] 소방차진입로 확보여부</li>
+				<li><span>주2)</span> 주요관리대상 : [40년] 40년 경과시설, [구조] 구조안전위험시설, [해소] 샌드위치패널/드라이비트시설 해소여부</li>
+			</ul>	
+						
+			<h3>해소 현황				
+				<!-- <span class="date">기준 : 2023-10-16<span>12 : 30</span></span> -->
+			</h3>	
+			<ul class="sol_list">
+				<li>
+					<h4>샌드위치 패널 해소율</h4>
+					<div class="sol_chart">
+						<!-- [D] 차트 영역 -->
+						<img src="../static/images/img_gis_gauge_chart_01.png" alt="해소현황 차트 샘플01">
+					</div>
+					<dl>
+						<dt>보유면적 :</dt>
+						<dd><span>1,870</span>㎡</dd>
+						<dt>해소면적 :</dt>
+						<dd><span>964</span>㎡</dd>
+					</dl>
+				</li>
+				<li>
+					<h4>드라이비트시설 해소율</h4>
+					<div class="sol_chart">
+						<!-- [D] 차트 영역 -->
+						<img src="../static/images/img_gis_gauge_chart_02.png" alt="해소현황 차트 샘플02">
+					</div>
+					<dl>
+						<dt>보유면적 :</dt>
+						<dd><span>11,904</span>㎡</dd>
+						<dt>해소면적 :</dt>
+						<dd><span>4,897</span>㎡</dd>
+					</dl>
+				</li>
+				<li>
+					<h4>석면건축물 해소율</h4>
+					<div class="sol_chart">
+						<!-- [D] 차트 영역 -->
+						<img src="../static/images/img_gis_gauge_chart_03.png" alt="해소현황 차트 샘플03">
+					</div>
+					<dl>
+						<dt>보유면적 :</dt>
+						<dd><span>564</span>㎡</dd>
+						<dt>해소면적 :</dt>
+						<dd><span>172</span>㎡</dd>
+					</dl>
+				</li>
+			</ul>
+			<ul class="announce">
+				<li><span>주1)</span> 표기 산식 : 해소율=(해소면적/건축면적)x100</li>
+			</ul>	
+
+		</div>	
+
+		<div class="fact_top_tab_cont">
+			<a class="fac_tab_cont_btn" href="#fac_cont01">요약정보</a>
+			<a class="fac_tab_cont_btn" href="#fac_cont02">시설현황</a>  
+			<a class="fac_tab_cont_btn on" href="#fac_cont03">안전관리</a>
+		</div>
+
+		<div class="fact_cont_area" id="fac_cont03">
+			
+			<h3>안전 점검	
+				<span class="safe_unit">(단위 : %)</span>
+				<!-- <span class="date">기준 : 2023-10-16<span>12 : 30</span></span> -->
+			</h3>				
+			<div class="safe_wrap">
+				<div class="safe_area">
+					<div class="safe_chart">
+						<!-- [D] 차트 영역 -->
+						<img src="../static/images/img_gis_pie_chart_02.png" alt="안전점검 차트 샘플01">
+					</div>
+					<ul>
+						<li>A등급</li>
+						<li>B등급</li>
+						<li>C등급</li>
+						<li>D등급</li>
+						<li>E등급</li>
+						<li>미지정</li>
+					</ul>
+				</div>
+				<div>						
+					<div class="box_table_safe safet">
+						<table>							
+							<caption>안전관리 안전점검 테이블입니다. 번호, 용지명, 건물명, 사용승인일자, 건물용도, 안전등급 등이 있습니다.</caption>
+							<colgroup>
+								<col style="width: 8rem;">
+								<col>
+								<col>
+								<col>
+								<col>
+								<col style="width: 10rem;">
+								<col style="width: 12.5rem;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">번호</th>
+									<th scope="col">용지명</th>
+									<th scope="col">건물명</th>
+									<th scope="col">사용승인일자</th>  
+									<th scope="col">건물용도</th>                   
+									<th scope="col">안전등급</th>                    
+									<th scope="col">안전점검 시행일자</th>                                  
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>교사대지</td>
+									<td>본관</td>
+									<td>1973-01-01</td>
+									<td>교사동</td>
+									<td><span class="ico a">A등급</span></td>
+									<td>1973-02-01</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>교사부지</td>
+									<td>본관</td>
+									<td>1973-01-01</td>
+									<td>교사동</td>
+									<td><span class="ico b">B등급</span></td>
+									<td>1973-02-01</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>교사부지</td>
+									<td>본관</td>
+									<td>1973-01-01</td>
+									<td>교사동</td>
+									<td><span class="ico c">C등급</span></td>
+									<td>1973-02-01</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>교사부지</td>
+									<td>본관</td>
+									<td>1973-01-01</td>
+									<td>교사동</td>
+									<td><span class="ico d">D등급</span></td>
+									<td>1973-02-01</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>교사부지</td>
+									<td>본관</td>
+									<td>1973-01-01</td>
+									<td>교사동</td>
+									<td><span class="ico e">E등급</span></td>
+									<td>1973-02-01</td>
+								</tr>
+								<tr>
+									<td>6</td>
+									<td>교사부지</td>
+									<td>본관</td>
+									<td>1973-01-01</td>
+									<td>교사동</td>
+									<td><span class="ico f">미지정</span></td>
+									<td>1973-02-01</td>
+								</tr>
+								<tr>
+									<td>7</td>
+									<td>교사부지</td>
+									<td>본관</td>
+									<td>1973-01-01</td>
+									<td>교사동</td>
+									<td><span class="ico a">A등급</span></td>
+									<td>1973-02-01</td>
+								</tr>
+								<tr>
+									<td>8</td>
+									<td>교사부지</td>
+									<td>본관</td>
+									<td>1973-01-01</td>
+									<td>교사동</td>
+									<td><span class="ico b">B등급</span></td>
+									<td>1973-02-01</td>
+								</tr>
+								<tr>
+									<td>9</td>
+									<td>교사부지</td>
+									<td>본관</td>
+									<td>1973-01-01</td>
+									<td>교사동</td>
+									<td><span class="ico c">C등급</span></td>
+									<td>1973-02-01</td>
+								</tr>
+								<tr>
+									<td>10</td>
+									<td>교사부지</td>
+									<td>본관</td>
+									<td>1973-01-01</td>
+									<td>교사동</td>
+									<td><span class="ico d">D등급</span></td>
+									<td>1973-02-01</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>		
+			</div>
+			
+			<ul class="announce">
+				<li><span>주1)</span> 표기 산식 : 안전등급비율=(해당 등급/전체 건물 수)x100</li>
+			</ul>	
+			
+			<h3>안전 인증				
+				<!-- <span class="date">기준 : 2023-10-16<span>12 : 30</span></span> -->
+			</h3>	
+			<div class="safe_cert_wrap">
+				<!-- <span>안전인증심사<span class="type01">최우수</span></span> -->
+				<!-- <span>안전인증심사<span class="type02">우수</span></span> -->
+				<span>안전인증심사<span class="type03">예정</span></span>
+
+				<ul class="expect"><!-- [D] 인증심사 예정일시 expect 클래스 추가 -->
+					<li>
+						<span>2023</span>
+						<dl>
+							<dt>안정인증 실시</dt>
+							<dd>
+								안정인증 취득일
+								<span>2023-10-13</span>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<span>2023~2033</span>
+						<dl>
+							<dt>안전인증 유효기간</dt>
+							<dd>
+								안정인증 심사 결과<br>
+								'최우수' : 유효기간 10년<br>
+								'우수' : 유효기간 5년
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<span>2033</span>
+						<dl>
+							<dt>안전인증 만료</dt>
+							<dd>
+								<span>2033-10-12</span>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+			
+			<h3>안전성 평가				
+				<!-- <span class="date">기준 : 2023-10-16<span>12 : 30</span></span> -->
+			</h3>	
+			<div class="box_table_safe type02">
+				<table>							
+					<caption>시설현황 안전성 평가 테이블입니다. 번호, 안전성평가대상구분, 안전성평가 검토결과, 보완조치 결과보고, 후속 보완 조치 진행상태, 안전확보여부 등이 있습니다.</caption>
+					<colgroup>
+						<col style="width: 6rem;">
+						<col style="width: 11rem;">
+						<col>
+						<col style="width: 10.3rem;">
+						<col style="width: 18rem;">
+						<col style="width: 33rem;">
+						<col style="width: 9.5rem;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">번호</th>
+							<th scope="col">평가검토결과<br>통보일자</th>
+							<th scope="col">안전성평가대상구분</th>
+							<th scope="col">안전성평가<br>검토결과</th>
+							<th scope="col">보완조치 결과<br>(완료/전체)</th>   
+							<th scope="col">후속 보완 조치 진행상태</th>          
+							<th scope="col">안전확보조치<br>결과여부</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>2023-10-26</td>
+							<td class="txt_l">교육시설</td>
+							<td><span class="ico02 n">보완</span></td>
+							<td class="article">조치중 (<span class="txt_b blue">3</span> / <span class="txt_b">7</span>)</td>
+							<td><span class="grp w30">30%</span></td><!-- [D] w0 ~ w100 으로 10단계 클래스 -->
+							<td></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>2023-10-26</td>
+							<td class="txt_l">학교 4m초과 건설공사</td>
+							<td><span class="ico02 y">적정</span></td>
+							<td class="article"><i>완료</i> (<span class="txt_b blue">10</span> / <span class="txt_b">10</span>)</td>
+							<td><span class="grp w100">100%</span></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>2023-10-26</td>
+							<td class="txt_l">교육시설</td>
+							<td><span class="ico02 n">보완</span></td>
+							<td class="empty"></td>
+							<td class="empty"></td>
+							<td class="empty"></td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>2023-10-26</td>
+							<td class="txt_l">학교 4m초과 건설공사</td>
+							<td><span class="ico02 y">적정</span></td>
+							<td class="article">조치중 (<span class="txt_b blue">2</span> / <span class="txt_b">4</span>)</td>
+							<td><span class="grp w50">50%</span></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>2023-10-26</td>
+							<td class="txt_l">교육시설</td>
+							<td><span class="ico02 n">보완</span></td>
+							<td class="article">조치중 (<span class="txt_b blue">0</span> / <span class="txt_b">3</span>)</td>
+							<td><span class="grp w00">0%</span></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>2023-10-26</td>
+							<td class="txt_l">학교 4m초과 건설공사</td>
+							<td><span class="ico02 y">적정</span></td>
+							<td class="empty"></td>
+							<td class="empty"></td>
+							<td class="empty"></td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>2023-10-26</td>
+							<td class="txt_l">교육시설</td>
+							<td><span class="ico02 n">보완</span></td>
+							<td class="empty"></td>
+							<td class="empty"></td>
+							<td class="empty"></td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td>2023-10-26</td>
+							<td class="txt_l">학교 4m초과 건설공사</td>
+							<td><span class="ico02 y">적정</span></td>
+							<td class="article"><i>완료</i> (<span class="txt_b blue">7</span> / <span class="txt_b">7</span>)</td>
+							<td><span class="grp w100">100%</span></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td>2023-10-26</td>
+							<td class="txt_l">교육시설</td>
+							<td><span class="ico02 n">보완</span></td>
+							<td class="article">조치중 (<span class="txt_b blue">1</span> / <span class="txt_b">4</span>)</td>
+							<td><span class="grp w30">30%</span></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td>2023-10-26</td>
+							<td class="txt_l">학교 4m초과 건설공사</td>
+							<td><span class="ico02 y">적정</span></td>
+							<td class="article">조치중 (<span class="txt_b blue">2</span> / <span class="txt_b">8</span>)</td>
+							<td><span class="grp w20">20%</span></td>
+							<td><span class="ico_red">경고</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<h3>안전 사고
+				<!-- <span class="date">기준 : 2023-10-16<span>12 : 30</span></span> -->
+			</h3>	
+			<ul class="acc_list">
+				<li>
+					<h4>안전사고 현황<span>(단위 : 건)</span></h4>
+					<div class="acc_chart">
+						<!-- [D] 차트 영역 -->
+						<img src="../static/images/img_gis_bar_chart.png" alt="안전사고 차트 샘플01">
+					</div>
+				</li>
+				<li>
+					<h4>안전사고 피해구분<span>(단위 : 건, %)</span></h4>
+					<div class="acc_chart">
+						<!-- [D] 차트 영역 -->
+						<img src="../static/images/img_gis_pie_chart_03.png" alt="안전사고 차트 샘플02">
+					</div>
+					<ul>
+						<li>인적사고 : <span>564</span></li>
+						<li>물적사고 : <span>1,870</span></li>
+						<li>2차피해 : <span>137</span></li>
+					</ul>
+				</li>
+			</ul>
+			
+			<ul class="announce">
+				<li><span>주1)</span> 1건의 사고에 대해 여러 건의 피해 등록이 가능하므로 피해 합계가 안전사고 건수와 동일하지 않을 수 있음</li>
+				<li><span>주2)</span> 표기 산식 : 안전사고 피해구분 피해율=(해당 피해 건수/전체 피해 건수)x100</li>
+			</ul>				
+
+			<!-- [D] 조회된 데이터 없을시 -->
+			<!-- <div class="fact_cont_none">
+				<span class="blind">조회된 데이터가 없습니다.</span>
+			</div> -->
+			
+		</div>
+	</div>
+	<!-- // #fact_cont -->	
+	
+	<!-- top button-->
+	<div class="top_btn_a">
+		<a href="javascript:void(0);">
+			<span class="blind">상단으로 이동하기</span>
+		</a>
+	</div>
+	<!-- //top button-->
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="64" viewBox="0 0 80 64">
+    <defs>
+        <clipPath id="iw8i9lyaka">
+            <path data-name="사각형 701" style="fill:none" d="M0 0h74v60H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="그룹 17960" transform="translate(3 2)" style="clip-path:url(#iw8i9lyaka)">
+        <path data-name="패스 26764" d="M44.9 11.767H11.119A10.073 10.073 0 0 0 1 21.792V40.62a7.278 7.278 0 0 0 7.312 7.243h.143v9.919a1.346 1.346 0 0 0 2.226 1.008L22.562 48.6a3.048 3.048 0 0 1 1.984-.733H44.9a10.072 10.072 0 0 0 10.124-10.029V21.792A10.073 10.073 0 0 0 44.9 11.767" transform="translate(0 -.109)" style="fill:#fff"/>
+        <path data-name="패스 26765" d="M44.9 11.767H11.119A10.073 10.073 0 0 0 1 21.792V40.62a7.278 7.278 0 0 0 7.312 7.243h.143v9.919a1.346 1.346 0 0 0 2.226 1.008L22.562 48.6a3.048 3.048 0 0 1 1.984-.733H44.9a10.072 10.072 0 0 0 10.124-10.029V21.792A10.073 10.073 0 0 0 44.9 11.767z" transform="translate(0 -.109)" style="stroke:#f18f30;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+        <path data-name="패스 26766" d="M28.257 1h35.356a9.291 9.291 0 0 1 9.334 9.249v16.13c.552 7.276-3.3 10.718-7.38 10.718h-.074v9.919a1.347 1.347 0 0 1-2.227 1.008l-10.247-8.792A8.875 8.875 0 0 0 47.24 37.1H28.257a9.291 9.291 0 0 1-9.334-9.248v-17.6A9.291 9.291 0 0 1 28.257 1" transform="translate(0 -.009)" style="fill:#fff"/>
+        <path data-name="패스 26767" d="M28.257 1h35.356a9.291 9.291 0 0 1 9.334 9.249v16.13c.552 7.276-3.3 10.718-7.38 10.718h-.074v9.919a1.347 1.347 0 0 1-2.227 1.008l-10.247-8.792A8.875 8.875 0 0 0 47.24 37.1H28.257a9.291 9.291 0 0 1-9.334-9.248v-17.6A9.291 9.291 0 0 1 28.257 1z" transform="translate(0 -.009)" style="stroke:#f18f30;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+        <path data-name="패스 26768" d="M40.849 16.564a5.417 5.417 0 0 1-.371-2.441 5.5 5.5 0 0 1 10.984.429c0 1.481-1.676 3.239-3.566 4.652a4.877 4.877 0 0 0-1.934 3.912v.889" transform="translate(0 -.084)" style="fill:#fff"/>
+        <path data-name="패스 26769" d="M40.849 16.564a5.417 5.417 0 0 1-.371-2.441 5.5 5.5 0 0 1 10.984.429c0 1.481-1.676 3.239-3.566 4.652a4.877 4.877 0 0 0-1.934 3.912v.889" transform="translate(0 -.084)" style="stroke-linecap:round;stroke:#f18f30;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+        <path data-name="패스 26770" d="M46.461 28.6a.5.5 0 1 1-.5-.5.5.5 0 0 1 .5.5" transform="translate(0 -.26)" style="fill:#fff"/>
+        <ellipse data-name="타원 13" cx=".5" cy=".495" rx=".5" ry=".495" transform="translate(45.461 27.843)" style="stroke-linecap:round;stroke:#f18f30;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+    </g>
+</svg>

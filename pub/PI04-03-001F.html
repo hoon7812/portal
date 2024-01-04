@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<link rel="stylesheet" href="../static/css/style.css"><!-- 공통 CSS -->
+	<link rel="stylesheet" href="../static/css/style_m.css"><!-- 모바일 CSS -->
+	<link rel="stylesheet" href="../static/css/style_t.css"><!-- 태블릿 CSS -->
+	<link rel="stylesheet" href="../static/css/swiper-bundle.min.css">
+	<script src="../static/js/ui/jquery-3.6.3.min.js"></script>
+	<script src="../static/js/ui/swiper-bundle.min.js"></script>
+	<script src="../static/js/ui/ui.js"></script><!-- 공통 퍼블리싱UI JS -->
+	<title>교육시설 계획</title>
+</head>
+<body>		
+	
+	<!-- #WRAP -->
+	<div id="wrap">
+		<!-- skip navigation -->
+		<nav id="skipnav">
+			<a title="주메뉴 바로가기" href="#gnb">주메뉴 바로가기</a>
+			<a title="본문 바로가기" href="#container">본문 바로가기</a>
+		</nav>
+		<!-- //skip navigation -->	
+		
+		<!-- #HEADER -->
+		<header>
+			<!-- header_area : [D] hover시 extend 클래스 추가(태블릿/모바일 제외) -->
+			<div class="header_area">
+				<h1>
+					<a href="javascript:void(0);"><span class="blind">KEIIS</span></a>
+				</h1>
+
+				<!-- gnb -->
+				<div id="gnb">
+					<ul>
+						<!-- [D] on 클래스 추가시 활성화  -->						
+						<li class="on"><a href="javascript:void(0);" title="교육시설 통계">교육시설 통계</a>   
+							<ul>
+								<!-- [D] on 클래스 추가시 활성화  -->
+								<li class="on"><a href="javascript:void(0);" title="주제별 통계">주제별 통계</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:void(0);" title="시설현황 지도">시설현황 지도</a>
+							<ul>
+								<li><a href="javascript:void(0);" title="지도에서 안전시설 찾기 새창">지도에서 안전시설 찾기</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:void(0);" title="시설안전 가이드">시설안전 가이드</a>
+							<ul>
+								<li><a href="javascript:void(0);" title="법령 자료실">법령 자료실</a></li>
+								<li><a href="javascript:void(0);" title="안전 자료실">안전 자료실</a></li>
+								<li><a href="javascript:void(0);" title="교육시설 계획">교육시설 계획</a></li>
+								<li><a href="javascript:void(0);" title="KEIIS 용어사전">KEIIS 용어사전</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:void(0);" title="교육시설 소식">교육시설 소식</a>
+							<ul>
+								<li><a href="javascript:void(0);" title="공지사항">공지사항</a></li>
+								<li><a href="javascript:void(0);" title="안전 캠페인">안전 캠페인</a></li>
+								<li><a href="javascript:void(0);" title="FAQ">FAQ</a></li>
+								<li><a href="javascript:void(0);" title="오류 정보 신고">오류 정보 신고</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:void(0);" title="서비스 소개">서비스 소개</a>
+							<ul>
+								<li><a href="javascript:void(0);" title="KEIIS 소개">KEIIS 소개</a></li>
+							    <li><a href="javascript:void(0);" title="안전예방 교육">안전예방 교육</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="menu_close">
+						<a href="javascript:void(0);"><span class="blind">메뉴 닫기</span></a>
+					</div>
+				</div>
+				<!-- //gnb -->				
+
+				<!-- utility -->
+				<ul class="header_util">
+					<li class="header_search"><a href="javascript:void(0);"><span class="blind">검색</span></a></li>
+					<li class="header_category"><a href="javascript:void(0);"><span class="blind">메뉴 전체보기</span></a></li>
+				</ul>
+				<!-- //utility -->
+			</div>
+			<!-- //header_area -->		
+			
+			<!-- 통합검색창 layer Popup -->			
+			<div class="search_pop_wrap">
+				<div class="search_pop">
+					<p>통합검색</p>
+					<span class="box_ipt">
+						<label for="input_all_search" class="search_input">
+							<input type="text" id="input_all_search" class="input_txt" title="검색어 입력하기" placeholder="검색어 입력">
+						</label>
+						<button type="reset" class="input_del"><span class="blind">검색어 내용 초기화</span></button>
+						<button type="button" class="ico_search"><span class="blind">검색하기</span></button>
+					</span>	
+				</div>
+			</div>
+			<!-- //통합검색창 layer Popup -->
+		</header>
+		<!-- //#HEADER -->
+	
+		<!--- #container --->
+		<section id="container">	
+			
+			<!-- visual -->
+			<div class="visual sub02">
+				<div class="visual_cont">
+					<h2 class="blind">시설안전 가이드 시설안전 정보를 안내드립니다.</h2>
+				</div>
+			</div>
+			<!-- //visual -->
+							
+			<!-- location -->
+			<div class="location">			
+				<ul>
+					<li><a href="javascript:void(0);">홈</a></li>
+					<li>시설안전 가이드</li>
+					<li>교육시설 계획</li>
+				</ul>
+			</div>
+			<!-- //location -->
+
+			<!-- #contents -->
+			<div id="contents">
+
+				<!------------------- 본문 ------------------->						
+				<!-- title -->
+				<div class="sub_tl">
+					<h2>교육시설 계획</h2>
+				</div>
+				<!-- // title -->
+
+				<div class="tab_wrap plan_tab" data-role="tab">
+					<div class="tab_title">
+						<ul role="tablist">
+							<li aria-controls="tab-panel-01" class="active"><button type="button">교육시설 기본계획</button></li> <!-- D: 활성화시 class[active] add -->
+							<li aria-controls="tab-panel-02"><button type="button">제1차 교육시설 기본계획(2022년~2026년)</button></li>
+						</ul>
+					</div>
+					<div class="tab_cont">
+
+						<div id="tab-panel-01" class="box_tab-contents active" tabindex="0"> <!-- [D] active 추가시 활성화 -->
+
+							<h3 class="h3_sub">교육시설 기본계획</h3>
+
+							<p class="p_sub">
+								<span>교육부장관은 국가 차원의 교육시설 종합관리 및 지원체계 구축을 위한 기본계획을 5년마다 수립 · 시행해야 합니다.</span>
+								<span>기본계획은 교육시설 정책 목표·추진방향을 정하는 5년 단위의 중장기 계획으로, 향후 5년간 교육시설에 관한 정책시행의 토대가 되는 최상위 계획입니다.</span>
+								<span>기본계획을 바탕으로 감독기관의 장은 매년 시행계획을 수립하고, 이에 따라 교육시설의 장은 매년 실행계획을 수립합니다.</span>
+							</p>
+
+							<h4 class="h4_tl">교육시설 기본 계획안</h4>
+
+							<div class="plan_img">
+								<img src="../static/images/img_master_plan_visual_01.png" onclick="window.open(this.src)" alt="교육시설 기본계획안">
+								<span class="blind">
+									시행주체 : 교육부장관 / 2022년 ~ 2026년(5년) : 기본계획<br>
+									시행주체 : 감독기관의 장 / 2022년 ~ 2026년(5년) : 시행계획<br>
+									시행주체 : 교육시설의 장 / 2022년 ~ 2026년(5년) : 실행계획<br>
+									감독기관 : 중앙행정기관, 지방자치단체, 시도교육청 등<br>
+									교육시설 : 유·초·중·고·대학(원), 평생교육기관 등
+								</span>
+							</div>
+							
+							<a href="https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=90057&lev=0&searchType=null&statusYN=W&page=1&s=moe&m=0205&opType=N" title="새창" target="_blank" class="btn_plan">교육부 ‘교육시설 기본계획’ 바로가기 </a>
+		
+							<h4 class="h4_tl">교육시설 기본계획 수립 절차</h4>
+
+							<div class="plan_img">
+								<img src="../static/images/img_master_plan_visual_02.png" onclick="window.open(this.src)" alt="교육시설 기본계획 수립 절차">
+								<ul class="blind">									
+									<li>계획방향 설정
+										<ul>
+											<li>Step 01 현황조사 : 교육시설 현황, 정책추진 현황</li>
+											<li>Step 02 여건분석 : 사회적 트렌드 분석, 국내외 사례분석</li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<li>계획안 작성
+												<ul>
+													<li>Step 03 비전 및 목표설정 : 문헌 분석, 법.제도 분석, 전문가 자문</li>
+													<li>Step 04 추진 전략 설정 : 전문가 자문, 관계기관 의견 수렴, 공청회</li>
+													<li>Step 05 세부과제 및 추진내용 설정</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+
+							<h3 class="h3_sub">교육시설 안전점검 계획 관련 법령</h3>
+
+							<h4 class="h4_sub">「교육시설 등의 안전 및 유지관리 등에 관한 법률」 <span>제2조 정의 제1호</span></h4>
+
+							<div class="p_safe">
+								<p><span>제2조(정의)</span> 이 법에서 사용하는 용어의 뜻은 다음과 같다. &lt;개정 2021. 12. 28.&gt;</p>
+								<ol>
+									<li>
+										1. “교육시설”이란 다음 각 목의 어느 하나에 해당하는 학교 등의 시설 및 설비를 말한다.
+										<ol>
+											<li>가. <a href="https://www.law.go.kr/LSW//lsLinkProc.do?lsNm=%EC%9C%A0%EC%95%84%EA%B5%90%EC%9C%A1%EB%B2%95&chrClsCd=010202&mode=20&ancYnChk=0#" title="새창" target="_blank">「유아교육법」</a> <a href="https://www.law.go.kr/LSW//lsLinkCommonInfo.do?lsJoLnkSeq=1015797217&chrClsCd=010202&ancYnChk=" title="새창" target="_blank">제2조제2호</a>에 따른 유치원</li>
+											<li>나. <a href="https://www.law.go.kr/LSW//lsLinkProc.do?lsNm=%EC%B4%88%E3%86%8D%EC%A4%91%EB%93%B1%EA%B5%90%EC%9C%A1%EB%B2%95&chrClsCd=010202&mode=20&ancYnChk=0#" title="새창" target="_blank">「초ㆍ중등교육법」</a> <a href="https://www.law.go.kr/LSW//lsLinkCommonInfo.do?lsJoLnkSeq=1015797205&chrClsCd=010202&ancYnChk=" title="새창" target="_blank">제2조</a>에 따른 학교</li>
+											<li>다. <a href="https://www.law.go.kr/lsLinkProc.do?lsNm=%EA%B3%A0%EB%93%B1%EA%B5%90%EC%9C%A1%EB%B2%95&chrClsCd=010202&mode=20&ancYnChk=0#" title="새창" target="_blank">「고등교육법」</a> <a href="https://www.law.go.kr/LSW//lsLinkCommonInfo.do?lsJoLnkSeq=1015797229&chrClsCd=010202&ancYnChk=" title="새창" target="_blank">제2조</a>에 따른 학교</li>
+											<li>라. <a href="https://www.law.go.kr/LSW//lsLinkProc.do?lsNm=%ED%8F%89%EC%83%9D%EA%B5%90%EC%9C%A1%EB%B2%95&chrClsCd=010202&mode=20&ancYnChk=0#" title="새창" target="_blank">「평생교육법」</a> <a href="https://www.law.go.kr/LSW//lsLinkCommonInfo.do?lsJoLnkSeq=1015797221&chrClsCd=010202&ancYnChk=" title="새창" target="_blank">제31조제2항</a> 및 <a href="https://www.law.go.kr/LSW//lsLinkCommonInfo.do?lsJoLnkSeq=1015797225&chrClsCd=010202&ancYnChk=" title="새창" target="_blank">제4항</a>에 따른 학력ㆍ학위가 인정되는 평생교육시설</li>
+											<li>마. 다른 법률에 따라 설치된 각급 학교(국방ㆍ치안 등의 사유로 정보공시가 어렵다고  <a href="https://www.law.go.kr/LSW//lsLinkCommonInfo.do?lspttninfSeq=161973&chrClsCd=010202" title="새창" target="_blank">대통령령</a>으로 정하는 학교는 제외한다)</li>
+											<li>바. 그 밖에  <a href="https://www.law.go.kr/LSW//lsLinkCommonInfo.do?lspttninfSeq=161975&chrClsCd=010202" title="새창" target="_blank">대통령령</a>으로 정하는 교육관련 시설</li>
+										</ol>										
+									</li>
+								</ol>		
+							</div>
+
+							<h4 class="h4_sub">「교육시설 등의 안전 및 유지관리 등에 관한 법률」 <span>제5조 교육시설기본계획의 수립 등</span></h4>
+
+							<div class="p_safe">
+								<p>① 교육부장관은 교육시설의 종합적인 관리ㆍ지원체계를 구축하기 위한 교육시설기본계획(이하 “기본계획”이라 한다)을  <a href="https://www.law.go.kr/LSW//lsLinkCommonInfo.do?lsJoLnkSeq=1015797237&chrClsCd=010202&ancYnChk=" title="새창" target="_blank">제7조</a>에 따른 교육시설정책위원회의 심의를 거쳐 5년마다 수립ㆍ시행하고, 이를 공표하여야 한다. 기본계획을 변경하는 경우에도 또한 같다.</p>
+								<p>② 기본계획에는 다음 각 호의 사항이 포함되어야 한다. &lt;개정 2021. 12. 28.&gt;</p>
+								<ol>
+									<li>1. 중장기 교육시설 관리계획 및 정책 방향에 관한 사항</li>
+									<li>2. 교육시설에 대한 조사, 연구ㆍ개발 계획에 관한 사항</li>
+									<li>3. 교육시설 관리 및 지원체계 구축에 관한 사항</li>
+									<li>4. 교육시설 자산관리 방안에 관한 사항</li>
+									<li>5. 교육시설의 안전성 또는 관리 상태에 대한 평가ㆍ점검에 관한 사항</li>
+									<li>6. 교육시설 재난ㆍ재해와 안전사고 예방 및 피해복구 등 안전한 관리를 위한 개선계획에 관한 사항</li>
+									<li>7. 교육시설 안전 및 유지관리를 위하여 필요한 재원확보와 조달방안에 관한 사항</li>
+									<li>8. 교육시설 종합정보망의 구축ㆍ운영 활성화 방안에 관한 사항</li>
+									<li>9. 교육시설의 조성 및 안전 문화 진흥에 관한 사항</li>
+									<li>10. <a href="https://www.law.go.kr/LSW//lsLinkCommonInfo.do?lsJoLnkSeq=1015797231&chrClsCd=010202&ancYnChk=" title="새창" target="_blank">제2조제1호</a> <a href="https://www.law.go.kr/LSW//lsLinkCommonInfo.do?lsJoLnkSeq=1015797235&chrClsCd=010202&ancYnChk=" title="새창" target="_blank">나목</a>에 해당하는 학교(이하 “초ㆍ중ㆍ고등학교”라 한다) 내 수목 및 생태환경 조성ㆍ관리에 관한 사항</li>
+									<li>11. 그 밖에 교육시설 관리 및 지원 등에 관하여 대통령령으로 정하는 사항</li>
+								</ol>
+								<p>③ 교육부장관은 기본계획을 수립하거나 중요사항을 변경하는 경우 미리 관계 중앙행정기관의 장 및 교육감과 협의하여야 하며, 관계 중앙행정기관의 장, 지방자치단체의 장 또는 교육감에게 필요한 자료의 제출을 요청할 수 있다. 이 경우 요청을 받은 자는 특별한 사유가 없으면 이에 따라야 한다.</p>
+								<p>④ 감독기관의 장은 기본계획에 따라 매년 소관 교육시설의 안전 및 유지관리 등에 관한 시행계획(이하 “시행계획”이라 한다)을 수립ㆍ시행하여야 한다.</p>
+								<p>⑤ 감독기관의 장은 제4항에 따라 시행계획을 수립하거나 변경하였을 때에는 이를 지체 없이 교육부장관에게 통보하여야 한다.</p>
+								<p>⑥ 그 밖에 기본계획 및 시행계획의 수립시기ㆍ절차, 결과보고 등에 필요한 사항은 <a href="https://www.law.go.kr/LSW//lsLinkCommonInfo.do?lspttninfSeq=161981&chrClsCd=010202" title="새창" target="_blank">대통령령</a>으로 정한다.</p>
+							</div>
+							
+						</div>
+
+						<div id="tab-panel-02" class="box_tab-contents" tabindex="0">
+
+							<h3 class="h3_sub">제1차 교육시설 기본계획(2022년~2026년)</h3>
+
+							<h4 class="h4_tl">비전 및 3대 전략목표</h4>		
+
+							<div class="plan_img">
+								<img src="../static/images/img_master_plan_visual_03.png" onclick="window.open(this.src)" alt="비전 및 3대 전략목표">
+								<span class="blind">
+									01 안전한 교육시설 관리 기반 구축<br>
+									법·제도 기반의 체계적이고 과학적인 교육시설 안전관리를 통한 안심할 수 있는 교육환경 조성<br>
+									02 지속가능한 교육환경 조성<br>
+									사회구조 및 환경변화에 대응할 수 있는 창의적 인재 양성이 가능한 미래지향적 교육환경 조성<br>
+									03 효율적인 교육시설 관리시스템 구축<br>
+									교육시설 관리 지능정보화 및 전문성 강화를 통한 효율적인 교육시설 안전 및 유지관리 체계 구축<br>
+									Vision : 안전한 미래를 여는 교육환경 구현									
+								</span>				
+							</div>		
+							
+							
+							<h4 class="h4_tl">8대 중점과제 및 실천과제</h4>
+							
+							<div class="plan_img">
+								<img src="../static/images/img_master_plan_visual_04.png" onclick="window.open(this.src)" alt="8대 중점과제 및 실천과제">	
+								<span class="blind">	
+									01. 안전관리 체계강화 : 법·제도 현장 안착 기반 마련, 교육시설 안전 · 유지관리 고도화, 안전 취약시설 지원 강화<br>
+									02. 안전 위해요소 해소 : 재난·화재 위험시설 조기 해소, 지진안전 강화 및 유해 건축재료 해소<br>						
+									03. 안전문화 진흥 : 교육시설 안전문화 확산, 국민과 함께하는 교육시설 안전<br>						
+									04. 탄소중립 교육환경 조성 :녹색 교육환경 구현, 제로에너지 교육시설 조성<br>	
+									05. 창의 융·복합 교수·학습환경 조성 : 교육과정과 연계한 학습환경 재구조화, 사용자 참여 강화, 지역사회 상생·협력 기능 강화<br>								
+									06. 교육시설 품질 및 성능 고도화 : 효율적인 시설사업 체계 확립, 쾌적하고 안전한 교육환경 개선<br>								
+									07. 교육시설 관리 지능화 : 빅데이터 기반 교육시설 관리 지능정보화, 교육시설 데이터 정책 활용 강화<br>								
+									08. 교육시설 지원체계 강화 : 교육시설 관리 · 지원 조직 강화, 안정적 재원 지원 체계 마련									
+								</span>		
+							</div>				
+							
+							<h4 class="h4_tl">2026년 변화될 교육시설의 모습</h4>
+
+							<ul class="plan_edu_list">
+								<li>
+									<img src="../static/images/img_master_plan_visual_05_01.png" alt="안심할 수 있는 학교">
+									<span class="blind">
+										안전이 인증된 학교 (안전인증 비율 100%)<br>
+										지진에 안전한 학교 (내진성능확보율 83%)<br>
+										석면이 제거된 안전한 학교 (석면 제거율 92%)<br>
+										건강하고 쾌적한 학교 (건강.안전 만족도 80점)
+									</span>		
+								</li>
+								<li>
+									<img src="../static/images/img_master_plan_visual_05_02.png" alt="미래를 선도하는 지속가능한 학교">
+									<span class="blind">
+										그린스마트 미래학교 (1,797개동)<br>
+										탄소중립 생태학교 (2019년 대비 온실가스 15.2% 감축)<br>
+										지역과 상생하는 복합화 학교
+									</span>		
+								</li>
+								<li>
+									<img src="../static/images/img_master_plan_visual_05_03.png" alt="과학적으로 관리 운영되는 학교">
+									<span class="blind">
+										전문가가 관리하는 학교 (지역별 공단 설립/분야별 전문기관 운영)<br>
+										첨단기술 기반 학교 (법정업무 시스템 활용율 100%)<br>
+										AI기반 예측 관리 학교 (교육시설 통계지표 30개)
+									</span>		
+								</li>
+							</ul>
+
+						</div>
+
+					</div>
+				</div>					
+				<!------------------- //본문 ------------------->	
+
+				<!-- top button-->
+				<div class="top_btn">
+					<a href="javascript:void(0);">
+						<span class="blind">상단으로 이동하기</span>
+					</a>
+				</div>
+				<!-- //top button-->
+
+			</div>
+			<!-- //#contents -->
+
+		
+		</section>
+		<!--- //#container --->	
+
+		<!-- S :Footer -->
+		<footer id="footer">
+			<div class="footer_wrap type02">
+				<div class="footer_copy">
+					<p>
+						서울특별시 영등포구 국회대로 62길 25(여의도동 17-10) 한국교육시설안전원10층<br>
+						대표번호 02-781-8100 팩스 020-720-3918						
+					</p>
+					<p>
+						Copyright © 2024  Korea Institute of Educational Facility Safety.  All Rights Reserved.
+					</p>
+				</div>
+				<div class="footer_logo">
+					<a href="https://www.moe.go.kr/main.do?s=moe" title="새창" target="_blank" class="footer_btn_edu"><span class="blind">교육부</span></a>
+					<a href="https://www.koies.or.kr/index" title="새창" target="_blank" class="logo">
+						<span class="blind">한국고용시설안전원 Korea Institute of Educational Facility Safety</span>
+					</a>			
+					<span class="box_ipt">
+						<select title="시도교육청 바로가기 새창" onchange="window.open(value,'_blank');">
+							<option selected="selected">시도교육청</option>
+							<option value="https://www.sen.go.kr/sen/index.do">서울특별시교육청</option>
+							<option value="http://www.pen.go.kr">부산광역시교육청</option>
+							<option value="https://www.dge.go.kr/main/main.do">대구광역시교육청</option>
+							<option value="https://www.ice.go.kr/main.do?s=ice">인천광역시교육청</option>
+							<option value="http://www.gen.go.kr/main/main.php">광주광역시교육청</option>
+							<option value="https://www.dje.go.kr/main.do?s=dje">대전광역시교육청</option>
+							<option value="https://www.use.go.kr">울산광역시교육청</option>
+							<option value="https://www.sje.go.kr/intro/sje/index.html?sysId=sje">세종특별자치시교육청</option>
+							<option value="https://www.goe.go.kr">경기도교육청</option>
+							<option value="https://www.gwe.go.kr">강원도특별자치시교육청</option>
+							<option value="https://www.cbe.go.kr">충청북도교육청</option>
+							<option value="http://www.cne.go.kr/cne/main.do">충청남도교육청</option>
+							<option value="https://www.jbe.go.kr/index.jbe">전라북도교육청</option>
+							<option value="https://www.jne.go.kr/main/main.do">전라남도교육청</option>
+							<option value="https://www.gbe.kr/main/main.do">경상북도교육청</option>
+							<option value="https://www.gne.go.kr/index.gne?contentsSid=1384">경상남도교육청</option>
+							<option value="https://www.jje.go.kr/index.jje">제주특별자치도교육청</option>
+						</select>
+					</span>
+					<a href="https://work.keiis.kr/keiis/index.do" title="새창" target="_blank" class="footer_btn">업무포털</a>
+				</div>
+			</div>		
+		</footer>
+		<!-- E :Footer -->
+	</div>
+	<!--// #WRAP -->
+
+</body>
+</html>

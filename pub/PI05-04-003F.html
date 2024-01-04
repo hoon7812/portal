@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<link rel="stylesheet" href="../static/css/style.css"><!-- 공통 CSS -->
+	<link rel="stylesheet" href="../static/css/style_m.css"><!-- 모바일 CSS -->
+	<link rel="stylesheet" href="../static/css/style_t.css"><!-- 태블릿 CSS -->
+	<link rel="stylesheet" href="../static/css/swiper-bundle.min.css">
+	<script src="../static/js/ui/jquery-3.6.3.min.js"></script>
+	<script src="../static/js/ui/swiper-bundle.min.js"></script>
+	<script src="../static/js/ui/ui.js"></script><!-- 공통 퍼블리싱UI JS -->
+	<title>오류 정보 신고 목록</title>
+</head>
+<body>		
+	
+	<!-- #WRAP -->
+	<div id="wrap">
+		<!-- skip navigation -->
+		<nav id="skipnav">
+			<a title="주메뉴 바로가기" href="#gnb">주메뉴 바로가기</a>
+			<a title="본문 바로가기" href="#container">본문 바로가기</a>
+		</nav>
+		<!-- //skip navigation -->
+		
+		<!-- #HEADER -->
+		<header>
+			<!-- header_area : [D] hover시 extend 클래스 추가(태블릿/모바일 제외) -->
+			<div class="header_area">
+				<h1>
+					<a href="javascript:void(0);"><span class="blind">KEIIS</span></a>
+				</h1>
+
+				<!-- gnb -->
+				<div id="gnb">
+					<ul>
+						<!-- [D] on 클래스 추가시 활성화  -->						
+						<li class="on"><a href="javascript:void(0);" title="교육시설 통계">교육시설 통계</a>   
+							<ul>
+								<!-- [D] on 클래스 추가시 활성화  -->
+								<li class="on"><a href="javascript:void(0);" title="주제별 통계">주제별 통계</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:void(0);" title="시설현황 지도">시설현황 지도</a>
+							<ul>
+								<li><a href="javascript:void(0);" title="지도에서 안전시설 찾기 새창">지도에서 안전시설 찾기</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:void(0);" title="시설안전 가이드">시설안전 가이드</a>
+							<ul>
+								<li><a href="javascript:void(0);" title="법령 자료실">법령 자료실</a></li>
+								<li><a href="javascript:void(0);" title="안전 자료실">안전 자료실</a></li>
+								<li><a href="javascript:void(0);" title="교육시설 계획">교육시설 계획</a></li>
+								<li><a href="javascript:void(0);" title="KEIIS 용어사전">KEIIS 용어사전</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:void(0);" title="교육시설 소식">교육시설 소식</a>
+							<ul>
+								<li><a href="javascript:void(0);" title="공지사항">공지사항</a></li>
+								<li><a href="javascript:void(0);" title="안전 캠페인">안전 캠페인</a></li>
+								<li><a href="javascript:void(0);" title="FAQ">FAQ</a></li>
+								<li><a href="javascript:void(0);" title="오류 정보 신고">오류 정보 신고</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:void(0);" title="서비스 소개">서비스 소개</a>
+							<ul>
+								<li><a href="javascript:void(0);" title="KEIIS 소개">KEIIS 소개</a></li>
+							    <li><a href="javascript:void(0);" title="안전예방 교육">안전예방 교육</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="menu_close">
+						<a href="javascript:void(0);"><span class="blind">메뉴 닫기</span></a>
+					</div>
+				</div>
+				<!-- //gnb -->				
+
+				<!-- utility -->
+				<ul class="header_util">
+					<li class="header_search"><a href="javascript:void(0);"><span class="blind">검색</span></a></li>
+					<li class="header_category"><a href="javascript:void(0);"><span class="blind">메뉴 전체보기</span></a></li>
+				</ul>
+				<!-- //utility -->
+			</div>
+			<!-- //header_area -->		
+			
+			<!-- 통합검색창 layer Popup -->			
+			<div class="search_pop_wrap">
+				<div class="search_pop">
+					<p>통합검색</p>
+					<span class="box_ipt">
+						<label for="input_all_search" class="search_input">
+							<input type="text" id="input_all_search" class="input_txt" title="검색어 입력하기" placeholder="검색어 입력">
+						</label>
+						<button type="reset" class="input_del"><span class="blind">검색어 내용 초기화</span></button>
+						<button type="button" class="ico_search"><span class="blind">검색하기</span></button>
+					</span>	
+				</div>
+			</div>
+			<!-- //통합검색창 layer Popup -->
+		</header>
+		<!-- //#HEADER -->
+	
+		<!--- #container --->
+		<section id="container">	
+			
+			<!-- visual -->
+			<div class="visual sub03">
+				<div class="visual_cont">
+					<h2 class="blind">교육시설 소식 교육시설 관련 소식을 전해 드립니다.</h2>
+				</div>
+			</div>
+			<!-- //visual -->
+							
+			<!-- location -->
+			<div class="location">			
+				<ul>
+					<li><a href="javascript:void(0);">홈</a></li>
+					<li>교육시설 소식</li>
+					<li>오류 정보 신고</li>
+				</ul>
+			</div>
+			<!-- //location -->
+
+			<!-- #contents -->
+			<div id="contents">
+
+				<!------------------- 본문 ------------------->						
+				<!-- title -->
+				<div class="sub_tl">
+					<h2>오류 정보 신고</h2>
+				</div>
+				<!-- // title -->
+
+				<div class="box_top_guide">
+					<h3>오류 정보 신고 이용안내</h3>
+					<ul>
+						<li>오류 정보 신고는 대국민포털 서비스 이용 중 오류 내용에 대한 신고 내용만을 접수하며, 이와 관련 없는 민원 및 불편사항에 대해서는 접수받지 않습니다.</li>
+					    <li>오류 내용을 신고하시거나, 작성한 오류 정보 신고 게시물 내용 확인을 위해 아래 본인인증을 실행해 주세요.</li>
+						<li>PC에서 본인인증 팝업 실행이 안될 경우, 브라우저 팝업 차단을 해제해주시기 바랍니다.</li>
+					</ul>
+				</div>
+
+				<ul class="certi_list">
+					<li>
+						<a href="https://scert.ez-iok.com/stdauth/ds_auth_ptb/ptb_ezauth.html" target="_blank" title="새창" class="certi_list_simple">간편인증</a>
+					</li>
+					<li>					
+						<a href="https://cert.mobile-ok.com/ptb_mokauth.html?usageCode=01005&serviceId=keiisT00000172119&convertInfo=%5BLIYcbHwq4Lm%2BqVwBU1VZhGVALGOqAFk%2FIBewCg84Kb%2FcNXDjvpZH1tzwcpRqDNViQipAHXZKhWUTsojThwGSUw%3D%3D&returnUrl=https%3A%2F%2Fwww.mobile-ok.com%2Fconvert%2Fresult&encryptReqClientInfo=%5BTfbHmM8SUak3VK9iGakIJRN8SmBjnPb8vxu6RsRHd6m%2BIEjMUogKtHx3B1Eg%2BNb%2B&serviceType=telcoAuth&retTransferType=MOKToken&callbackFunction=&serverName=WEB-V1" target="_blank" title="새창" class="certi_list_phone">휴대폰인증</a>
+					</li>
+				</ul>
+				<!------------------- //본문 ------------------->	
+
+				<!-- top button-->
+				<div class="top_btn">
+					<a href="javascript:void(0);">
+						<span class="blind">상단으로 이동하기</span>
+					</a>
+				</div>
+				<!-- //top button-->
+
+			</div>
+			<!-- //#contents -->
+
+		
+		</section>
+		<!--- //#container --->	
+
+		<!-- S :Footer -->
+		<footer id="footer">
+			<div class="footer_wrap type02">
+				<div class="footer_copy">
+					<p>
+						서울특별시 영등포구 국회대로 62길 25(여의도동 17-10) 한국교육시설안전원10층<br>
+						대표번호 02-781-8100 팩스 020-720-3918						
+					</p>
+					<p>
+						Copyright © 2024  Korea Institute of Educational Facility Safety.  All Rights Reserved.
+					</p>
+				</div>
+				<div class="footer_logo">
+					<a href="https://www.moe.go.kr/main.do?s=moe" title="새창" target="_blank" class="footer_btn_edu"><span class="blind">교육부</span></a>
+					<a href="https://www.koies.or.kr/index" title="새창" target="_blank" class="logo">
+						<span class="blind">한국고용시설안전원 Korea Institute of Educational Facility Safety</span>
+					</a>			
+					<span class="box_ipt">
+						<select title="시도교육청 바로가기 새창" onchange="window.open(value,'_blank');">
+							<option selected="selected">시도교육청</option>
+							<option value="https://www.sen.go.kr/sen/index.do">서울특별시교육청</option>
+							<option value="http://www.pen.go.kr">부산광역시교육청</option>
+							<option value="https://www.dge.go.kr/main/main.do">대구광역시교육청</option>
+							<option value="https://www.ice.go.kr/main.do?s=ice">인천광역시교육청</option>
+							<option value="http://www.gen.go.kr/main/main.php">광주광역시교육청</option>
+							<option value="https://www.dje.go.kr/main.do?s=dje">대전광역시교육청</option>
+							<option value="https://www.use.go.kr">울산광역시교육청</option>
+							<option value="https://www.sje.go.kr/intro/sje/index.html?sysId=sje">세종특별자치시교육청</option>
+							<option value="https://www.goe.go.kr">경기도교육청</option>
+							<option value="https://www.gwe.go.kr">강원도특별자치시교육청</option>
+							<option value="https://www.cbe.go.kr">충청북도교육청</option>
+							<option value="http://www.cne.go.kr/cne/main.do">충청남도교육청</option>
+							<option value="https://www.jbe.go.kr/index.jbe">전라북도교육청</option>
+							<option value="https://www.jne.go.kr/main/main.do">전라남도교육청</option>
+							<option value="https://www.gbe.kr/main/main.do">경상북도교육청</option>
+							<option value="https://www.gne.go.kr/index.gne?contentsSid=1384">경상남도교육청</option>
+							<option value="https://www.jje.go.kr/index.jje">제주특별자치도교육청</option>
+						</select>
+					</span>
+					<a href="https://work.keiis.kr/keiis/index.do" title="새창" target="_blank" class="footer_btn">업무포털</a>
+				</div>
+			</div>		
+		</footer>
+		<!-- E :Footer -->
+	</div>
+	<!--// #WRAP -->
+
+	<!-- 본인확인 팝업 -->
+	<section class="full_pop certi_pop"><!-- [D] 버튼 open-full-pop 속성 클래스로 팝업 연동 -->
+		<!-- 헤더 -->
+		<div class="pop_header">
+			<h2>본인확인</h2>
+		</div>
+		<!--// 헤더 -->
+
+		<!-- 본문 컨텐츠 -->
+		<div class="pop_cont">
+			<ul class="certi_list">
+				<li>
+					<a href="javascript:void(0);" title="새창" class="certi_list_simple">간편인증</a>
+				</li>
+				<li>					
+					<a href="javascript:void(0);" title="새창" class="certi_list_phone">휴대폰인증</a>
+				</li>
+			</ul>
+		</div>
+		<!--// 본문 컨텐츠 -->
+
+	    <!-- 닫기 -->
+		<a href="javascript:void(0);" class="closed">
+			<span class="blind">팝업 닫기</span>
+		</a>
+		<!--// 닫기 -->
+	</section>
+	<!--//본인확인 팝업 -->
+
+</body>
+</html>

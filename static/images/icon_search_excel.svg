@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <g transform="translate(-174 -60)">
+        <rect width="64" height="64" rx="12" transform="translate(174 60)" style="fill:#0a7a3b"/>
+        <path data-name="패스 64455" d="m22.436 0-7.411 11.268L7.615 0H0l11.244 17L0 34h7.615l7.41-11.267L22.436 34H30L18.807 17 30 0z" transform="translate(191 75)" style="fill:#fff"/>
+    </g>
+</svg>

@@ -1,0 +1,172 @@
+
+
+테이블 가로 78.084
+
+
+
+11.6
+- 교육시설통계 작업 
+
+- 메인 리뉴얼
+
+  1. 날짜 -, . 구분 필요
+- 체크박스/라디오 포커스용 디자인 2개 필요
+- 정보공개 제도안내 8개탭
+
+
+GIS 윈도우 팝업창 열기
+<a href="javascript:openWindowPop('PI03_pc.html', 'map');">팝업창 열기</a>
+<a href="javascript:openWindowPop('PI03_m.html', 'map');">팝업창 열기</a>
+
+
+================================
+
+
+출근 23.6.1
+
+로그인/cmos 비번 
+1234
+
+wifi
+foxsoft / apfoxsoft
+
+교육시설통합정보시스템 개발서버
+fox_hoon7812
+1234qwer
+
+그룹웨어 
+gw.foxsoft.kr
+hoon7812
+1q2w3e4r!
+
+이메일
+hoon7812@foxsoft.kr
+
+SVN
+fox_hoon7812 / fox_hoon7812
+ 
+
+프린터
+mono / 1234
+
+고정IP
+192.168.0.235
+255.255.255.0
+192.168.0.254
+
+168.126.63.1
+168.126.63.2
+
+
+업무포털 교육시스템
+http://211.57.84.113:8080/keiis/index.do
+fox_hoon7812
+1234qwer
+
+
+
+모바일 사이트 접속
+1. 본인 PC > 네트워크 및 인터넷 > 모바일 핫스팟 접속 
+   "속성" 영역의 이름/암호 확인
+2. 본인 모바일 Wifi 에서 상기 속성 이름 네트워크로 접속 설정
+3. 모바일 > 인터넷 브라우저 keiis.kr 접속
+
+
+=========메모====================
+
+360px > 3.6px = 1vw
+OOpx / 3.6 = OOvw
+
+
+
+
+=======교육시설통합정보망 구축 사업 관련 접속 정보 ========
+
+
+[폭스소프트 그룹웨어] 메일 수신/발신용
+http://gw.foxsoft.kr/
+
+
+[SVN_포털부분]
+C:\Users\Administrator\Desktop\2022년_교육시설통합정보망_구축사업\00. 산출물\200. 공정 산출물\02. 23년-2차년도\05. 포털(PTL)
+
+
+[업무포털 테스트서버]
+http://211.57.84.113:8080/keiis/index.do
+
+
+[eXBuilder6(토마토) 샘플]
+https://edu.tomatosystem.co.kr/sample/
+
+
+[한국교육시설안전원]
+https://www.koies.or.kr/index
+
+
+
+
+
+
+=========작업절차====================
+
+- 웹표준검사
+- 크로스브라우징
+
+
+
+
+=========기타====================
+
+- 업무보고
+- 계약서 진행 예정?
+
+
+
+========반응형 해상도===========
+
+[기준]
+1. PC : 1920px ~ 1024px
+2. Tablet : 1023px ~ 769px
+3. Mobile : 768px <
+
+* 디자인
+ ① 1920px ~ 1200px : PC버전 최적 해상도
+ ② 1023px ~ 769px : 테블릿 최적 해상도
+ ③ 768px < : 360px 기준으로 모바일 최적 해상도
+
+* 퍼블리싱
+ ① 1920px ~ 1200px : PC 콘텐츠 사이즈 유지, 여백 조정
+ ② 1199px ~ 1024px : PC 최하 해상도까지 비율 조정(가로스크롤 방지)
+ ③ 1023px ~ 769px : 테블릿 최적, 여백 조정
+ ④ 768px < : 모바일 최적, 여백 조정
+
+
+
+
+
+
+
+==========참고 소스=================
+
+	<!-- <div class="video">
+					<video width="300px" poster="https://img.youtube.com/vi/bAXfK-VC4Pk/mqdefault.jpg" autoplay loop controls style="border-radius: 20px;">
+					  <source src="https://www.youtube.com/watch?v=bAXfK-VC4Pk">
+					</video>
+				</div> -->
+
+
+                스와이퍼 이동시 옵션
+
+                       on: {
+                            slideChangeTransitionEnd: function () {
+                              if(this.activeIndex == 2){
+                                $(".tab_wrap.stat_tab .swiper-container .swiper-slide").siblings().removeClass("active");
+                                $(".tab_wrap.stat_tab .swiper-container .swiper-slide:nth-child(8)").addClass("active");
+                              }
+                              else {   
+                              }
+                              console.log(this.activeIndex);
+                            }
+                        }
+
+

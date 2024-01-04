@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <style>
+      .cls-1, .cls-4, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-7 {
+        fill: none;
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-4 {
+        opacity: 0;
+      }
+
+      .cls-5 {
+        stroke: #ccc;
+      }
+
+      .cls-6 {
+        clip-path: url(#clip-path-2);
+      }
+
+      .cls-7 {
+        stroke: #111;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-8 {
+        stroke: none;
+      }
+
+      .cls-9 {
+        filter: url(#bg);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="mask" class="cls-1" width="60" height="60" transform="translate(1574 1524)"/>
+    </clipPath>
+    <filter id="bg" x="-1.5" y="-1.5" width="63" height="63" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feFlood flood-opacity="0.149"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path-2">
+      <rect id="사각형_1231" data-name="사각형 1231" class="cls-2" width="16" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="btn_go_top" transform="translate(-1574 -1524)">
+    <g id="mask-2" data-name="mask" class="cls-3">
+      <rect id="area" class="cls-4" width="60" height="60" transform="translate(1574 1524)"/>
+      <g class="cls-9" transform="matrix(1, 0, 0, 1, 1574, 1524)">
+        <g id="bg-2" data-name="bg" class="cls-5" transform="translate(6 6)">
+          <circle class="cls-8" cx="24" cy="24" r="24"/>
+          <circle class="cls-2" cx="24" cy="24" r="23.5"/>
+        </g>
+      </g>
+      <g id="arrow" transform="translate(1596 1542)">
+        <g id="그룹_18036" data-name="그룹 18036" class="cls-6">
+          <path id="패스_64335" data-name="패스 64335" class="cls-7" d="M15,8,8,1,1,8"/>
+          <line id="선_1" data-name="선 1" class="cls-7" y1="22" transform="translate(8 1)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

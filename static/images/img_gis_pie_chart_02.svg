@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="260" viewBox="0 0 260 260">
+    <defs>
+        <clipPath id="tj1n3nftra">
+            <circle cx="130" cy="130" r="130" transform="rotate(180 329.832 260.331)" style="fill:#242940"/>
+        </clipPath>
+    </defs>
+    <g transform="translate(-23 -39)">
+        <g transform="rotate(180 341.332 279.831)" style="clip-path:url(#tj1n3nftra)">
+            <g data-name="pie">
+                <path data-name="1" d="M0 0a129.27 129.27 0 0 1 76.323 24.795L0 129.844zm76.323 24.795a130.127 130.127 0 0 1 47.192 64.916L0 129.844z" transform="rotate(180 264.91 260.33)" style="stroke:transparent;stroke-miterlimit:10;fill:#0eb946"/>
+                <path data-name="2" d="M123.514 0 0 40.132l123.514 40.132a129.755 129.755 0 0 0 6.331-40.132A129.748 129.748 0 0 0 123.514 0z" transform="rotate(180 264.91 215.475)" style="fill:#4298d3"/>
+                <path data-name="3" d="m0 0 76.323 105.043A129.254 129.254 0 0 1 0 129.844zm0 0 123.515 40.13a130.106 130.106 0 0 1-47.192 64.913z" transform="rotate(180 264.91 195.408)" style="fill:#7876dd;stroke:transparent;stroke-miterlimit:10"/>
+                <path data-name="4" d="M0 105.046a129.247 129.247 0 0 0 76.321 24.8V0z" transform="rotate(180 303.07 195.409)" style="fill:#db7a05"/>
+                <path data-name="5" d="M6.331 80.264A130.356 130.356 0 0 1 6.331 0l123.514 40.13-76.322 105.047A130.126 130.126 0 0 1 6.331 80.264z" transform="rotate(180 329.832 215.474)" style="fill:#ea507c;stroke:transparent;stroke-miterlimit:10"/>
+                <path data-name="6" d="M123.515 129.844 0 89.711A129.9 129.9 0 0 1 123.515 0z" transform="rotate(180 326.667 260.33)" style="fill:#8d7969;stroke:transparent;stroke-miterlimit:10"/>
+            </g>
+            <path data-name="1" d="M0 127.209V-6.5" transform="translate(529.822 397.781)" style="stroke:#fff;stroke-width:2px;fill:none"/>
+            <path data-name="3" transform="translate(403.921 390.197)" style="stroke:#fff;stroke-width:2px;fill:none" d="M0 41.932 126.208 0"/>
+            <path data-name="4" transform="translate(403.923 349.504)" style="stroke:#fff;stroke-width:2px;fill:none" d="m0 0 126.206 41.622"/>
+            <path data-name="6" transform="translate(529.822 255.201)" style="stroke:#fff;stroke-width:2px;fill:none" d="M0 134.996V0"/>
+            <path data-name="7" transform="translate(530.129 282.418)" style="stroke:#fff;stroke-width:2px;fill:none" d="M77.336 0 0 107.78"/>
+            <path data-name="9" transform="translate(530.129 390.197)" style="stroke:#fff;stroke-width:2px;fill:none" d="M128.478 41.932 0 0"/>
+        </g>
+        <circle cx="80" cy="80" r="80" transform="translate(71 87)" style="fill:#fff"/>
+        <text transform="translate(210 87)" style="font-size:18px;font-family:Pretendard-Medium,Pretendard;font-weight:500;fill:#fff"><tspan x="-18.36" y="0">20.0</tspan></text>
+        <text transform="translate(255 174)" style="font-size:18px;font-family:Pretendard-Medium,Pretendard;font-weight:500;fill:#fff"><tspan x="-17.042" y="0">10.0</tspan></text>
+        <text transform="translate(210 260)" style="font-size:18px;font-family:Pretendard-Medium,Pretendard;font-weight:500;fill:#fff"><tspan x="-18.36" y="0">20.0</tspan></text>
+        <text transform="translate(118 273)" style="font-size:18px;font-family:Pretendard-Medium,Pretendard;font-weight:500;fill:#fff"><tspan x="-17.042" y="0">10.0</tspan></text>
+        <text transform="translate(50 201)" style="font-size:18px;font-family:Pretendard-Medium,Pretendard;font-weight:500;fill:#fff"><tspan x="-18.36" y="0">20.0</tspan></text>
+        <text transform="translate(92 88)" style="font-size:18px;font-family:Pretendard-Medium,Pretendard;font-weight:500;fill:#fff"><tspan x="-18.36" y="0">20.0</tspan></text>
+    </g>
+</svg>

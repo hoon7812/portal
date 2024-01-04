@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<link rel="stylesheet" href="../static/css/style.css"><!-- 공통 CSS -->
+	<link rel="stylesheet" href="../static/css/style_m.css"><!-- 모바일 CSS -->
+	<link rel="stylesheet" href="../static/css/style_t.css"><!-- 태블릿 CSS -->
+	<link rel="stylesheet" href="../static/css/swiper-bundle.min.css">
+	<script src="../static/js/ui/jquery-3.6.3.min.js"></script>
+	<script src="../static/js/ui/swiper-bundle.min.js"></script>
+	<script src="../static/js/ui/ui.js"></script><!-- 공통 퍼블리싱UI JS -->
+	<link rel="stylesheet" href="../static/css/datepicker.css">
+	<script src="../static/js/ui/bootstrap-datepicker.js"></script>
+	<script>	
+		$(window).on('load', function () {	
+			// Datepicker
+			$(".startDate").datepicker({
+				dateFormat: 'yy.mm.dd'
+			});	
+
+			$(".endtDate").datepicker({
+				dateFormat: 'yy.mm.dd'	
+			});		
+		});	
+	</script>
+	<title>게시판 검색</title>
+</head>
+<body>		
+	
+	<!-- #WRAP -->
+	<div id="wrap" class="search_all">
+		<!-- skip navigation -->
+		<nav id="skipnav">
+			<a title="통합검색 바로가기" href="#search_header">통합검색 바로가기</a>
+			<a title="본문 바로가기" href="#container">본문 바로가기</a>
+		</nav>
+		<!-- //skip navigation -->	
+  
+		<!-- #HEADER -->
+		<header>			
+			<div class="header_area">	
+				<div id="search_header">							
+					<h1>
+						<a href="javascript:void(0);"><span class="blind">KEIIS</span></a>
+					</h1>
+					<fieldset>
+						<div class="sel_wrap">
+							<select title="통합검색 구분 선택하기">
+								<option selected="selected">통합검색</option>
+								<option>학교/기관 검색</option>
+								<option>메뉴 검색</option>
+								<option>공지사항</option>
+								<option>안전 캠페인</option>
+								<option>안전 자료실</option>
+								<option>용어사전</option>
+								<option>게시판</option>
+								<option>첨부문서</option>
+								<option>웹페이지</option>
+							</select>
+						</div>
+					
+						<span class="box_ipt">
+							<label for="input_all_search">
+								<!-- input 클릭시 최신 검색어 [D] on 클래스 활성화 -->
+								<input type="text" id="input_all_search" class="input_txt" title="통합 검색하기" value="시설안전" placeholder="">
+							</label>
+							<button type="reset" class="input_del"><span class="blind">검색어 내용 초기화</span></button>
+							<button type="button" class="ico_search"><span class="blind">검색하기</span></button>
+						</span>
+
+						<!-- input 클릭시 최신 검색어 [D] on 클래스 활성화 -->
+						<div class="search_input_list">
+							<ul>
+								<li><a href="javascript:void(0);" class="txt_link">시설안전</a><a href="javascript:void(0);" class="btn_close_x"><span class="blind">삭제</span></a></li>
+								<li><a href="javascript:void(0);" class="txt_link">안전 캠페인</a><a href="javascript:void(0);" class="btn_close_x"><span class="blind">삭제</span></a></li>
+								<li><a href="javascript:void(0);" class="txt_link">교육시설</a><a href="javascript:void(0);" class="btn_close_x"><span class="blind">삭제</span></a></li>
+								<li><a href="javascript:void(0);" class="txt_link">안전점검</a><a href="javascript:void(0);" class="btn_close_x"><span class="blind">삭제</span></a></li>
+								<li><a href="javascript:void(0);" class="txt_link">용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전</a><a href="javascript:void(0);" class="btn_close_x"><span class="blind">삭제</span></a></li>
+							</ul>
+						</div>
+						<!-- //input 클릭시 최신 검색어 -->
+
+					</fieldset>
+				</div>
+			</div>		
+
+			<div class="header_bot_area">				
+				<div class="header_bot">
+
+					<div class="sel_cust">
+						<!-- [D] 클릭시 on 클래스, 옵션 활성화 -->
+						<button type="button">정렬</button>
+						<div class="sel_dropbox">
+							<ul>
+								<!-- [D] on 클래스, hover시 활성화 -->
+								<li class="on">
+									<a href="javascript:void(0);">관련도순</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">최신순</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="sel_cust">
+						<!-- [D] 클릭시 on 클래스, 옵션 활성화 -->
+						<button type="button">기간</button>
+						<div class="sel_dropbox">
+							<ul>
+								<li class="on">
+									<a href="javascript:void(0);">전체</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">1일</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">1주</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">1개월</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">1년</a>
+								</li>
+								<li>
+									<span>직접입력</span>
+									<div class="box_datepicker">
+										<span class="box_ipt">
+											<input type="text" class="input_txt startDate" title="날짜 시작 선택" value="" placeholder="">
+										</span>
+										<span class="date_line">
+										~
+										</span>
+										<span class="box_ipt ">
+											<input type="text" class="input_txt endtDate" title="날짜 끝 선택" value="" placeholder="">
+										</span>
+										<button type="button">적용하기</button>
+									</div>								
+								</li>
+							</ul>
+						</div>
+					</div>					
+					
+					<div class="sel_cust">
+						<!-- [D] 클릭시 on 클래스, 옵션 활성화 -->
+						<button type="button">검색범위</button>
+						<div class="sel_dropbox">
+							<ul>
+								<li class="on">
+									<a href="javascript:void(0);">전체</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">제목</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<span class="option_tl">옵션유지</span>
+
+					<div class="option_state">
+						<ul>
+							<!-- [D] on 클래스 추가시 활성화 -->
+							<li class="on">
+								<a href="javascript:void(0);">꺼짐</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">켜짐</a>
+							</li>				
+						</ul>	
+					</div>	
+					
+				</div>
+			</div>
+		</header>
+		<!-- //#HEADER -->		
+	
+		<!--- #container --->
+		<section id="container">	
+
+			<!-- #contents -->
+			<div id="contents">
+
+				<!------------------- 본문 ------------------->		
+				<!-- LNB-->
+				<div class="srch_lnb_wrap">
+					<ul class="srch_lnb">			
+						<li class="srch_lnb_tl">
+							검색구분
+						</li>			
+						<!-- [D] on 클래스시 활성화 -->
+						<li class="on">
+							<a href="javascript:void(0);">통합검색</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">학교/기관 검색</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">메뉴 검색</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">공지사항</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">안전 캠페인</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">안전 자료실</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">용어사전</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">게시판</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">첨부문서</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">웹페이지</a>
+						</li>
+					</ul>
+					<button type="button" class="btn_lnb"><span class="blind">메뉴 열기</span></button>
+
+				</div>
+				<!-- //LNB -->
+
+				<!-- 컨텐츠 -->
+				<div class="srch_cont">		
+					
+					<div class="srch_all_txt">
+						검색어 <span class="txt_keyword">"시설안전"</span> 에 대한 <span class="txt_all">총 00,000건</span>의 검색결과를 찾았습니다.
+					</div>
+
+					<!-- 게시판 -->
+					<div class="srch_board" id="srch_board">
+						<h3>게시판 <span>(총 00건)</span></h3>
+						<ul>
+							<li>
+								<div class="lct">
+									<span>홈</span>
+									<span>교육시설 통계</span>
+									<span>지역별 통계</span>
+								</div>
+								<h4>
+									<a href="javascript:void(0);">게시물 제목 표기</a>
+									<span class="date">2023-05-24</span>
+								</h4>
+								<p>
+									게시물 내용 내 검색어 <strong>시설안전</strong> 존재 시 이렇게 표시 합니다. 내용 일부(PC 기준 최대 2행) 노출 및 영역 초과 시 말줄임으로 표시 합니다. 제목 클릭 시 해당 게시물 상세 페이지로 이동 합니다. 내용 일부(PC 기준 최대 2행) 노출 및 영역 초과 시 말줄임으로 표시 합니다. 제목 클릭 시 해당 게시물 상세 페이지로 이동 합니다...
+								</p>
+							</li>
+							<li>
+								<div class="lct">
+									<span>홈</span>
+									<span>시설안전 가이드</span>
+									<span>법령 자료실</span>
+								</div>
+								<h4>
+									<a href="javascript:void(0);">「제6회 학교 <strong>시설안전</strong> 콘텐츠 공모전」 결과 및 이벤트 당첨자 발표 콘텐츠 공모전」 결과 및 이벤트 당첨자 발표 콘텐츠 공모전」 결과 및 이벤트 당첨자 발표 콘텐츠 공모전」 결과 및 이벤트 당첨자 발표 콘텐츠 공모전」 결과 및 이벤트 당첨자 발표</a>
+									<span class="date">2023-05-24</span>
+								</h4>
+								<p>
+									교육시설에 대한 사전기획(적정성검토)이 법제화 됨(「교육시설의 사전기획 등 업무수행 지침」, 22.6.29.)에 따라 미래형 학교 조성을 위한 내실있는 사전기획 저변화를 관계 전문가와 모색하는 「교육시설 
+									사전기획 심포지엄」을 개최합니다. 아래와 같이 행사 안내를 드리오니 많은 관심과 참여 부탁드립니다.아래와 같이 행사 안내를 드리오니 많은 관심과 참여 부탁드립니다.아래와 같이 행사 안내를 드리오니 많은 관심과 참여 부탁드립니다.아래와 같이 행사 안내를 드리오니 많은 관심과 참여 부탁드립니다.아래와 같이 행사 안내를 드리오니 많은 관심과 참여 부탁드립니다.
+								</p>
+							</li>
+							<li>
+								<div class="lct">
+									<span>홈</span>
+									<span>교육시설 소식</span>
+									<span>오류 정보 신고</span>
+								</div>
+								<h4>
+									<a href="javascript:void(0);">제목 영역 1행으로 등록일 영역 제외, 말줄임 표시</a>
+									<span class="date">2023-05-24</span>
+								</h4>
+								<p>
+									자료실 내용 내 검색어 <strong>시설안전</strong> 존재 시 이렇게 표시 하며, 1행 일 경우 높이값 조절
+								</p>
+							</li>
+							<li>
+								<div class="lct">
+									<span>홈</span>
+									<span>교육시설 소식</span>
+									<span>오류 정보 신고</span>
+								</div>
+								<h4>
+									<a href="javascript:void(0);">제목 영역 1행으로 등록일 영역 제외, 말줄임 표시</a>
+									<span class="date">2023-05-24</span>
+								</h4>
+								<p>
+									자료실 내용 내 검색어 <strong>시설안전</strong> 존재 시 이렇게 표시 하며, 1행 일 경우 높이값 조절
+								</p>
+							</li>
+							<li>
+								<div class="lct">
+									<span>홈</span>
+									<span>교육시설 소식</span>
+									<span>오류 정보 신고</span>
+								</div>
+								<h4>
+									<a href="javascript:void(0);">제목 영역 1행으로 등록일 영역 제외, 말줄임 표시</a>
+									<span class="date">2023-05-24</span>
+								</h4>
+								<p>
+									자료실 내용 내 검색어 <strong>시설안전</strong> 존재 시 이렇게 표시 하며, 1행 일 경우 높이값 조절
+								</p>
+							</li>
+							<li>
+								<div class="lct">
+									<span>홈</span>
+									<span>교육시설 소식</span>
+									<span>오류 정보 신고</span>
+								</div>
+								<h4>
+									<a href="javascript:void(0);">제목 영역 1행으로 등록일 영역 제외, 말줄임 표시</a>
+									<span class="date">2023-05-24</span>
+								</h4>
+								<p>
+									자료실 내용 내 검색어 <strong>시설안전</strong> 존재 시 이렇게 표시 하며, 1행 일 경우 높이값 조절
+								</p>
+							</li>
+						</ul>						
+						<div class="box_ipt">
+							<select title="출력수 선택하기">
+								<option selected="selected">10개씩 보기</option>
+								<option>15개씩 보기</option>
+								<option>20개씩 보기</option>
+								<option>30개씩 보기</option>
+								<option>50개씩 보기</option>
+								<option>100개씩 보기</option>
+							</select>
+						</div>
+					</div>
+					<!-- //게시판 -->
+										
+					<div class="box_table_bottom">
+						<!-- pagination -->
+						<div class="box_pagination">
+							<button type="button" class="btn_page first"><span class="blind">처음으로</span></button>
+							<!-- [D] disabled시 비활성화 -->
+							<button type="button" class="btn_page prev"><span class="blind">이전</span></button>
+							<button type="button"><span>1</span>/10</button>  
+							<span>페이지</span>
+							<button type="button" class="btn_page next"><span class="blind">다음</span></button>
+						</div>
+						<!-- //pagination -->
+					</div>
+
+				</div>
+				<!-- //컨텐츠 -->
+				<!------------------- //본문 ------------------->		
+
+				<!-- top button-->
+				<div class="top_btn">
+					<a href="javascript:void(0);">
+						<span class="blind">상단으로 이동하기</span>
+					</a>
+				</div>
+				<!-- //top button-->
+
+			</div>
+			<!-- //#contents -->
+
+		</section>
+		<!--- //#container --->	
+
+		<!-- S :Footer -->
+		<footer id="footer">
+			<div class="footer_wrap type02">
+				<div class="footer_copy">
+					<p>
+						서울특별시 영등포구 국회대로 62길 25(여의도동 17-10) 한국교육시설안전원10층<br>
+						대표번호 02-781-8100 팩스 020-720-3918						
+					</p>
+					<p>
+						Copyright © 2024  Korea Institute of Educational Facility Safety.  All Rights Reserved.
+					</p>
+				</div>
+				<div class="footer_logo">
+					<a href="https://www.moe.go.kr/main.do?s=moe" title="새창" target="_blank" class="footer_btn_edu"><span class="blind">교육부</span></a>
+					<a href="https://www.koies.or.kr/index" title="새창" target="_blank" class="logo">
+						<span class="blind">한국고용시설안전원 Korea Institute of Educational Facility Safety</span>
+					</a>			
+					<span class="box_ipt">
+						<select title="시도교육청 바로가기 새창" onchange="window.open(value,'_blank');">
+							<option selected="selected">시도교육청</option>
+							<option value="https://www.sen.go.kr/sen/index.do">서울특별시교육청</option>
+							<option value="http://www.pen.go.kr">부산광역시교육청</option>
+							<option value="https://www.dge.go.kr/main/main.do">대구광역시교육청</option>
+							<option value="https://www.ice.go.kr/main.do?s=ice">인천광역시교육청</option>
+							<option value="http://www.gen.go.kr/main/main.php">광주광역시교육청</option>
+							<option value="https://www.dje.go.kr/main.do?s=dje">대전광역시교육청</option>
+							<option value="https://www.use.go.kr">울산광역시교육청</option>
+							<option value="https://www.sje.go.kr/intro/sje/index.html?sysId=sje">세종특별자치시교육청</option>
+							<option value="https://www.goe.go.kr">경기도교육청</option>
+							<option value="https://www.gwe.go.kr">강원도특별자치시교육청</option>
+							<option value="https://www.cbe.go.kr">충청북도교육청</option>
+							<option value="http://www.cne.go.kr/cne/main.do">충청남도교육청</option>
+							<option value="https://www.jbe.go.kr/index.jbe">전라북도교육청</option>
+							<option value="https://www.jne.go.kr/main/main.do">전라남도교육청</option>
+							<option value="https://www.gbe.kr/main/main.do">경상북도교육청</option>
+							<option value="https://www.gne.go.kr/index.gne?contentsSid=1384">경상남도교육청</option>
+							<option value="https://www.jje.go.kr/index.jje">제주특별자치도교육청</option>
+						</select>
+					</span>
+					<a href="https://work.keiis.kr/keiis/index.do" title="새창" target="_blank" class="footer_btn">업무포털</a>
+				</div>
+			</div>		
+		</footer>
+		<!-- E :Footer -->
+	</div>
+	<!--// #WRAP -->
+</body>
+</html>

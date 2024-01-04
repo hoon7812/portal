@@ -1,0 +1,293 @@
+@charset "utf-8";
+@import url('reset.css');/* UI setting CSS */
+
+
+
+/* ************************************************************************************************************************************************************
+						《 공통 UI 》
+************************************************************************************************************************************************************ */
+
+
+/* ============================== [ 컨텐츠영역 ] ========================================================================================== */
+#skipnav a { display:block;overflow:hidden;position:absolute;left:0;top:-1000rem}
+#skipnav a:focus, #skipnav a:active { position:relative;top:0;width:100%;height:3.5rem;line-height:3.5rem;text-align:center;background-color:blue;color:#fff; z-index:20}
+
+
+/* ============ GIS ================ */
+#gis_wrap { position:relative; width:100%; height: 100%; overflow: hidden;}
+
+/* ::-webkit-scrollbar { display: none; width: .6rem; }
+::-webkit-scrollbar-thumb { background-color: #ccc; }
+::-webkit-scrollbar-track { background-color: #f0f0f0; } */
+
+#gis_top_wrap { position: fixed; top: 0; display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 1.2rem; gap: 1rem; background-color: #404e87;  box-shadow: 0 .3rem .6rem 0 rgba(0, 0, 0, 0.1); z-index: 4; }
+#gis_top_wrap > h1 { display: block; }
+#gis_top_wrap .top_btn { display: none; width: 4rem; height: 4rem; background-position: center; background-repeat: no-repeat; border-radius: .6rem; background-color: #3da5f5;}
+#gis_top_wrap .top_btn.on { display: block; }
+#gis_top_wrap .top_btn.home { background-image:url("../images/gis/icon_map_home_mobile.svg"); }
+#gis_top_wrap .top_btn.back { background-image:url("../images/gis/icon_map_back_mobile.svg"); }
+#gis_top_wrap .top_btn.close { background-image:url("../images/gis/icon_map_close_mobile.svg"); }
+#gis_top_wrap .top_btn.map { background-image:url("../images/gis/icon_map_map_mobile.svg"); }
+#gis_top_wrap .top_btn.list { background-image:url("../images/gis/icon_map_list_mobile.svg"); }
+#gis_top_wrap .box_ipt { flex: 1; }
+#gis_top_wrap .box_ipt { display: inline-flex; align-items: center; width: 100%; position: relative; vertical-align: top; flex: 1; }
+#gis_top_wrap .box_ipt label { width: 100%; }
+#gis_top_wrap .box_ipt .input_txt { width: 100%; height: 4rem; padding: 1.1rem 6rem 1rem 1rem; border-radius: .6rem; border: none; color: #111;  background-color: #fff; }
+#gis_top_wrap .box_ipt .input_txt::placeholder { color: #aaa; }
+#gis_top_wrap .box_ipt button[type='reset'].gis_input_del {position:absolute; right:4.4rem; top:50%; width: 1.4rem; height: 1.4rem; transform: translateY(-50%); background:url("../images/gis/btn_map_input_del.svg") no-repeat;}
+#gis_top_wrap button.gis_ico_search { position:absolute;right:1rem;top:50%; transform: translateY(-50%); width:2.4rem; height: 2.4rem; background:url("../images/gis/icon_map_search.svg")  }
+
+#gis_info_wrap { position: fixed; top: 6.4rem; width: 100%; height: calc(100vh - 6.4rem); background-color: #fff; overflow-y: auto; z-index: 10; }
+
+
+ /* gis 지도영역 관리 bar */
+#gis_btn_wrap { position: fixed; width: 3.6rem; height: auto; top: 8rem; left: 1.2rem; z-index: 4;}
+#gis_btn_wrap ul.gis_btn > li { position: relative; display: flex; justify-content: center; align-items: center; width: 3.6rem; height: 3.6rem; background-color: #fff; box-shadow: 0 0 .5rem 0 rgba(0, 0, 0, 0.15); border-radius: .6rem; }
+#gis_btn_wrap ul.gis_btn > li + li { margin-top: .6rem; }
+#gis_btn_wrap ul.gis_btn .gis_top_btn { display: block; width: 3.6rem; height: 3.6rem; background-repeat: no-repeat; background-position: center; }
+#gis_btn_wrap ul.gis_btn .gis_top_btn.num { line-height: 3.6rem; text-align: center; color: #111; font-weight: 500; }
+#gis_btn_wrap ul.gis_btn .gis_top_btn.mylct { background-image:url("../images/gis/icon_map_control_01_on.svg"); }
+#gis_btn_wrap ul.gis_btn .gis_top_btn.plus { background-image:url("../images/gis/icon_map_control_02_on.svg"); }
+#gis_btn_wrap ul.gis_btn .gis_top_btn.minus { background-image:url("../images/gis/icon_map_control_03_on.svg"); }
+#gis_btn_wrap ul.gis_btn .gis_top_btn.guide { background-image:url("../images/gis/icon_map_control_11_on.svg"); }
+#gis_btn_wrap ul.gis_btn > li.on { background-color: #2189d9;  }
+#gis_btn_wrap ul.gis_btn > li.on .gis_top_btn.guide { background-image:url("../images/gis/icon_map_control_11_over.svg"); }
+#gis_btn_wrap ul.gis_btn > li.on > ul { position: absolute; top: 0; left: 4.2rem; display: flex; gap: .6rem; }
+#gis_btn_wrap ul.gis_btn > li.on > ul > li { width: 3.6rem; height: 3.6rem; }
+#gis_btn_wrap ul.gis_btn > li.on > ul > li > a { display: block; width: 100%; height: 100%; border-radius: .6rem; box-shadow: 0 0 .5rem 0 rgba(0, 0, 0, 0.15); background-color: #fff;  background-repeat: no-repeat; background-position: center; }
+#gis_btn_wrap ul.gis_btn > li.on > ul > li > a.police { background-image:url("../images/gis/icon_map_around_01.svg"); }
+#gis_btn_wrap ul.gis_btn > li.on > ul > li > a.fire { background-image:url("../images/gis/icon_map_around_02.svg"); }
+#gis_btn_wrap ul.gis_btn > li.on > ul > li > a.hospital { background-image:url("../images/gis/icon_map_around_03.svg"); }
+#gis_btn_wrap ul.gis_btn > li.on > ul > li > a.temporary { background-image:url("../images/gis/icon_map_around_04.svg"); }
+#gis_btn_wrap ul.gis_btn > li.on > ul > li > a.disaster { background-image:url("../images/gis/icon_map_around_05.svg"); }
+#gis_btn_wrap ul.gis_btn > li.on > ul > li.on > a.police { background-image:url("../images/gis/icon_map_around_01_over.svg"); background-color: #3e7eff;  }
+#gis_btn_wrap ul.gis_btn > li.on > ul > li.on > a.fire { background-image:url("../images/gis/icon_map_around_02_over.svg"); background-color: #ef233c;  }
+#gis_btn_wrap ul.gis_btn > li.on > ul > li.on > a.hospital { background-image:url("../images/gis/icon_map_around_03_over.svg"); background-color: #00b337;  }
+#gis_btn_wrap ul.gis_btn > li.on > ul > li.on > a.temporary { background-image:url("../images/gis/icon_map_around_04_over.svg"); background-color: #b16828;  }
+#gis_btn_wrap ul.gis_btn > li.on > ul > li.on > a.disaster { background-image:url("../images/gis/icon_map_around_05_over.svg"); background-color: #625cf3;  }
+
+/* gis 일반/위성 */
+.gis_sate {  position: fixed; height: 3.6rem; top: 8rem; right: 1.2rem; z-index: 4;}
+.gis_sate ul { display: flex; align-items: center; justify-content: space-between; box-shadow: 0 0 .5rem 0 rgba(0, 0, 0, 0.15); }
+.gis_sate ul > li { display: flex; justify-content: center; align-items: center; background-color: #fff;  }
+.gis_sate ul > li a { display: block; font-size: 1.5rem; color: #111; line-height: 1.8rem; padding: .9rem .5rem; font-weight: 500; }
+.gis_sate ul > li.on { background-color: #0e77c7; }
+.gis_sate ul > li.on a { color: #fff; }
+.gis_sate ul > li:first-child { border-top-left-radius: .6rem; border-bottom-left-radius: .6rem; }
+.gis_sate ul > li:last-child { border-top-right-radius: .6rem; border-bottom-right-radius: .6rem; border-left: .1rem solid #e5e5e5; }
+
+
+/* input 클릭시 검색결과 */
+.gis_info_area { display: none; position: relative; width:100%; height: 100%; background-color: #fff; overflow-y: auto; }
+.gis_info_area.active { display: block;}
+.gis_info_area::-webkit-scrollbar { display: block; }
+
+.gis_info_facility { position: relative; display: block; padding: .8rem 1.5rem 1.2rem; box-shadow: 0 .3rem .6rem 0 rgba(0, 0, 0, 0.1); }
+.gis_info_facility > ul { display: flex; justify-content: space-between; }
+.gis_info_facility > ul li { flex: 1; }
+.gis_info_facility > ul li a { display: block; position: relative; padding-top: 4.6rem; color: #555; font-size: 1.3rem; text-align: center; }
+.gis_info_facility > ul li a::before { display: block; content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 3.2rem; height: 3.2rem; border-radius: .4rem; background-size: 2.4rem; background-repeat: no-repeat; background-position: center; }
+.gis_info_facility > ul li:nth-child(4) a,
+.gis_info_facility > ul li:nth-child(5) a { padding-top: 3.8rem }
+.gis_info_facility > ul li a.police::before { background-image:url("../images/gis/icon_map_around_01.svg"); }
+.gis_info_facility > ul li a.fire::before { background-image:url("../images/gis/icon_map_around_02.svg"); }
+.gis_info_facility > ul li a.hospital::before { background-image:url("../images/gis/icon_map_around_03.svg"); }
+.gis_info_facility > ul li a.temporary::before { background-image:url("../images/gis/icon_map_around_04.svg"); }
+.gis_info_facility > ul li a.disaster::before { background-image:url("../images/gis/icon_map_around_05.svg"); }
+.gis_info_facility > ul li.on a.police::before { background-color: #e8f2f6; }
+.gis_info_facility > ul li.on a.fire::before { background-color: #f7ecf0; }
+.gis_info_facility > ul li.on a.hospital::before { background-color: #e4f5e5; }
+.gis_info_facility > ul li.on a.temporary::before { background-color: #f5eee4; }
+.gis_info_facility > ul li.on a.disaster::before { background-color: #ebebf8; }
+
+.gis_input_list { display: none; width: 100%; padding: 2rem 2.4rem 2rem 2rem; background-color: #fff; }
+.gis_input_list.active { display: block; }
+.gis_input_list h3 { color: #999; line-height: 1.6rem; font-size: 1.4rem; font-weight: 400;  }
+.gis_input_list ul li { display: flex; justify-content: space-between; align-items: center;}
+.gis_input_list ul li + li { margin-top: 2rem; }
+.gis_input_list ul li a.gis_txt_link { position: relative; max-width: 92%; padding-left: 1.8rem; font-weight: 400; line-height: 1.9rem; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; } 
+.gis_input_list ul li a.gis_txt_link::before { display: block; content: ""; position: absolute; top: 50%; transform: translateY(-50%); left: 0; width: 1.2rem; height: 1.6rem; background:url("../images/gis/icon_map_list_marker.svg") no-repeat;  }
+.gis_input_list ul li a.btn_close_x { display: inline-block; width: 1.6rem; height: 1.6rem; background:url("../images/gis/icon_map_list_del.svg") }
+
+/* 최근 기록 없음 */
+.res_none { display: none; padding: 22rem 0 15rem; align-items: center; justify-content: center; background-image:url("../images/gis/img_no_search.svg"); background-position: center 15rem; background-repeat: no-repeat;}
+.res_none.active { display: flex; }
+
+
+
+/* 검색결과 */
+.gis_info_result { overflow: hidden; }
+.gis_info_result.active { display: block; }
+.gis_info_result .gis_result_cont > h3 { position: fixed; width: 100%; height: 6rem; line-height: 6rem; margin-top: -6rem; color: #111; font-weight: 500; padding-left: 2rem; border-bottom: .1rem solid #e9e9e9; background-color: #fff; }
+.gis_info_result .gis_result_cont > h3 > span { color: #999; margin-left: .5rem; }
+.gis_info_result .gis_result_cont > h3 > span > i { color: #1c78bf; }
+.gis_info_result .gis_result_cont { display: none; position: relative; height: 100%; padding-top: 6rem; overflow-y: auto;  }
+.gis_info_result .gis_result_cont.active { display: block; }
+.gis_info_result .gis_result_cont ul {  width: 100%;  }
+.gis_info_result .gis_result_cont ul li { width: 100%; height: 9.1rem; padding: 2rem; background-color: #fff; border-bottom: .1rem solid #e9e9e9; }
+.gis_info_result .gis_result_cont ul li .gis_result_cont_top { display: flex; align-items: center; justify-content: flex-start; height: 2.1rem; }
+.gis_info_result .gis_result_cont ul li .gis_result_cont_top .gis_result_num { display: inline-block; min-width: 2rem; width: 2rem; height: 2rem; text-align: center; line-height: 2rem; font-size: 1.4rem; color: #1c78bf;  background-color: #e2f2fe; border-radius: .4rem; }
+.gis_info_result .gis_result_cont ul li .gis_result_cont_top > a { display: inline-block; line-height: 2.1rem; font-size: 1.8rem; color: #111; font-weight: 700; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;  }
+.gis_info_result .gis_result_cont ul li .gis_result_cont_top > a strong { color: #1c78bf; }
+.gis_info_result .gis_result_cont ul li .gis_result_cont_top .gis_result_fac { display: inline-block; line-height: 1.8rem;  font-size: 1.5rem; color: #999; font-weight: 400; }
+.gis_info_result .gis_result_cont ul li .gis_result_cont_top * + * { margin-left: 1rem;  }
+.gis_info_result .gis_result_cont ul li > p { margin-top: 1.2rem; color: #999; line-height: 1.8rem; font-size: 1.5rem; font-weight: 400; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;  }
+.gis_info_result .gis_result_cont .btn_result { display: flex; justify-content: center; align-items: center; position: relative; width: 100%; padding: 2rem 0 1.3rem; }
+.gis_info_result .gis_result_cont .btn_result::after { display: inline-block; content: ""; width: 1.4rem; height: .8rem; background:url("../images/gis/icon_detail_search_combo_down.svg") no-repeat; margin-left: .8rem; }
+
+ /* 검색결과 없음 */
+.gis_m_none { display: none; padding: 30.6rem 0 15rem; align-items: center; justify-content: center; font-weight: 400; background-image:url("../images/gis/icn.svg"); background-position: center 23.6rem; background-repeat: no-repeat;}
+.gis_m_none.active { display: flex; }
+
+/* ========= GIS 팝업  ======= */
+.gis_pop { display:none;  position:fixed; background-color: #fff; overflow:hidden; z-index: 4;}
+.gis_pop.on { display: block; }
+
+/* 요약정보 small 팝업 */
+.gis_pop.small { left:50%; bottom: 1.6rem; transform:translateX(-50%); width: 93.333%; height: unset; padding: 1.5rem; border-radius: .6rem; box-shadow: 0 0 .5rem 0 rgba(0, 0, 0, 0.1); }
+.gis_pop.small .gis_pop_top { display: block; }
+.gis_pop.small .gis_pop_top > h3 > a { display: block; font-size: 1.8rem; line-height: 2.1rem; color: #1c78bf; padding-right: 2.2rem; font-weight: 700; text-decoration: underline; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;  }
+.gis_pop.small .gis_pop_top > span { display: block; margin-top: 1rem; color: #999; line-height: 1.9rem; font-weight: 400; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;  }
+.gis_pop.small .gis_pop_top > p { margin-top: 1rem; color: #555; font-size: 1.6rem; line-height: 1.9rem; font-weight: 400; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;  }
+.gis_pop.small > .close { position: absolute; top: .8rem; right: .8rem; width: 3.2rem; height: 3.2rem; background: url("../images/gis/btn_btmsheet_close_mobile.svg") no-repeat center;  } 
+
+/* 요약정보 full 팝업 */
+.gis_pop.full { top:0; left: 0; width: 100%; height:100%; padding: 2rem; overflow-y: auto; z-index: 6; }
+.gis_info_simp_sec .closed { position: absolute; top: 1.4rem; right: 1.4rem; width: 3.2rem; height: 3.2rem; background: url("../images/gis/btn_popup_close_mobile.svg") no-repeat;  } 
+
+.gis_info_simp_sec .gis_simp_tl { padding-bottom: 2rem; }
+.gis_info_simp_sec .gis_simp_tl > ul li { display: inline-block; position: relative; font-size: 1.5rem; color: #999; line-height: 1.8rem; font-weight: 400; }
+.gis_info_simp_sec .gis_simp_tl > ul li + li { margin-left: 1.9rem; }
+.gis_info_simp_sec .gis_simp_tl > ul li + li::before { position: absolute; display: block; content: ""; top: 50%; transform: translateY(-50%); left: -1.4rem; width: .6rem; height: 1.1rem; background:url("../images/gis/icon_map_loca_arrow.svg") no-repeat;  }
+.gis_info_simp_sec .gis_simp_tl > h4 { margin-top: 2rem; font-size: 2rem; color: #111; line-height: 2.6rem; text-align: center; font-weight: 700; word-break: break-all; white-space: normal; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.gis_info_simp_sec .gis_simp_tl > p { margin-top: 2rem; font-size: 1.5rem; color: #999; font-weight: 400; line-height: 2.1rem; text-align: center;  white-space: normal; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.gis_info_simp_sec .gis_simp_detail { padding: 2rem 0; margin: 0 -2rem; background-color: #f7f7f7; }
+.gis_info_simp_sec .gis_simp_detail > ul.gis_simp_detail01 { text-align: center; }
+.gis_info_simp_sec .gis_simp_detail > ul.gis_simp_detail01 li { display: inline-block; position: relative; line-height: 1.9rem; }
+.gis_info_simp_sec .gis_simp_detail > ul.gis_simp_detail01 li + li { margin-left: 1.9rem;  }
+.gis_info_simp_sec .gis_simp_detail > ul.gis_simp_detail01 li + li::before { position: absolute; display: block; content: "|"; top: 50%; transform: translateY(-50%); left: -1.4rem; width: .1rem;  }
+.gis_info_simp_sec .gis_simp_detail > p { margin-top: 1rem; text-align: center;line-height: 1.9rem;  }
+.gis_info_simp_sec .gis_simp_detail > p > span { color: #999; }
+.gis_info_simp_sec .gis_simp_detail > ul.gis_simp_detail02 { display:flex; justify-content: space-between; padding-top: 2rem; margin: 2rem 2rem 0; border-top: .1rem solid #e9e9e9; }  
+.gis_info_simp_sec .gis_simp_detail > ul.gis_simp_detail02 li { position: relative; display: flex; flex-direction: column; justify-content: space-between; text-align: center; flex: 1; }
+.gis_info_simp_sec .gis_simp_detail > ul.gis_simp_detail02 li + li::before { position: absolute; display: block; content: ""; top: 0; left: 0; width: .1rem; height: 5rem; background: #e9e9e9;  }
+.gis_info_simp_sec .gis_simp_detail > ul.gis_simp_detail02 li > span { line-height: 1.9rem; }
+.gis_info_simp_sec .gis_simp_detail > ul.gis_simp_detail02 li > p { font-size: 1.8rem; color: #111; margin-top: .8rem; line-height: 2.1rem; font-weight: 700; }
+
+.gis_info_simp_sec .btn_bp_wrap { text-align: center; }
+.gis_info_simp_sec .gis_simp_detail + .btn_bp_wrap { margin-top: 2rem; }
+.gis_info_simp_sec .btn_bp_wrap .btn_bp { display: inline-flex; justify-content: center; align-items: center; height: 4rem; padding: 0 1.2rem; border-radius: .6rem; color: #fff; background-color: #0e77c7; font-weight: 500; }
+.gis_info_simp_sec .btn_bp_wrap .btn_bp::after { display: inline-block; content: ""; width: 1.4rem; height: 1.4rem; margin-left: .8rem; background:url("../images/gis/icon_go_details.svg") no-repeat;  }
+.gis_info_simp_sec .btn_bp_wrap .btn_bp.ico_none::after { display: none; }
+.gis_info_simp_sec .btn_bp_wrap .btn_bp.ico_blue { color: #fff; background-color: #0e77c7; border: none; }
+.gis_info_simp_sec .btn_bp_wrap .btn_bp.ico_blue::after { display: none; }
+
+.gis_info_simp_sec .gis_simp_state { position: relative; margin-top: 3.9rem; }
+.gis_info_simp_sec .gis_simp_state > div > h5 { display: flex; justify-content: space-between; font-size: 1.8rem; color: #111; line-height: 2.1rem; }
+.gis_info_simp_sec .gis_simp_state > div > h5 > span { font-size: 1.5rem; color: #555; font-weight: 400; }
+.gis_info_simp_sec .gis_simp_state > div + div { margin-top: 3rem; }
+.gis_info_simp_sec .gis_simp_state > div > .chart_area { width: 100%; margin-top: 2.5rem; height: 19rem;}
+.gis_info_simp_sec .gis_simp_state > div:last-child > .chart_area { height: 24rem; }
+
+/* .gis_info_simp_sec .gis_simp_state { position: relative; }
+.gis_info_simp_sec .gis_simp_state img { width: 100%; max-width: 32rem; }
+.gis_info_simp_sec .gis_simp_state .gis_simp_state_area { padding-top: 2rem; text-align: center; }
+.gis_info_simp_sec .gis_simp_state .gis_simp_state_result { padding-top: 2rem; text-align: center; } */
+
+.gis_info_fac_list { margin-top: 2rem; }
+.gis_info_fac_list h5 { position: relative; display: flex; align-items: center; gap: .6rem; color: #111; font-size: 1.8rem; line-height: 2.1rem; font-weight: 500; }
+.gis_info_fac_list h5 > button { display: inline-block; width: 1.6rem; height: 1.6rem; background: url("../images/gis/icon_map_info.svg") no-repeat; }
+/* .gis_info_fac_list h5 > button:hover + .tooltip { display: block; } */
+.gis_info_fac_list h5 .tooltip { display: none; position: absolute; top: 2.5rem; left: 50%; transform: translateX(-50%); width: 26rem; height: auto; padding: 1.1rem 1.2rem; border-radius: 6px; box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2); background-color: #fff; font-size: 1.5rem; line-height: 2rem; letter-spacing: -.038rem; z-index: 1; }
+.gis_info_fac_list h5 .tooltip.on { display: block; }
+.gis_info_fac_list h5 .tooltip > button { position: absolute; top: 1.2rem; right: 1.2rem; width: 1.2rem; height: 1.2rem; background: url("../images/gis/btn_map_infotip_close.svg") no-repeat; font-size: 0; }
+.gis_info_fac_list > ul { margin-top: 2rem; display: flex; justify-content: space-between; }
+.gis_info_fac_list > ul li { width: 6.4rem; display: flex; justify-content: center; }
+.gis_info_fac_list > ul li button { display: block; position: relative; padding-top: 4.8rem; }
+.gis_info_fac_list > ul li button > span:first-child { display: flex; align-items: center; justify-content: center; font-size: 1.4rem; line-height: 1.6rem; font-weight: 400; min-height: 3.2rem; letter-spacing: -.035rem; }
+.gis_info_fac_list > ul li button > span:last-child { display: block; margin-top: .9rem; color: #111; font-weight: 500; line-height: 1.9rem; }
+.gis_info_fac_list > ul li button::before { display: block; content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 3.2rem; height: 3.2rem; border-radius: .4rem; background-position: center; background-repeat: no-repeat; }
+.gis_info_fac_list > ul li.on button > span:first-child,
+.gis_info_fac_list > ul li.on button > span:last-child { font-weight: 700; }
+.gis_info_fac_list > ul li button.police::before { background-color: #e8f2f6; background-image: url("../images/gis/icon_map_around_01.svg") }
+.gis_info_fac_list > ul li.on button.police::before { background-color: #3e7eff; background-image: url("../images/gis/icon_map_around_01_over.svg") }
+.gis_info_fac_list > ul li button.fire::before { background-color: #f7ecf0; background-image: url("../images/gis/icon_map_around_02.svg") }
+.gis_info_fac_list > ul li.on button.fire::before { background-color: #ef233c; background-image: url("../images/gis/icon_map_around_02_over.svg") }
+.gis_info_fac_list > ul li button.hospital::before { background-color: #e4f5e5; background-image: url("../images/gis/icon_map_around_03.svg") }
+.gis_info_fac_list > ul li.on button.hospital::before { background-color: #00b337; background-image: url("../images/gis/icon_map_around_03_over.svg") }
+.gis_info_fac_list > ul li button.temporary::before { background-color: #f5eee4; background-image: url("../images/gis/icon_map_around_04.svg") }
+.gis_info_fac_list > ul li.on button.temporary::before { background-color: #b16828; background-image: url("../images/gis/icon_map_around_04_over.svg") }
+.gis_info_fac_list > ul li button.disaster::before { background-color: #ebebf8; background-image: url("../images/gis/icon_map_around_05.svg") }
+.gis_info_fac_list > ul li.on button.disaster::before { background-color: #625cf3; background-image: url("../images/gis/icon_map_around_05_over.svg") }
+
+
+ 
+/* 주변 bottom 팝업 */
+.gis_pop.bottom { bottom:0; left: 0; width: 100%; border-top-left-radius: 1.4rem;  border-top-right-radius: 1.4rem; z-index: 6; }
+.gis_pop.bottom .gis_info_facility { position: relative; display: block; padding: 2.3rem 0rem 4rem; }
+.gis_pop.bottom .gis_info_facility > h3 { color: #111; font-size: 1.8rem; line-height: 2.1rem; padding-left: 2rem; }
+.gis_pop.bottom .gis_info_facility > ul { margin: 4.3rem .4rem 0; }
+.gis_pop.bottom > .closed { position: absolute; top: 1.8rem; right: 1.2rem; width: 3.2rem; height: 3.2rem; background: url("../images/gis/btn_btmsheet_close_mobile.svg") no-repeat;  } 
+
+
+/* ====== modal ====== */
+.gis_modal { display: none; position: fixed; width: 100%; height: 100%; left: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.6); z-index: 5;}
+.gis_modal.on { display: block; }
+.gis_modal.small { background-color: rgba(0, 0, 0, 0); z-index: 1; }
+
+
+/* gis 지도 영역 */
+#gis_map_area { position: fixed; width: 100%; height: 100%; z-index: 0; }
+
+/* gis marker */
+.gis_map_marker_area { position: absolute; z-index: 2; }
+.gis_map_marker_area.on { z-index: 3; }
+.gis_map_marker_area .gis_map_marker { position: absolute; top: 0; left: 0; width: 3.4rem; height: 4.6rem; cursor: pointer; background-repeat: no-repeat; background-size: 3.4rem 4.6rem; transform:translateZ(0); }
+.gis_map_marker_area.on .gis_map_marker { top: -1.2rem; left: -.5rem; width: 4.4rem; height: 6rem; background-size: 4.4rem 6rem; transform: translateZ(0); }
+
+.gis_map_marker_area.normal .gis_map_marker { background-image:url("../images/gis/icon_map_marker_00_on.png"); }
+.gis_map_marker_area.normal.on .gis_map_marker { background-image:url("../images/gis/icon_map_marker_00_over.png");  }
+.gis_map_marker_area.n01 .gis_map_marker { background-image:url("../images/gis/icon_map_marker_01_on.png"); }
+.gis_map_marker_area.n01.on .gis_map_marker { background-image:url("../images/gis/icon_map_marker_01_over.png");  }
+.gis_map_marker_area.n02 .gis_map_marker { background-image:url("../images/gis/icon_map_marker_02_on.png"); }
+.gis_map_marker_area.n02.on .gis_map_marker { background-image:url("../images/gis/icon_map_marker_02_over.png");  }
+.gis_map_marker_area.n03 .gis_map_marker { background-image:url("../images/gis/icon_map_marker_03_on.png"); }
+.gis_map_marker_area.n03.on .gis_map_marker { background-image:url("../images/gis/icon_map_marker_03_over.png");  }
+.gis_map_marker_area.n04 .gis_map_marker { background-image:url("../images/gis/icon_map_marker_04_on.png"); }
+.gis_map_marker_area.n04.on .gis_map_marker { background-image:url("../images/gis/icon_map_marker_04_over.png");  }
+.gis_map_marker_area.n05 .gis_map_marker { background-image:url("../images/gis/icon_map_marker_05_on.png"); }
+.gis_map_marker_area.n05.on .gis_map_marker { background-image:url("../images/gis/icon_map_marker_05_over.png");  }
+.gis_map_marker_area.n06 .gis_map_marker { background-image:url("../images/gis/icon_map_marker_06_on.png"); }
+.gis_map_marker_area.n06.on .gis_map_marker { background-image:url("../images/gis/icon_map_marker_06_over.png");  }
+.gis_map_marker_area.n07 .gis_map_marker { background-image:url("../images/gis/icon_map_marker_07_on.png"); }
+.gis_map_marker_area.n07.on .gis_map_marker { background-image:url("../images/gis/icon_map_marker_07_over.png");  }
+.gis_map_marker_area.n08 .gis_map_marker { background-image:url("../images/gis/icon_map_marker_08_on.png"); }
+.gis_map_marker_area.n08.on .gis_map_marker { background-image:url("../images/gis/icon_map_marker_08_over.png");  }
+.gis_map_marker_area.n09 .gis_map_marker { background-image:url("../images/gis/icon_map_marker_09_on.png"); }
+.gis_map_marker_area.n09.on .gis_map_marker { background-image:url("../images/gis/icon_map_marker_09_over.png");  }
+.gis_map_marker_area.n10 .gis_map_marker { background-image:url("../images/gis/icon_map_marker_10_on.png"); }
+.gis_map_marker_area.n10.on .gis_map_marker { background-image:url("../images/gis/icon_map_marker_10_over.png");  }
+.gis_map_marker_area.n11 .gis_map_marker { background-image:url("../images/gis/icon_map_marker_11_on.png"); }
+.gis_map_marker_area.n11.on .gis_map_marker { background-image:url("../images/gis/icon_map_marker_11_over.png");  }
+.gis_map_marker_area.n12 .gis_map_marker { background-image:url("../images/gis/icon_map_marker_12_on.png"); }
+.gis_map_marker_area.n12.on .gis_map_marker { background-image:url("../images/gis/icon_map_marker_12_over.png");  }
+.gis_map_marker_area.n13 .gis_map_marker { background-image:url("../images/gis/icon_map_marker_13_on.png"); }
+.gis_map_marker_area.n13.on .gis_map_marker { background-image:url("../images/gis/icon_map_marker_13_over.png");  }
+.gis_map_marker_area.n14 .gis_map_marker { background-image:url("../images/gis/icon_map_marker_14_on.png"); }
+.gis_map_marker_area.n14.on .gis_map_marker { background-image:url("../images/gis/icon_map_marker_14_over.png");  }
+.gis_map_marker_area.n15 .gis_map_marker { background-image:url("../images/gis/icon_map_marker_cate_01_on.png"); }
+.gis_map_marker_area.n15.on .gis_map_marker { background-image:url("../images/gis/icon_map_marker_cate_01_over.png");  }
+.gis_map_marker_area.n16 .gis_map_marker { background-image:url("../images/gis/icon_map_marker_cate_02_on.png"); }
+.gis_map_marker_area.n16.on .gis_map_marker { background-image:url("../images/gis/icon_map_marker_cate_02_over.png");  }
+.gis_map_marker_area.n17 .gis_map_marker { background-image:url("../images/gis/icon_map_marker_cate_03_on.png"); }
+.gis_map_marker_area.n17.on .gis_map_marker { background-image:url("../images/gis/icon_map_marker_cate_03_over.png");  }
+.gis_map_marker_area.n18 .gis_map_marker { background-image:url("../images/gis/icon_map_marker_cate_04_on.png"); }
+.gis_map_marker_area.n18.on .gis_map_marker { background-image:url("../images/gis/icon_map_marker_cate_04_over.png");  }
+.gis_map_marker_area.n19 .gis_map_marker { background-image:url("../images/gis/icon_map_marker_cate_05_on.png"); }
+.gis_map_marker_area.n19.on .gis_map_marker { background-image:url("../images/gis/icon_map_marker_cate_05_over.png");  }
+.gis_map_marker_area.n20 .gis_map_marker { background-image:url("../images/gis/icon_map_marker_cate_06_on.png"); }
+.gis_map_marker_area.n20.on .gis_map_marker { background-image:url("../images/gis/icon_map_marker_cate_06_over.png");  }
+.gis_map_marker_area.n21 .gis_map_marker { background-image:url("../images/gis/icon_map_marker_cate_07_on.png"); }
+.gis_map_marker_area.n21.on .gis_map_marker { background-image:url("../images/gis/icon_map_marker_cate_07_over.png");  }
+.gis_map_marker_area.n22 .gis_map_marker { background-image:url("../images/gis/icon_map_marker_cate_08_on.png"); }
+.gis_map_marker_area.n22.on .gis_map_marker { background-image:url("../images/gis/icon_map_marker_cate_08_over.png");  }

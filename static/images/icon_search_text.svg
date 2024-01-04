@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <defs>
+        <clipPath id="lkqfau8eaa">
+            <path data-name="사각형 2935" style="fill:none" d="M0 0h42v38H0z"/>
+        </clipPath>
+    </defs>
+    <g transform="translate(-174 -60)">
+        <rect width="64" height="64" rx="12" transform="translate(174 60)" style="fill:#ccc"/>
+        <g data-name="그룹 18133">
+            <g data-name="그룹 18132" style="clip-path:url(#lkqfau8eaa)" transform="translate(185 73)">
+                <path data-name="패스 64464" d="M14.469 5.34a.766.766 0 0 0 .763-.768v-2.3a.766.766 0 0 0-.763-.768H2.262a.765.765 0 0 0-.762.768v2.3a.763.763 0 1 0 1.525 0V3.036H7.6v10.753H6.077a.768.768 0 0 0 0 1.536h4.577a.768.768 0 0 0 0-1.536H9.129V3.036h4.577v1.536a.766.766 0 0 0 .763.768" style="fill:#555"/>
+                <path data-name="패스 64465" d="M14.469 5.34a.766.766 0 0 0 .763-.768v-2.3a.766.766 0 0 0-.763-.768H2.262a.765.765 0 0 0-.762.768v2.3a.763.763 0 1 0 1.525 0V3.036H7.6v10.753H6.077a.768.768 0 0 0 0 1.536h4.577a.768.768 0 0 0 0-1.536H9.129V3.036h4.577v1.536a.766.766 0 0 0 .763.768z" style="stroke-miterlimit:10;stroke-width:3px;stroke:#555;fill:none"/>
+            </g>
+        </g>
+        <g data-name="그룹 18135">
+            <g data-name="그룹 18134" style="clip-path:url(#lkqfau8eaa)" transform="translate(185 73)">
+                <path data-name="선 157" transform="translate(24.211 3.095)" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:6px;stroke:#555;fill:none" d="M0 0h14.789"/>
+                <path data-name="선 158" transform="translate(24.211 13.73)" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:6px;stroke:#555;fill:none" d="M0 0h14.789"/>
+                <path data-name="선 159" transform="translate(3.085 24.365)" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:6px;stroke:#555;fill:none" d="M0 0h35.915"/>
+                <path data-name="선 160" transform="translate(3.085 35)" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:6px;stroke:#555;fill:none" d="M0 0h35.915"/>
+            </g>
+        </g>
+    </g>
+</svg>

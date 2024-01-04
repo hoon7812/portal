@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="160" viewBox="0 0 320 160">
+    <defs>
+        <clipPath id="7ciml5loha">
+            <path data-name="사각형 2892" transform="translate(0 -.001)" style="fill:none" d="M0 0h108v34.362H0z"/>
+        </clipPath>
+    </defs>
+    <path style="fill:#fff" d="M0 0h320v160H0z"/>
+    <g data-name="그룹 18084">
+        <path data-name="패스 64414" d="m18.444.459-8.521 11-3.032 4.16V.459H0V33.9h6.891v-9.553l3.584-3.859L19.064 33.9h8.2L15.045 15.32 26.92.459z" style="fill:#ccc" transform="translate(106 40)"/>
+        <path data-name="패스 64415" d="M29.859.459V33.9h22.418v-5.534H36.75v-8.958h13.23v-5.4H36.75V6.041h15.481V.459z" style="fill:#ccc" transform="translate(106 40)"/>
+        <path data-name="사각형 2890" transform="translate(162.757 40.459)" style="fill:#ccc" d="M0 0h6.89v33.443H0z"/>
+        <path data-name="사각형 2891" transform="translate(176.469 40.459)" style="fill:#ccc" d="M0 0h6.89v33.443H0z"/>
+        <g data-name="그룹 18083">
+            <g data-name="그룹 18082" style="clip-path:url(#7ciml5loha)" transform="translate(106 40)">
+                <path data-name="패스 64416" d="M101.086 25.128a3.536 3.536 0 0 0-1.378-3 18.071 18.071 0 0 0-4.961-2.2 35.061 35.061 0 0 1-5.674-2.286q-5.7-3.076-5.7-8.292A8.074 8.074 0 0 1 84.9 4.513a9.98 9.98 0 0 1 4.387-3.319A16.536 16.536 0 0 1 95.711 0a15.052 15.052 0 0 1 6.389 1.3 10.175 10.175 0 0 1 4.352 3.663A9.589 9.589 0 0 1 108 10.336h-6.891a4.511 4.511 0 0 0-1.447-3.572A5.949 5.949 0 0 0 95.6 5.49a6.35 6.35 0 0 0-3.927 1.068 3.367 3.367 0 0 0-1.4 2.813A3.226 3.226 0 0 0 91.91 12.1a18.529 18.529 0 0 0 4.835 2.067q5.878 1.77 8.567 4.387A8.736 8.736 0 0 1 108 25.082a8.049 8.049 0 0 1-3.285 6.81q-3.286 2.471-8.843 2.47a17.071 17.071 0 0 1-7.028-1.413 11.108 11.108 0 0 1-4.835-3.87 9.9 9.9 0 0 1-1.666-5.7h6.914q0 5.536 6.615 5.536a6.438 6.438 0 0 0 3.836-1 3.251 3.251 0 0 0 1.378-2.791" style="fill:#ccc"/>
+            </g>
+        </g>
+    </g>
+    <text transform="translate(160 113)" style="font-size:19px;font-family:Pretendard-Medium,Pretendard;font-weight:500;letter-spacing:-.025em;fill:#ccc"><tspan x="-94.371" y="0">조회된 데이터가 없습니다.</tspan></text>
+</svg>

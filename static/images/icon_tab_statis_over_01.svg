@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <defs>
+        <clipPath id="ytvrxent9a">
+            <path data-name="사각형 1233" style="fill:none" d="M0 0h50v54H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="그룹 18037" style="clip-path:url(#ytvrxent9a)" transform="translate(5 3)">
+        <path data-name="패스 64336" d="M38.5 18.73V53h-27V18.73" style="stroke:#1c78bf;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+        <path data-name="패스 64337" d="M38.5 30.153h8.1a2.382 2.382 0 0 1 2.4 2.364v18.119A2.382 2.382 0 0 1 46.6 53H3.4A2.383 2.383 0 0 1 1 50.636V32.517a2.382 2.382 0 0 1 2.4-2.364h8.1" style="stroke:#1c78bf;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+        <path data-name="패스 64338" d="M42.883 21.12 24.593 9.863 7.117 21.12" style="stroke:#1c78bf;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+        <path data-name="선 2" transform="translate(25 1)" style="stroke:#1c78bf;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 8.273V0"/>
+        <path data-name="사각형 1232" transform="translate(25 1.026)" style="stroke:#1c78bf;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 0h9v6.526H0z"/>
+        <path data-name="패스 64339" d="M32.5 37.863V53h-15V37.863a1.191 1.191 0 0 1 1.2-1.182h12.6a1.191 1.191 0 0 1 1.2 1.182z" style="stroke:#1c78bf;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+        <path data-name="선 3" transform="translate(25 36.791)" style="stroke:#1c78bf;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 14.891V0"/>
+        <circle data-name="타원 1" cx="5.5" cy="5.5" r="5.5" transform="translate(19.5 19)" style="stroke:#1c78bf;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+        <path data-name="선 4" transform="translate(25 22.097)" style="stroke:#1c78bf;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 0v3.391"/>
+    </g>
+</svg>

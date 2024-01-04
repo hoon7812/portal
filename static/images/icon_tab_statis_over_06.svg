@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <defs>
+        <clipPath id="cjgaowdwia">
+            <path data-name="사각형 5154" style="fill:none" d="M0 0h48v51H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="그룹 18395" style="clip-path:url(#cjgaowdwia)" transform="translate(6 4)">
+        <path data-name="패스 68586" d="m1 50 1.642-13.561a5.028 5.028 0 0 1 1.1-2.656c.586-.68 1.462-.7 2.326-1.114l2.79-1.331L9.466 50" style="stroke-linecap:round;stroke:#1c78bf;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+        <path data-name="패스 68587" d="m38.373 50 .608-18.662 2.951 1.331c1.741.785 3.178 1.73 3.425 3.77L47 50" style="stroke-linecap:round;stroke:#1c78bf;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+        <path data-name="패스 68588" d="M9.8 30.835 14.721 28l.572 11.2a3.171 3.171 0 0 0 3.024 3.147h11.366a3.171 3.171 0 0 0 3.024-3.147l.572-11.2 4.921 2.835" style="stroke-linecap:round;stroke:#1c78bf;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+        <path data-name="패스 68589" d="M32.963 15.542c.026.26.6 6.412-2.693 10.04A8.075 8.075 0 0 1 24 28.124a8.1 8.1 0 0 1-6.291-2.551c-3.286-3.631-2.7-9.771-2.67-10.031" style="stroke:#1c78bf;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+        <path data-name="패스 68590" d="M14.442 20.787a2.4 2.4 0 0 1-2.4-2.394v-.655a2.4 2.4 0 0 1 2.4-2.394" style="stroke-linecap:round;stroke:#1c78bf;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+        <path data-name="패스 68591" d="M33.558 15.343a2.4 2.4 0 0 1 2.4 2.394v.655a2.4 2.4 0 0 1-2.4 2.394" style="stroke-linecap:round;stroke:#1c78bf;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+        <path data-name="패스 68592" d="M35.859 15.282H12.141a.529.529 0 0 1-.541-.516v-2.958a.529.529 0 0 1 .541-.516h23.718a.529.529 0 0 1 .541.516v2.958a.529.529 0 0 1-.541.516z" style="stroke-linecap:round;stroke:#1c78bf;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+        <path data-name="패스 68593" d="M12.989 11.983a11.011 11.011 0 0 1 22.022 0" style="stroke:#1c78bf;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+        <path data-name="선 564" transform="translate(22.556 1.785)" style="stroke-linecap:round;stroke:#1c78bf;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 0v4.57"/>
+        <path data-name="선 565" transform="translate(25.444 1.785)" style="stroke-linecap:round;stroke:#1c78bf;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 4.57V0"/>
+    </g>
+</svg>

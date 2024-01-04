@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="168" viewBox="0 0 460 168">
+    <defs>
+        <clipPath id="bb4rgm8s7a">
+            <circle cx="84" cy="84" r="84" transform="rotate(180 283.999 214.498)" style="fill:#242940"/>
+        </clipPath>
+    </defs>
+    <g transform="rotate(180 333.999 214.498)" style="clip-path:url(#bb4rgm8s7a)">
+        <g data-name="pie">
+            <path data-name="합치기 3" d="M0 151.957 49.373 84l79.906 25.96A84.015 84.015 0 0 1 0 151.957zM49.373 84l79.906-25.965a84.373 84.373 0 0 1 0 51.925zm49.373-67.96a84.187 84.187 0 0 1 30.533 42L49.373 84zM49.373 0a83.617 83.617 0 0 1 49.373 16.04L49.373 84z" transform="rotate(180 266.687 214.499)" style="stroke:transparent;stroke-miterlimit:10;fill:#0eb946"/>
+            <path data-name="5" d="M4.1 51.925A84.325 84.325 0 0 1 4.1 0L84 25.961 34.625 93.919A84.185 84.185 0 0 1 4.1 51.925z" transform="rotate(180 284 185.479)" style="fill:#4298d3;stroke:transparent;stroke-miterlimit:10"/>
+            <path data-name="6" d="M79.906 84 0 58.036A84.039 84.039 0 0 1 79.906 0z" transform="rotate(180 281.952 214.498)" style="fill:#7876dd;stroke:transparent;stroke-miterlimit:10"/>
+        </g>
+        <path data-name="1" d="M0 80.3V-6.5" transform="translate(483.999 351.496)" style="fill:none;stroke:#fff;stroke-width:2px"/>
+        <path data-name="7" style="fill:none;stroke:#fff;stroke-width:2px" d="M50.697 0 0 70.593" transform="translate(483.531 274.87)"/>
+        <path data-name="9" transform="translate(483.531 344.53)" style="fill:none;stroke:#fff;stroke-width:2px" d="M83.783 27.193 0 0"/>
+    </g>
+    <text transform="translate(224 95)" style="font-size:18px;font-family:Pretendard-Medium,Pretendard;font-weight:500;fill:#fff"><tspan x="-18.615" y="0">60.0</tspan></text>
+    <text transform="translate(152 49)" style="font-size:18px;font-family:Pretendard-Medium,Pretendard;font-weight:500;fill:#fff"><tspan x="-18.36" y="0">20.0</tspan></text>
+    <text transform="translate(134 103)" style="font-size:18px;font-family:Pretendard-Medium,Pretendard;font-weight:500;fill:#fff"><tspan x="-18.36" y="0">20.0</tspan></text>
+    <path data-name="사각형 958" transform="translate(298 48)" style="fill:#0eb946" d="M0 0h12v12H0z"/>
+    <text transform="translate(316 59)" style="fill:#555;font-size:15px;font-family:Pretendard-Regular,Pretendard;letter-spacing:-.025em"><tspan x="0" y="0">인적사고</tspan></text>
+    <path data-name="사각형 958" transform="translate(298 78)" style="fill:#4298d3" d="M0 0h12v12H0z"/>
+    <text data-name="text" transform="translate(316 89)" style="fill:#555;font-size:15px;font-family:Pretendard-Regular,Pretendard;letter-spacing:-.025em"><tspan x="0" y="0">물적사고</tspan></text>
+    <g>
+        <path data-name="사각형 958" transform="translate(298 108)" style="fill:#7876dd" d="M0 0h12v12H0z"/>
+        <text data-name="text" transform="translate(316 119)" style="fill:#555;font-size:15px;font-family:Pretendard-Regular,Pretendard;letter-spacing:-.025em"><tspan x="0" y="0">2차피해</tspan></text>
+    </g>
+</svg>

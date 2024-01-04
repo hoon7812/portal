@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <defs>
+        <clipPath id="m2br9fmmja">
+            <rect width="64" height="64" rx="12" transform="translate(174 60)" style="fill:#f4ac1c"/>
+        </clipPath>
+        <clipPath id="xevpgn5qrb">
+            <path data-name="사각형 2928" style="fill:none" d="M0 0h51.806v22.847H0z"/>
+        </clipPath>
+    </defs>
+    <g transform="translate(-174 -60)">
+        <rect data-name="bg" width="64" height="64" rx="12" transform="translate(174 60)" style="fill:#f4ac1c"/>
+        <g style="clip-path:url(#m2br9fmmja)">
+            <g data-name="그룹 18118">
+                <path data-name="사각형 2923" style="fill:#7d4524" d="M0 0h8v4H0z" transform="translate(198 60)"/>
+                <path data-name="사각형 2924" transform="translate(206 64)" style="fill:#7d4524" d="M0 0h8v4H0z"/>
+                <path data-name="사각형 2925" transform="translate(198 68)" style="fill:#7d4524" d="M0 0h8v4H0z"/>
+                <path data-name="사각형 2926" transform="translate(206 72)" style="fill:#7d4524" d="M0 0h8v4H0z"/>
+            </g>
+            <g data-name="그룹 18140">
+                <path data-name="사각형 2923" style="fill:#7d4524" d="M0 0h8v4H0z" transform="translate(198 108)"/>
+                <path data-name="사각형 2924" transform="translate(206 112)" style="fill:#7d4524" d="M0 0h8v4H0z"/>
+                <path data-name="사각형 2925" transform="translate(198 116)" style="fill:#7d4524" d="M0 0h8v4H0z"/>
+                <path data-name="사각형 2926" transform="translate(206 120)" style="fill:#7d4524" d="M0 0h8v4H0z"/>
+            </g>
+        </g>
+        <g data-name="그룹 18122">
+            <path data-name="패스 64458" d="M.7 0v5.12h11.011L0 17.983v4.863h19.807v-5.12H7.391l12-13.118V0z" style="fill:#873c0f" transform="translate(180 80.5)"/>
+            <path data-name="사각형 2927" transform="translate(202.623 80.501)" style="fill:#873c0f" d="M0 0h5.952v22.846H0z"/>
+            <g data-name="그룹 18121">
+                <g data-name="그룹 18120" style="clip-path:url(#xevpgn5qrb)" transform="translate(180 80.5)">
+                    <path data-name="패스 64459" d="M32.7 0h10.851c4.255 0 8.255 1.952 8.255 7.359 0 5.664-3.232 7.872-8.255 7.872h-4.9v7.616H32.7zm5.952 10.624h4c1.855 0 3.2-.769 3.2-2.849 0-2.143-1.376-3.007-3.2-3.007h-4z" style="fill:#873c0f"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

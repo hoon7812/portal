@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+    <defs>
+        <clipPath id="ao5j87ywja">
+            <path data-name="사각형 130" style="fill:none" d="M0 0h14v14H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="그룹 51" style="clip-path:url(#ao5j87ywja)">
+        <path data-name="선 10" transform="translate(.75 .75)" style="stroke:#555;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;fill:none" d="M0 12.5 12.5 0"/>
+        <path data-name="선 11" transform="translate(.75 .75)" style="stroke:#555;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;fill:none" d="m0 0 12.5 12.5"/>
+    </g>
+</svg>

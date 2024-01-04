@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+    <defs>
+        <clipPath id="as96umqxia">
+            <path data-name="사각형 3090" style="fill:none" d="M0 0h42v46H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="그룹 18243">
+        <g data-name="그룹 18242" style="clip-path:url(#as96umqxia)" transform="translate(3)">
+            <path data-name="패스 68211" d="M32.25 16v29H9.75V16" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+            <path data-name="패스 68212" d="M32.25 25.668H39a2 2 0 0 1 2 2V43a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V27.668a2 2 0 0 1 2-2h6.75" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+            <path data-name="패스 68213" d="M35.9 18.025 20.661 8.5 6.1 18.025" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+            <path data-name="선 164" transform="translate(21 1)" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 7V0"/>
+            <path data-name="사각형 3089" transform="translate(21 1.022)" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 0h7.5v5.522H0z"/>
+            <path data-name="패스 68214" d="M27.25 32.191V45h-12.5V32.191a1 1 0 0 1 1-1h10.5a1 1 0 0 1 1 1z" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+            <path data-name="선 165" transform="translate(21 31.285)" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 12.6V0"/>
+            <path data-name="패스 68215" d="M25.583 20.884A4.584 4.584 0 1 1 21 16.23a4.619 4.619 0 0 1 4.583 4.654z" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+            <path data-name="선 166" transform="translate(21 18.852)" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="M0 0v2.87"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<link rel="stylesheet" href="../static/css/style.css"><!-- 공통 CSS -->
+	<link rel="stylesheet" href="../static/css/style_m.css"><!-- 모바일 CSS -->
+	<link rel="stylesheet" href="../static/css/style_t.css"><!-- 태블릿 CSS -->
+	<link rel="stylesheet" href="../static/css/swiper-bundle.min.css">
+	<script src="../static/js/ui/jquery-3.6.3.min.js"></script>
+	<script src="../static/js/ui/swiper-bundle.min.js"></script>
+	<script src="../static/js/ui/ui.js"></script><!-- 공통 퍼블리싱UI JS -->
+	<link rel="stylesheet" href="../static/css/datepicker.css">
+	<script src="../static/js/ui/bootstrap-datepicker.js"></script>
+	<script>	
+		$(window).on('load', function () {	
+			// Datepicker
+			$(".startDate").datepicker({
+				dateFormat: 'yy.mm.dd'
+			});	
+
+			$(".endtDate").datepicker({
+				dateFormat: 'yy.mm.dd'	
+			});		
+		});	
+	</script>
+	<title>통합검색</title>
+</head>
+<body>		
+	
+	<!-- #WRAP -->
+	<div id="wrap" class="search_all">
+		<!-- skip navigation -->
+		<nav id="skipnav">
+			<a title="통합검색 바로가기" href="#search_header">통합검색 바로가기</a>
+			<a title="본문 바로가기" href="#container">본문 바로가기</a>
+		</nav>
+		<!-- //skip navigation -->	
+  
+		<!-- #HEADER -->
+		<header>			
+			<div class="header_area">	
+				<div id="search_header">							
+					<h1>
+						<a href="javascript:void(0);"><span class="blind">KEIIS</span></a>
+					</h1>
+					<fieldset>
+						<div class="sel_wrap">
+							<select title="통합검색 구분 선택하기">
+								<option selected="selected">통합검색</option>
+								<option>학교/기관 검색</option>
+								<option>메뉴 검색</option>
+								<option>공지사항</option>
+								<option>안전 캠페인</option>
+								<option>안전 자료실</option>
+								<option>용어사전</option>
+								<option>게시판</option>
+								<option>첨부문서</option>
+								<option>웹페이지</option>
+							</select>
+						</div>
+					
+						<span class="box_ipt">
+							<label for="input_all_search">
+								<!-- input 클릭시 최신 검색어 [D] on 클래스 활성화 -->
+								<input type="text" id="input_all_search" class="input_txt" title="통합 검색하기" value="시설안전" placeholder="">
+							</label>
+							<button type="reset" class="input_del"><span class="blind">검색어 내용 초기화</span></button>
+							<button type="button" class="ico_search"><span class="blind">검색하기</span></button>
+						</span>
+
+						<!-- input 클릭시 최신 검색어 [D] on 클래스 활성화 -->
+						<div class="search_input_list">
+							<ul>
+								<li><a href="javascript:void(0);" class="txt_link">시설안전</a><a href="javascript:void(0);" class="btn_close_x"><span class="blind">삭제</span></a></li>
+								<li><a href="javascript:void(0);" class="txt_link">안전 캠페인</a><a href="javascript:void(0);" class="btn_close_x"><span class="blind">삭제</span></a></li>
+								<li><a href="javascript:void(0);" class="txt_link">교육시설</a><a href="javascript:void(0);" class="btn_close_x"><span class="blind">삭제</span></a></li>
+								<li><a href="javascript:void(0);" class="txt_link">안전점검</a><a href="javascript:void(0);" class="btn_close_x"><span class="blind">삭제</span></a></li>
+								<li><a href="javascript:void(0);" class="txt_link">용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전용어사전</a><a href="javascript:void(0);" class="btn_close_x"><span class="blind">삭제</span></a></li>
+							</ul>
+						</div>
+						<!-- //input 클릭시 최신 검색어 -->
+
+					</fieldset>
+				</div>
+			</div>		
+
+			<div class="header_bot_area">				
+				<div class="header_bot">
+
+					<div class="sel_cust">
+						<!-- [D] 클릭시 on 클래스, 옵션 활성화 -->
+						<button type="button">정렬</button>
+						<div class="sel_dropbox">
+							<ul>
+								<!-- [D] on 클래스, hover시 활성화 -->
+								<li class="on">
+									<a href="javascript:void(0);">관련도순</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">최신순</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="sel_cust">
+						<!-- [D] 클릭시 on 클래스, 옵션 활성화 -->
+						<button type="button">기간</button>
+						<div class="sel_dropbox">
+							<ul>
+								<li class="on">
+									<a href="javascript:void(0);">전체</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">1일</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">1주</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">1개월</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">1년</a>
+								</li>
+								<li>
+									<span>직접입력</span>
+									<div class="box_datepicker">
+										<span class="box_ipt">
+											<input type="text" class="input_txt startDate" title="날짜 시작 선택" value="" placeholder="">
+										</span>
+										<span class="date_line">
+										~
+										</span>
+										<span class="box_ipt ">
+											<input type="text" class="input_txt endtDate" title="날짜 끝 선택" value="" placeholder="">
+										</span>
+										<button type="button">적용하기</button>
+									</div>								
+								</li>
+							</ul>
+						</div>
+					</div>					
+					
+					<div class="sel_cust">
+						<!-- [D] 클릭시 on 클래스, 옵션 활성화 -->
+						<button type="button">검색범위</button>
+						<div class="sel_dropbox">
+							<ul>
+								<li class="on">
+									<a href="javascript:void(0);">전체</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">제목</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<span class="option_tl">옵션유지</span>
+
+					<div class="option_state">
+						<ul>
+							<!-- [D] on 클래스 추가시 활성화 -->
+							<li class="on">
+								<a href="javascript:void(0);">꺼짐</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">켜짐</a>
+							</li>				
+						</ul>	
+					</div>	
+					
+				</div>
+			</div>
+		</header>
+		<!-- //#HEADER -->		
+	
+		<!--- #container --->
+		<section id="container">	
+
+			<!-- #contents -->
+			<div id="contents">
+
+				<!------------------- 본문 ------------------->		
+				<!-- LNB-->
+				<div class="srch_lnb_wrap">
+					<ul class="srch_lnb">			
+						<li class="srch_lnb_tl">
+							검색구분
+						</li>			
+						<!-- [D] on 클래스시 활성화 -->
+						<li class="on">
+							<a href="javascript:void(0);">통합검색</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">학교/기관 검색</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">메뉴 검색</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">공지사항</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">안전 캠페인</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">안전 자료실</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">용어사전</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">게시판</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">첨부문서</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">웹페이지</a>
+						</li>
+					</ul>
+					<button type="button" class="btn_lnb"><span class="blind">메뉴 열기</span></button>
+
+				</div>
+				<!-- //LNB -->
+
+				<!-- 컨텐츠 -->
+				<div class="srch_cont">		
+					
+					<div class="srch_all_txt">
+						검색어 <span class="txt_keyword">""</span> 에 대한 <span class="txt_all">총 0건</span>의 검색결과를 찾았습니다.
+					</div>
+
+					<div class="srch_guide">
+						<p class="srch_guide_top">
+							검색 연산자는 <strong>기본 연산자(Boolean Operation)</strong>와 <strong>고급 연산자(Advanced Operation)</strong>로 구분됩니다.<br>
+							<span>* 기본 연산자는 효율적이고 정확한 검색을 위해 검색어 사이의 논리적인 관계를 지정해주는 검색 연산자 입니다.  AND, OR, NOT 연산자가 이에 포함됩니다.</span>
+						</p>
+
+						<h3>기본 연산자(Boolean Operation)의 표현</h3>
+
+						<!-- table -->
+						<table class="box_table search">
+							<caption>기본 연산자(Boolean Operation)의 표현 테이블입니다. 검색연산자, 사용사례가 있습니다.</caption>
+							<colgroup>
+								<col>
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">검색연산자</th>
+									<th scope="col">사용사례</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>AND 연산자 [&amp;], [ ]</td>
+									<td>검색 &amp; 기업 또는 검색 기업</td>
+								</tr>
+								<tr>
+									<td>OR 연산자 [|]</td>
+									<td>검색 | 기업</td>
+								</tr>
+								<tr>
+									<td>NOT 연산자[!]</td>
+									<td>검색 ! 기업</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- //table -->
+
+						<ul>
+							<li>검색 &amp; 기업 : '검색'과 '기업' 두 개의 키워드가 모두 포함된 결과를 찾습니다.</li>
+						    <li>검색 | 기업 : '검색'이나 '기업' 둘 중 하나의 검색어라도 포함되면 검색결과로 찾아줍니다. 보다 포괄적인 검색결과를 얻을 수 있습니다. </li>
+							<li>검색 ! 기업 : '검색'이 포함된 결과 중에서 '기업'이 포함되지 않은 결과를 검색합니다. 이 NOT 연산은 검색결과에서 원하지 않는 문서를 검색어를 통해서 제외하는데 있어서 매우 유용한 연산자입니다.</li>
+							<li class="last">* 고급 연산자는 검색할 대상을 세밀하게 지정하여 보다 정확한 검색 결과를 얻을 수 있는 검색 연산자 입니다. 근접검색, Wild 검색, 유의어 확장 검색이 이에 포함됩니다.</li>
+						</ul>
+						
+						<h3>고급 연산자(Advanced Operation)의 표현</h3>
+
+						<!-- table -->
+						<table class="box_table search">
+							<caption>기본 연산자(Boolean Operation)의 표현 테이블입니다. 검색연산자, 사용사례가 있습니다.</caption>
+							<colgroup>
+								<col>
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">검색연산자</th>
+									<th scope="col">사용사례</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>유의어 확장 연산자 [@]</td>
+									<td>매거진@</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- //table -->
+
+						<ul>
+							<li>매거진@ : 매거진 키워드의 유의어 확장을 검색엔진의 유의어 사전에 검색하여 보다 포괄적으로 검색결과를 얻을 수 있습니다. 매거진# 의 검색결과는 매거진 | 저널 | 잡지 | 신문 | journal | newspaper | magazine 의 검색결과와 동일합니다.</li>
+						</ul>
+
+					</div>		
+
+				</div>
+				<!-- //컨텐츠 -->
+				<!------------------- //본문 ------------------->		
+
+				<!-- top button-->
+				<div class="top_btn">
+					<a href="javascript:void(0);">
+						<span class="blind">상단으로 이동하기</span>
+					</a>
+				</div>
+				<!-- //top button-->
+
+			</div>
+			<!-- //#contents -->
+
+		</section>
+		<!--- //#container --->	
+
+		<!-- S :Footer -->
+		<footer id="footer">
+			<div class="footer_wrap type02">
+				<div class="footer_copy">
+					<p>
+						서울특별시 영등포구 국회대로 62길 25(여의도동 17-10) 한국교육시설안전원10층<br>
+						대표번호 02-781-8100 팩스 020-720-3918						
+					</p>
+					<p>
+						Copyright © 2024  Korea Institute of Educational Facility Safety.  All Rights Reserved.
+					</p>
+				</div>
+				<div class="footer_logo">
+					<a href="https://www.moe.go.kr/main.do?s=moe" title="새창" target="_blank" class="footer_btn_edu"><span class="blind">교육부</span></a>
+					<a href="https://www.koies.or.kr/index" title="새창" target="_blank" class="logo">
+						<span class="blind">한국고용시설안전원 Korea Institute of Educational Facility Safety</span>
+					</a>			
+					<span class="box_ipt">
+						<select title="시도교육청 바로가기 새창" onchange="window.open(value,'_blank');">
+							<option selected="selected">시도교육청</option>
+							<option value="https://www.sen.go.kr/sen/index.do">서울특별시교육청</option>
+							<option value="http://www.pen.go.kr">부산광역시교육청</option>
+							<option value="https://www.dge.go.kr/main/main.do">대구광역시교육청</option>
+							<option value="https://www.ice.go.kr/main.do?s=ice">인천광역시교육청</option>
+							<option value="http://www.gen.go.kr/main/main.php">광주광역시교육청</option>
+							<option value="https://www.dje.go.kr/main.do?s=dje">대전광역시교육청</option>
+							<option value="https://www.use.go.kr">울산광역시교육청</option>
+							<option value="https://www.sje.go.kr/intro/sje/index.html?sysId=sje">세종특별자치시교육청</option>
+							<option value="https://www.goe.go.kr">경기도교육청</option>
+							<option value="https://www.gwe.go.kr">강원도특별자치시교육청</option>
+							<option value="https://www.cbe.go.kr">충청북도교육청</option>
+							<option value="http://www.cne.go.kr/cne/main.do">충청남도교육청</option>
+							<option value="https://www.jbe.go.kr/index.jbe">전라북도교육청</option>
+							<option value="https://www.jne.go.kr/main/main.do">전라남도교육청</option>
+							<option value="https://www.gbe.kr/main/main.do">경상북도교육청</option>
+							<option value="https://www.gne.go.kr/index.gne?contentsSid=1384">경상남도교육청</option>
+							<option value="https://www.jje.go.kr/index.jje">제주특별자치도교육청</option>
+						</select>
+					</span>
+					<a href="https://work.keiis.kr/keiis/index.do" title="새창" target="_blank" class="footer_btn">업무포털</a>
+				</div>
+			</div>		
+		</footer>
+		<!-- E :Footer -->
+	</div>
+	<!--// #WRAP -->
+</body>
+</html>

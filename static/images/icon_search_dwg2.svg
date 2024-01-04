@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <g transform="translate(-402 -60)">
+        <rect width="64" height="64" rx="12" transform="translate(402 60)" style="fill:#7c3ec4"/>
+        <text transform="translate(434 100)" style="fill:#fff;font-size:22px;font-family:HelveticaNeueLTStd-Hv,Helvetica Neue LT Std"><tspan x="-27.5" y="0">DWG</tspan></text>
+    </g>
+</svg>
