@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 	<meta name="format-detection" content="telephone=no, address=no, email=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -17,20 +19,20 @@
 	<title>KEIIS 한국교육시설안전원</title>
 	<script>
 		//스크롤 시 header fixed :: 메인페이지 경우
-		$(document).ready(function(){
+		$(document).ready(function () {
 			mainScrollAct();
 		});
-		function mainScrollAct(){
+		function mainScrollAct() {
 			var position = $(".notice_top_wrap").height(); //fixed 메뉴 위치
 
-			$(window).on('scroll', function() {
+			$(window).on('scroll', function () {
 				var scrollTop = $(window).scrollTop() > position; //현재 스크롤 위치
 
-				if (scrollTop){
+				if (scrollTop) {
 					$('#wrap').addClass("sticky")
 					$('.notice_top_btn').removeClass("on")
 					$('.notice_list_area').removeClass("on")
-					
+
 				} else {
 					$('#wrap').removeClass("sticky")
 				}
@@ -38,8 +40,9 @@
 		}
 	</script>
 </head>
-<body>		
-	
+
+<body>
+
 	<!-- #WRAP -->
 	<div id="wrap" class="main">
 		<!-- skip navigation -->
@@ -47,10 +50,10 @@
 			<a title="주메뉴 바로가기" href="#gnb">주메뉴 바로가기</a>
 			<a title="본문 바로가기" href="#container">본문 바로가기</a>
 		</nav>
-		<!-- //skip navigation -->	
-  
+		<!-- //skip navigation -->
+
 		<!-- Notice : 공지없을시 none 클래스 추가 -->
-		
+
 		<div class="notice_top_wrap">
 			<div class="notice_top_area">
 				<div class="ico_noti">
@@ -79,12 +82,12 @@
 					<button type="button" class="play">재생</button>
 					<button type="button" class="stop">정지</button>
 					<div class="swiper-pagination"></div>
-				</div>		
-			</div>	
+				</div>
+			</div>
 			<div class="notice_btn_wrap">
 				<a href="/keiisp/prj/pik/rep/pi0501001f.do">공지사항 더보기</a>
 			</div>
-		</div>		
+		</div>
 		<!-- //Notice -->
 
 		<!-- #HEADER -->
@@ -98,8 +101,8 @@
 				<!-- gnb -->
 				<div id="gnb">
 					<ul>
-						<!-- [D] on 클래스 추가시 활성화  -->						
-						<li class="on"><a href="javascript:void(0);" title="교육시설 통계">교육시설 통계</a>   
+						<!-- [D] on 클래스 추가시 활성화  -->
+						<li class="on"><a href="javascript:void(0);" title="교육시설 통계">교육시설 통계</a>
 							<ul>
 								<!-- [D] on 클래스 추가시 활성화  -->
 								<li class="on"><a href="javascript:void(0);" title="주제별 통계">주제별 통계</a></li>
@@ -129,7 +132,7 @@
 						<li><a href="javascript:void(0);" title="서비스 소개">서비스 소개</a>
 							<ul>
 								<li><a href="javascript:void(0);" title="KEIIS 소개">KEIIS 소개</a></li>
-							    <li><a href="javascript:void(0);" title="안전예방 교육">안전예방 교육</a></li>
+								<li><a href="javascript:void(0);" title="안전예방 교육">안전예방 교육</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -137,37 +140,39 @@
 						<a href="javascript:void(0);"><span class="blind">메뉴 닫기</span></a>
 					</div>
 				</div>
-				<!-- //gnb -->				
+				<!-- //gnb -->
 
-				<!-- utility -->				
+				<!-- utility -->
 				<ul class="header_util">
 					<li class="header_search"><a href="javascript:void(0);"><span class="blind">검색</span></a></li>
-					<li class="header_category"><a href="javascript:void(0);"><span class="blind">메뉴 전체보기</span></a></li>
+					<li class="header_category"><a href="javascript:void(0);"><span class="blind">메뉴 전체보기</span></a>
+					</li>
 				</ul>
 				<!-- //utility -->
 
-				<!-- 통합검색창 layer Popup -->			
+				<!-- 통합검색창 layer Popup -->
 				<div class="search_pop_wrap">
 					<div class="search_pop">
 						<p>통합검색</p>
 						<span class="box_ipt">
 							<label for="input_all_search" class="search_input">
-								<input type="text" id="input_all_search" class="input_txt" title="검색어 입력하기" placeholder="검색어 입력">
+								<input type="text" id="input_all_search" class="input_txt" title="검색어 입력하기"
+									placeholder="검색어 입력">
 							</label>
 							<button type="reset" class="input_del"><span class="blind">검색어 내용 초기화</span></button>
 							<button type="button" class="ico_search"><span class="blind">검색하기</span></button>
-						</span>	
+						</span>
 					</div>
 				</div>
-				<!-- //통합검색창 layer Popup -->		
+				<!-- //통합검색창 layer Popup -->
 
 			</div>
 			<!-- //#header_bottom -->
 
 		</header>
-		<!-- //#HEADER -->	
-				
-	
+		<!-- //#HEADER -->
+
+
 		<!--- #container --->
 		<section id="container">
 
@@ -184,19 +189,19 @@
 								</p>
 								<span>
 									KEIIS는 학교·기관 모든 교육시설 안전 및 유지관리 현황을<br>
-									체계적으로 통합 관리하는 플랫폼입니다. 
+									체계적으로 통합 관리하는 플랫폼입니다.
 								</span>
-								<a href="/keiisp/prj/pik/pre/pi0601001f.do">KEIIS 자세히 알아보기</a>								
+								<a href="/keiisp/prj/pik/pre/pi0601001f.do">KEIIS 자세히 알아보기</a>
 							</div>
 
 							<div class="main_vis_r r01"></div>
 						</div>
 
 						<div class="swiper-slide">
-							<div class="main_vis_l l02">					
+							<div class="main_vis_l l02">
 								<p>
 									<span>관심 시설과 주변 생활 안전 시설</span>을<br>
-									지도를 통해 확인하세요.   
+									지도를 통해 확인하세요.
 								</p>
 								<span>
 									위치별 생활 안전 시설 정보와 재난·재해 피해 정보를<br>
@@ -205,9 +210,10 @@
 								<a href="/gissvc/moveMapPos.do" title="새창" target="_blank">지도에서 안전한 교육시설 찾기</a>
 							</div>
 
-							<div class="main_vis_r r02">								
+							<div class="main_vis_r r02">
 								<!-- [D] 툴팁 샘플 -->
-								<div style="position: absolute; top: 8rem; left: 15rem; display: inline-block; font-size: 1.6rem; line-height: 1.9rem; color: #111; padding: .85rem 1.6rem; opacity: .9; border-radius: .6rem; box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15); background-color: #fff;">
+								<div
+									style="position: absolute; top: 8rem; left: 15rem; display: inline-block; font-size: 1.6rem; line-height: 1.9rem; color: #111; padding: .85rem 1.6rem; opacity: .9; border-radius: .6rem; box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15); background-color: #fff;">
 									경기도
 								</div>
 								<!-- [D] //툴팁 샘플 -->
@@ -217,7 +223,7 @@
 						</div>
 
 						<div class="swiper-slide">
-							<div class="main_vis_l l03">			
+							<div class="main_vis_l l03">
 								<p>
 									<span>전국 학교 수</span>와<br>
 									<span>안전등급 심사 결과</span>는?
@@ -232,27 +238,41 @@
 							<div class="main_vis_r r03">
 								<div class="stat_info_graph_chart">
 									<ul>
-										<li><p>유치원</p><span class="count_num n01 on">7962</span></li><!-- [D] on 클래스 추가시 말풍선 -->
-										<li><p>초등학교</p><span class="count_num n02">6170</span></li>
-										<li><p>중학교</p><span class="count_num n03">3263</span></li>
-										<li><p>고등학교</p><span class="count_num n04">2378</span></li>
-										<li><p>기타학교</p><span class="count_num n05">280</span></li>
-										<li><p>대학</p><span class="count_num n06">517</span></li>
+										<li>
+											<p>유치원</p><span class="count_num n01 on">7962</span>
+										</li><!-- [D] on 클래스 추가시 말풍선 -->
+										<li>
+											<p>초등학교</p><span class="count_num n02">6170</span>
+										</li>
+										<li>
+											<p>중학교</p><span class="count_num n03">3263</span>
+										</li>
+										<li>
+											<p>고등학교</p><span class="count_num n04">2378</span>
+										</li>
+										<li>
+											<p>기타학교</p><span class="count_num n05">280</span>
+										</li>
+										<li>
+											<p>대학</p><span class="count_num n06">517</span>
+										</li>
 									</ul>
 								</div>
 							</div>
 						</div>
 
-					</div>				
+					</div>
 					<div class="swiper-btn-wrap">
-						<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"></div>		
+						<div
+							class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+						</div>
 						<button type="button" class="play">재생</button>
 						<button type="button" class="stop">정지</button>
 					</div>
-				</div>	
+				</div>
 			</div>
 			<!-- //메인 비쥬얼 -->
-			
+
 			<!-- 메인 교육시설 통계 -->
 			<div class="main_swiper_stat">
 				<h2>
@@ -262,7 +282,7 @@
 					<div class="swiper-wrapper">
 
 						<div class="swiper-slide">
-							<a href="/keiisp/prj/pik/stats/pi0201001f.do">									
+							<a href="/keiisp/prj/pik/stats/pi0201001f.do">
 								<p>학교/기관</p>
 							</a>
 						</div>
@@ -272,37 +292,37 @@
 								<p>건물/용지</p>
 							</a>
 						</div>
-						
+
 						<div class="swiper-slide">
 							<a href="/keiisp/prj/pik/stats/pi0203001f.do">
 								<p>안전인증</p>
 							</a>
-						</div>						
-						
+						</div>
+
 						<div class="swiper-slide">
 							<a href="/keiisp/prj/pik/stats/pi0204001f.do">
 								<p>석면관리</p>
 							</a>
 						</div>
-												
+
 						<div class="swiper-slide">
 							<a href="/keiisp/prj/pik/stats/pi0205001f.do">
 								<p>내진설계관리</p>
 							</a>
-						</div>						
-						
+						</div>
+
 						<div class="swiper-slide">
 							<a href="/keiisp/prj/pik/stats/pi0206001f.do">
 								<p>안전사고</p>
 							</a>
-						</div>					
-						
+						</div>
+
 						<div class="swiper-slide">
 							<a href="/keiisp/prj/pik/stats/pi0207001f.do">
 								<p>안전성평가</p>
 							</a>
-						</div>				
-						
+						</div>
+
 						<div class="swiper-slide">
 							<a href="/keiisp/prj/pik/stats/pi0208001f.do">
 								<p>안전관리</p>
@@ -310,15 +330,17 @@
 						</div>
 
 					</div>
-				</div>	
-					
+				</div>
+
 				<div class="swiper-btn-wrap">
-					<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"></div>	
+					<div
+						class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+					</div>
 				</div>
 			</div>
 			<!-- //메인 교육시설 통계 -->
 
-			<!-- 안전 자료실 -->	
+			<!-- 안전 자료실 -->
 			<div class="main_safe">
 				<h2>
 					<span>안전 자료실</span>
@@ -327,21 +349,25 @@
 
 					<div class="swiper-wrapper">
 
-						<div class="swiper-slide">	
+						<div class="swiper-slide">
 							<div class="mov_list_li">
 								<a href="javascript:void(0);"><span class="blind">안전자료실 목록 1</span></a>
-								<span class="img">												
-									<iframe src="https://www.youtube.com/embed/BP5-cAfQIaY?controls=2&showinfo=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+								<span class="img">
+									<iframe src="https://www.youtube.com/embed/BP5-cAfQIaY?controls=2&showinfo=0"
+										title="YouTube video player"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+										allowfullscreen=""></iframe>
 								</span>
-								<p>특수학교(유치원) 안전전검 지원 현장스케치 특수학교 (유치원) 안전전검 지원 현장스케치 특수학교(유치원) 원 현장스케치 특수학교(유치원)원 현장스케치 특수학교(유치원)</p>
+								<p>특수학교(유치원) 안전전검 지원 현장스케치 특수학교 (유치원) 안전전검 지원 현장스케치 특수학교(유치원) 원 현장스케치 특수학교(유치원)원 현장스케치
+									특수학교(유치원)</p>
 								<span class="mov_bottom">
 									<span>안전점검</span>
 									<span>2023-06-01</span>
 								</span>
-							</div>		
+							</div>
 						</div>
 
-						<div class="swiper-slide">								
+						<div class="swiper-slide">
 							<div class="mov_list_li">
 								<a href="javascript:void(0);"><span class="blind">안전자료실 목록 2</span></a>
 								<span class="img">
@@ -355,7 +381,7 @@
 							</div>
 						</div>
 
-						<div class="swiper-slide">		
+						<div class="swiper-slide">
 							<div class="mov_list_li">
 								<a href="javascript:void(0);"><span class="blind">안전자료실 목록 2</span></a>
 								<span class="img">
@@ -366,27 +392,28 @@
 									<span>안전점검</span>
 									<span>2023-06-01</span>
 								</span>
-							</div>							
+							</div>
 						</div>
 
-						<div class="swiper-slide">		
+						<div class="swiper-slide">
 							<div class="mov_list_li">
 								<a href="javascript:void(0);"><span class="blind">안전자료실 목록 4</span></a>
-								<span class="img">	
+								<span class="img">
 									<img src="../static/images/temp/img_dataroom_sample_02.png" alt="안전자료실 이미지 샘플">
 								</span>
-								<p>특수학교(유치원) 안전전검 지원 현장스케치 특수학교 (유치원) 안전전검 지원 현장스케치 특수학교(유치원) 원 현장스케치 특수학교(유치원)원 현장스케치 특수학교(유치원)</p>
+								<p>특수학교(유치원) 안전전검 지원 현장스케치 특수학교 (유치원) 안전전검 지원 현장스케치 특수학교(유치원) 원 현장스케치 특수학교(유치원)원 현장스케치
+									특수학교(유치원)</p>
 								<span class="mov_bottom">
 									<span>안전점검</span>
 									<span>2023-06-01</span>
 								</span>
-							</div>  							
+							</div>
 						</div>
 
-						<div class="swiper-slide">		
+						<div class="swiper-slide">
 							<div class="mov_list_li">
 								<a href="javascript:void(0);"><span class="blind">안전자료실 목록 5</span></a>
-								<span class="img">	
+								<span class="img">
 									<img src="../static/images/temp/img_dataroom_sample_02.png" alt="안전자료실 이미지 샘플">
 								</span>
 								<p>특수학교(유치원) </p>
@@ -394,13 +421,13 @@
 									<span>안전점검</span>
 									<span>2023-06-01</span>
 								</span>
-							</div>  							
+							</div>
 						</div>
 
-						<div class="swiper-slide">		
+						<div class="swiper-slide">
 							<div class="mov_list_li">
 								<a href="javascript:void(0);"><span class="blind">안전자료실 목록 5</span></a>
-								<span class="img">		
+								<span class="img">
 									<img src="../static/images/temp/img_dataroom_sample_02.png" alt="안전자료실 이미지 샘플">
 								</span>
 								<p>특수학교(유치원) </p>
@@ -408,13 +435,13 @@
 									<span>안전점검</span>
 									<span>2023-06-01</span>
 								</span>
-							</div>  							
+							</div>
 						</div>
 
-						<div class="swiper-slide">		
+						<div class="swiper-slide">
 							<div class="mov_list_li">
 								<a href="javascript:void(0);"><span class="blind">안전자료실 목록 5</span></a>
-								<span class="img">		
+								<span class="img">
 									<img src="../static/images/temp/img_dataroom_sample_02.png" alt="안전자료실 이미지 샘플">
 								</span>
 								<p>특수학교(유치원) </p>
@@ -422,13 +449,13 @@
 									<span>안전점검</span>
 									<span>2023-06-01</span>
 								</span>
-							</div>  							
+							</div>
 						</div>
 
-						<div class="swiper-slide">		
+						<div class="swiper-slide">
 							<div class="mov_list_li">
 								<a href="javascript:void(0);"><span class="blind">안전자료실 목록 5</span></a>
-								<span class="img">		
+								<span class="img">
 									<img src="../static/images/temp/img_dataroom_sample_02.png" alt="안전자료실 이미지 샘플">
 								</span>
 								<p>특수학교(유치원) </p>
@@ -436,13 +463,13 @@
 									<span>안전점검</span>
 									<span>2023-06-01</span>
 								</span>
-							</div>  							
+							</div>
 						</div>
 
-						<div class="swiper-slide">		
+						<div class="swiper-slide">
 							<div class="mov_list_li">
 								<a href="javascript:void(0);"><span class="blind">안전자료실 목록 5</span></a>
-								<span class="img">		
+								<span class="img">
 									<img src="../static/images/temp/img_dataroom_sample_02.png" alt="안전자료실 이미지 샘플">
 								</span>
 								<p>특수학교(유치원) </p>
@@ -450,10 +477,10 @@
 									<span>안전점검</span>
 									<span>2023-06-01</span>
 								</span>
-							</div>  							
-						</div>						
+							</div>
+						</div>
 
-						<div class="swiper-slide">		
+						<div class="swiper-slide">
 							<div class="mov_list_li">
 								<a href="javascript:void(0);"><span class="blind">안전자료실 목록 2</span></a>
 								<span class="img">
@@ -464,7 +491,7 @@
 									<span>안전점검</span>
 									<span>2023-06-01</span>
 								</span>
-							</div>							
+							</div>
 						</div>
 
 					</div>
@@ -487,17 +514,17 @@
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<a href="/keiisp/prj/pik/guide/pi0403001f.do">교육시설 계획</a>
-					    </div>
-					    <div class="swiper-slide">
+						</div>
+						<div class="swiper-slide">
 							<a href="/keiisp/prj/pik/rep/pi0502001f.do">안전 캠페인</a>
 						</div>
-					    <div class="swiper-slide">
+						<div class="swiper-slide">
 							<a href="/keiisp/prj/pik/pre/pi0603001f.do">안전 예방 교육</a>
 						</div>
-							<div class="swiper-slide">
+						<div class="swiper-slide">
 							<a href="/keiisp/prj/pik/guide/pi0401001f.do">법령 자료실</a>
 						</div>
-							<div class="swiper-slide">
+						<div class="swiper-slide">
 							<a href="/keiisp/prj/pik/guide/pi0404001f.do">용어사전</a>
 						</div>
 					</div>
@@ -561,7 +588,7 @@
 								<img src="../static/images/img_main_footer_link_10.png" alt="대학알리미">
 							</a>
 						</div>
-					</div>					
+					</div>
 				</div>
 				<div class="swiper-button-next">다음</div>
 				<div class="swiper-button-prev">이전</div>
@@ -577,9 +604,9 @@
 				</div>
 			</div>
 			<!-- //top button-->
-			
+
 		</section>
-		<!--- //#container --->	
+		<!--- //#container --->
 
 		<!-- S :Footer -->
 		<footer id="footer">
@@ -587,17 +614,18 @@
 				<div class="footer_copy">
 					<p>
 						서울특별시 영등포구 국회대로 62길 25(여의도동 17-10) 한국교육시설안전원10층<br>
-						대표번호 02-781-8100 팩스 020-720-3918						
+						대표번호 02-781-8100 팩스 020-720-3918
 					</p>
 					<p>
-						Copyright © 2024  Korea Institute of Educational Facility Safety.  All Rights Reserved.
+						Copyright © 2024 Korea Institute of Educational Facility Safety. All Rights Reserved.
 					</p>
 				</div>
 				<div class="footer_logo">
-					<a href="https://www.moe.go.kr/main.do?s=moe" title="새창" target="_blank" class="footer_btn_edu"><span class="blind">교육부</span></a>
+					<a href="https://www.moe.go.kr/main.do?s=moe" title="새창" target="_blank"
+						class="footer_btn_edu"><span class="blind">교육부</span></a>
 					<a href="https://www.koies.or.kr/index" title="새창" target="_blank" class="logo">
 						<span class="blind">한국고용시설안전원 Korea Institute of Educational Facility Safety</span>
-					</a>			
+					</a>
 					<span class="box_ipt">
 						<select title="시도교육청 바로가기 새창" onchange="window.open(value,'_blank');">
 							<option selected="selected">시도교육청</option>
@@ -620,12 +648,14 @@
 							<option value="https://www.jje.go.kr/index.jje">제주특별자치도교육청</option>
 						</select>
 					</span>
-					<a href="https://work.keiis.kr/keiis/index.do" title="새창" target="_blank" class="footer_btn">업무포털</a>
+					<a href="https://work.keiis.kr/keiis/index.do" title="새창" target="_blank"
+						class="footer_btn">업무포털</a>
 				</div>
-			</div>		
+			</div>
 		</footer>
 		<!-- E :Footer -->
 	</div>
 	<!--// #WRAP -->
 </body>
+
 </html>
